@@ -86,7 +86,7 @@ function get_sets()
         left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
         right_ear="スラッドピアス",
         -- right_ear="ヒーズンピアス",
-        back={ name="アンコウマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+        back={ name="アンコウマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
     }
     sets.ws.Catastrophe = set_combine(sets.ws, {
         -- head="ラトリサリット",
