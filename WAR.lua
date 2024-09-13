@@ -111,6 +111,7 @@ function get_sets()
         feet="ＢＩカリガ+2",
         -- neck="ホメリクゴルゲット",
         -- left_ring="ジェリーリング",
+        waist="プラチナモグベルト",
     }
     sets.uncap = {
         -- head="サクパタヘルム",
