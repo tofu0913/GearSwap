@@ -29,6 +29,15 @@ function get_sets()
         main={ name="ロクソテクメイス+1", augments={'Path: A',}},
         sub="ブラーシールド+1",
     }
+    sets.mode['Club'] = {
+        main={ name="ロクソテクメイス+1", augments={'Path: A',}},
+        sub="ブラーシールド+1",
+    }
+    sets.mode['Polearm'] = {
+        main="シャイニングワン",
+        sub="ポールグリップ",
+    }
+    
     
     sets.tp={
         ammo="銀銭",
@@ -317,6 +326,8 @@ function self_command(command)
         mode = 'Great Axe'
     elseif command == 'cb' then
         mode = 'Club'
+    elseif command == 'po' then
+        mode = 'Polearm'
     else
         windower.add_to_chat('==============================')
         windower.add_to_chat('Mode: '..tostring(mode))
