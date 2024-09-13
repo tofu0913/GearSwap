@@ -200,6 +200,10 @@ end
 
 function midcast(spell)
     local set_equip = nil
+    
+    if buffactive['睡眠'] or buffactive['石化'] or buffactive['スタン'] or buffactive['魅了'] or buffactive['アムネジア'] or buffactive['テラー'] or buffactive['ララバイ'] or buffactive['インペア'] then
+        return
+    end
 
     if spell.type == 'WeaponSkill' then
         if sets.ws[spell.english] then
