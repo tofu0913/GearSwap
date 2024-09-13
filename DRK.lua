@@ -280,10 +280,11 @@ function self_command(command)
         setIdle()
     else
         windower.add_to_chat('==============================')
-        windower.add_to_chat('Mode- is: '..tostring(mode))
-        windower.add_to_chat('PDT- is: '..tostring(pdt))
-        windower.add_to_chat('uncap is: '..tostring(uncap))
-        windower.add_to_chat('TH is: '..tostring(th))
+        windower.add_to_chat('Mode: '..tostring(mode))
+        windower.add_to_chat('Available modes: [sw, gsw, cb, sc]')
+        windower.add_to_chat('PDT: '..tostring(pdt))
+        windower.add_to_chat('uncap: '..tostring(uncap))
+        windower.add_to_chat('TH: '..tostring(th))
     end
     
     setIdle()

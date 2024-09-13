@@ -285,12 +285,13 @@ function self_command(command)
         mode = 'Club'
     else
         windower.add_to_chat('==============================')
-        windower.add_to_chat('Mode- is: '..tostring(mode))
-        windower.add_to_chat('PDT- is: '..tostring(pdt))
-        windower.add_to_chat('Accuracy is: '..tostring(acc))
-        windower.add_to_chat('Uncapped is: '..tostring(uncap))
-        windower.add_to_chat('TH is: '..tostring(th))
-        windower.add_to_chat('Announce is: '..tostring(announce))
+        windower.add_to_chat('Mode: '..tostring(mode))
+        windower.add_to_chat('Available modes: [sw, gax, cb, po]')
+        windower.add_to_chat('PDT: '..tostring(pdt))
+        windower.add_to_chat('Accuracy: '..tostring(acc))
+        windower.add_to_chat('Uncapped: '..tostring(uncap))
+        windower.add_to_chat('TH: '..tostring(th))
+        windower.add_to_chat('Announce: '..tostring(announce))
     end
     
     setIdle()
