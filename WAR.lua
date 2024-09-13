@@ -150,10 +150,10 @@ function get_sets()
         body="カウンセラーガーブ",
     })
     sets.walk.windusts = set_combine(sets.walk, {
-        body="元老院警護リバリ",
+        -- body="元老院警護リバリ",
     })
     sets.walk.windust = set_combine(sets.walk, {
-        body="連邦制式礼服",
+        -- body="連邦制式礼服",
     })
 
     send_command('input /macro book 9;wait 2;input /lockstyleset 20')
