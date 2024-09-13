@@ -58,7 +58,7 @@ function get_sets()
         -- right_ring="イフラマドリング"
         left_ear="テロスピアス",
         -- left_ear="セサンスピアス",
-        right_ear={ name="ボイイピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+        right_ear={ name="ボイイピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
         back={ name="シコルマント", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
     sets.tp['Great Axe']=set_combine(sets.tp, {
@@ -197,7 +197,7 @@ end
 function midcast(spell)
     local set_equip = nil
 
-    if spell.type == 'WeaponSkill' and not buffactive['アムネジア'] then
+    if spell.type == 'WeaponSkill' then
         if sets.ws[spell.english] then
             set_equip = sets.ws[spell.english]
         else
