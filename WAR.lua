@@ -139,6 +139,9 @@ function get_sets()
     sets.ja['Blood Rage'] = {
         body="ＢＩロリカ+3"
     }
+    sets.ja['Restraint'] = {
+        body="ＢＩマフラ+3"
+    }
     sets.ja['Mighty Strikes'] = {
         hands="ＡＧマフラ+1",
     }
