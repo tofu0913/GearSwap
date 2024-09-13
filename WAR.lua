@@ -1,5 +1,7 @@
 
 mylib = require('mylib')
+packets = require('packets')
+res = require('resources')
 
 function get_sets()
     set_language('japanese')
@@ -155,6 +157,11 @@ function get_sets()
     sets.walk.windust = set_combine(sets.walk, {
         -- body="連邦制式礼服",
     })
+    
+    sets.HolyWater = {
+        neck="ニカンダネックレス",
+        -- left_ring="Purity Ring",
+    }
 
     send_command('input /macro book 9;wait 2;input /lockstyleset 20')
 end
@@ -216,6 +223,33 @@ end
 function status_change(new,old)
     setIdle()
 end
+
+function buff_change(buff,gain,buff_details)
+    if buff == '死の宣告' then
+        if gain then
+            send_command(windower.to_shift_jis('input /p 死の宣告！！！Doom!!!!!!!!!!!!!<call>'))
+        elseif windower.ffxi.get_player().status ~= 2 then
+            send_command(windower.to_shift_jis('input /p 死の宣告から回復した、Doom gone....'))
+        end
+    end
+end
+
+windower.register_event('outgoing chunk',function(id,data)
+	if id == 0x037 then
+		local packet = packets.parse('outgoing', data)
+        item_used = res.items[windower.ffxi.get_items(packet.Bag, packet.Slot).id].en
+        if item_used == 'Holy Water' then  
+          if player.equipment.left_ring == "Purity Ring" and player.equipment.neck == "Nicander's Necklace" then
+            -- nothing
+          else
+            -- windower.add_to_chat(2,"Equipping gear and adding delay")
+            windower.send_command("gs equip sets.HolyWater")
+            send_command(windower.to_shift_jis('@wait 0.5; input /item "聖水" <me>'))
+            return true
+          end
+        end
+	end
+end)
 
 function setIdle()
     set_equip = nil
