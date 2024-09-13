@@ -173,7 +173,7 @@ function precast(spell)
 
     if spell.type == 'Trust' or string.find(spell.type, 'Magic') then
         set_equip = sets.fc
-    elseif spell.english == 'Spectral Jig' then
+    elseif spell.english == 'Spectral Jig' and windower.ffxi.get_ability_recasts()[218] == 0 then
         windower.ffxi.cancel_buff(71)
     elseif string.find(spell.name, 'ドレイン') or string.find(spell.name, 'アスピル') then
         set_equip = set_combine(sets.drk_magic, sets.drain)
