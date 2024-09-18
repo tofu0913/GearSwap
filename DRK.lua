@@ -19,11 +19,11 @@ function get_sets()
     }
     sets.mode['Great Sword'] = {
         main={ name="カラドボルグ", augments={'Path: A',}},
-        sub="ポールグリップ",
+        sub="ウトゥグリップ",
     }
     sets.mode['Scythe'] = {
         main={ name="アポカリプス", augments={'Path: A',}},
-        sub="ポールグリップ",
+        sub="ウトゥグリップ",
     }
     sets.mode['Club'] = {
         main={ name="ロクソテクメイス+1", augments={'Path: A',}},

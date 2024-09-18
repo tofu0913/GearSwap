@@ -23,8 +23,7 @@ function get_sets()
     }
     sets.mode['Great Axe'] = {
         main={ name="シャンゴル", augments={'Path: A',}},
-        -- sub="ポールグリップ",
-        sub="ウーゼルグリップ",
+        sub="ウトゥグリップ",
     }
     sets.mode['Club'] = {
         main={ name="ロクソテクメイス+1", augments={'Path: A',}},
@@ -36,7 +35,7 @@ function get_sets()
     }
     sets.mode['Polearm'] = {
         main="シャイニングワン",
-        sub="ポールグリップ",
+        sub="ウトゥグリップ",
     }
     
     
