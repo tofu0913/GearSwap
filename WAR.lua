@@ -176,7 +176,7 @@ function get_sets()
         -- left_ring="Purity Ring",
     }
 
-    send_command('input /macro book 9;wait 2;input /lockstyleset 20')
+    send_command('input /macro book 9;wait 2;input /lockstyleset 1')
 end
 
 function precast(spell)
@@ -307,7 +307,7 @@ function setIdle()
 end
 
 function sub_job_change(new,old)
-    send_command('wait 4;input /lockstyleset 20')
+    send_command('wait 4;input /lockstyleset 1')
 end
 
 function self_command(command)

@@ -165,7 +165,7 @@ function get_sets()
         -- body="連邦制式礼服",
     })
 
-    send_command('input /macro book 3; wait 2;input /lockstyleset 19')
+    send_command('input /macro book 3; wait 2;input /lockstyleset 2')
 end
 
 function precast(spell)
