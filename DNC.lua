@@ -47,7 +47,6 @@ function updateText()
         flags = flags..'R '
     end
     -- windower.add_to_chat('Low Haste: '..tostring(lowhaste))
-    -- windower.add_to_chat('Trick: '..tostring(trick))
     -- windower.add_to_chat('TH: '..tostring(th))
     text.flags = flags
 end
@@ -66,7 +65,6 @@ function get_sets()
     bflo = true
     rflo = false
     step = true
-    trick = false
     mode = ''
     updateText()
         
@@ -273,18 +271,10 @@ function precast(spell)
         end
     elseif spell.type == 'WeaponSkill' then
         if cflo and not buffactive['C.フラリッシュ'] and windower.ffxi.get_ability_recasts()[226] < 1 and get_FM() > 0 then
-            if trick and windower.ffxi.get_player().sub_job == 'THF' and windower.ffxi.get_ability_recasts()[66] < 1 then
-                cast_delay(2.5)
-                send_command(windower.to_shift_jis('input /ja "C.フラリッシュ" <me>; wait 1; input /ja "だまし討ち" <me>'))
-            else
-                -- cast_delay(1.5)
-                -- send_command(windower.to_shift_jis('input /ja "C.フラリッシュ" <me>'))
-                cancel_spell()
-                send_command(windower.to_shift_jis('input /ja "C.フラリッシュ" <me>; wait 1; input /ws '..spell.name..' <t>'))
-            end
-        elseif trick and windower.ffxi.get_player().sub_job == 'THF' and windower.ffxi.get_ability_recasts()[66] < 1 then
-            cast_delay(1.5)
-            send_command(windower.to_shift_jis('input /ja "だまし討ち" <me>'))
+           -- cast_delay(1.5)
+            -- send_command(windower.to_shift_jis('input /ja "C.フラリッシュ" <me>'))
+            cancel_spell()
+            send_command(windower.to_shift_jis('input /ja "C.フラリッシュ" <me>; wait 1; input /ws '..spell.name..' <t>'))
         end
     end
 
@@ -484,9 +474,6 @@ function self_command(command)
     elseif command == 'step' then
         step = not step
         windower.add_to_chat('Step is: '..tostring(step))
-    elseif command == 'trick' then
-        trick = not trick
-        windower.add_to_chat('Trick is: '..tostring(trick))
     elseif command == 'lowhaste' then
         lowhaste = not lowhaste
         windower.add_to_chat('Low Haste is: '..tostring(lowhaste))
@@ -524,7 +511,6 @@ function self_command(command)
         windower.add_to_chat('B.Flour: '..tostring(bflo))
         windower.add_to_chat('R.Flour: '..tostring(rflo))
         windower.add_to_chat('Low Haste: '..tostring(lowhaste))
-        windower.add_to_chat('Trick: '..tostring(trick))
         windower.add_to_chat('TH: '..tostring(th))
         -- windower.add_to_chat('Announce is: '..tostring(announce))
     end
