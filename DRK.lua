@@ -102,13 +102,16 @@ function get_sets()
         -- feet="スレビアレギンス+2",
         back={ name="アンコウマント", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
     })
+    sets.ws['Savage Blade'] = set_combine(sets.ws, {
+        hands={ name="オディシアガントレ", augments={'Accuracy+13 Attack+13','Weapon skill damage +4%','Accuracy+15','Attack+14',}},
+    })
     
     sets.pdt = {
         head="ニャメヘルム",
         body="ニャメメイル",
         hands="ニャメガントレ",
         legs="ニャメフランチャ",
-        feet="ニャメソルレット",
+        feet={ name="ニャメソルレット", augments={'Path: B',}},
     }
     sets.uncap = {
         body="サクパタブレスト",
@@ -120,52 +123,65 @@ function get_sets()
         legs={ name="オディシアクウィス", augments={'"Dbl.Atk."+3','Pet: Haste+3','"Treasure Hunter"+1','Accuracy+9 Attack+9',}},
     }
 
-    sets.drk_magic = {
+    sets.ja = {}
+    sets.ja['Dark Seal'] = {
         head="ＦＬバーゴネット+1",
-        legs="ＨＴフランチャ+1",
+    }
+    sets.ja['Diabolic Eye'] = {
+        hands="ＦＬガントレット+1",
+    }
+    sets.ja['Blood Weapon'] = {
+        hands="ＦＬキュイラス+1",
+    }
+    
+    sets.drk_magic = {
+        -- head="ＦＬバーゴネット+1",
+        -- legs="ＨＴフランチャ+1",
         neck="エーラペンダント",
         right_ring="エバネセンスリング",
         left_ring="アルコンリング",
         left_ear="マニピアス",
         right_ear="マリグナスピアス",
         
+        head="ニャメヘルム",
         body="ニャメメイル",
         hands="ニャメガントレ",
+        legs="ニャメフランチャ",
         feet="ニャメソルレット",
         
-        back={ name="デオルクネスマント", augments={'Attack+5','Dark magic skill +10',}},
     }
     sets.drain = {
-        -- head="ストリガクラウン",
         right_ear="ヒルディネアピアス",
         waist="オステリベルト+1",
         hands="ＦＬガントレット+1",
+        back={ name="デオルクネスマント", augments={'Attack+7','"Drain" and "Aspir" potency +25',}},
     }
     
     sets.ra = {
         range="ラミアベーン",
     }
 
-    -- Common equipments
     sets.fc = {
+        head="ＦＬバーゴネット+1",
         left_ear="マリグナスピアス",
         right_ear="ロケイシャスピアス",
         right_ring="プロリクスリング",
     }
+    -- Common equipments
     sets.walk = {
         right_ring="シュネデックリング",
     }
     sets.walk.adoulin = set_combine(sets.walk, {
         body="カウンセラーガーブ",
     })
-    sets.walk.windusts = set_combine(sets.walk, {
-        -- body="元老院警護リバリ",
-    })
-    sets.walk.windust = set_combine(sets.walk, {
-        -- body="連邦制式礼服",
-    })
 
     send_command('input /macro book 3; wait 2;input /lockstyleset 2')
+end
+
+function buff_change(buff,gain,buff_details)
+    if buff == 'ブラッドウェポン' and not gain then
+        windower.ffxi.cancel_buff(63)--暗黒
+    end
 end
 
 function precast(spell)
@@ -175,10 +191,6 @@ function precast(spell)
         set_equip = sets.fc
     elseif spell.english == 'Spectral Jig' and windower.ffxi.get_ability_recasts()[218] == 0 then
         windower.ffxi.cancel_buff(71)
-    elseif string.find(spell.name, 'ドレイン') or string.find(spell.name, 'アスピル') then
-        set_equip = set_combine(sets.drk_magic, sets.drain)
-    elseif string.find(spell.name, 'アブゾ') or string.find(spell.name, 'エンダーク') then
-        set_equip = sets.drk_magic
     elseif spell.action_type == 'Ranged Attack' then
          set_equip = sets.ra
     end
@@ -200,6 +212,12 @@ function midcast(spell)
         if uncap then
             set_equip = set_combine(set_equip, sets.uncap)
         end
+    elseif string.find(spell.name, 'ドレイン') or string.find(spell.name, 'アスピル') then
+        set_equip = set_combine(sets.drk_magic, sets.drain)
+    elseif string.find(spell.name, 'アブゾ') or string.find(spell.name, 'エンダーク') then
+        set_equip = sets.drk_magic
+    elseif sets.ja[spell.english] then
+        set_equip = sets.ja[spell.english]
     end
 
     if set_equip then
