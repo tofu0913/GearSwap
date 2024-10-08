@@ -257,7 +257,7 @@ function precast(spell)
         set_equip = sets.ra
     elseif spell.type == 'Waltz' then
         if buffactive['剣の舞い'] then
-            cast_delay(1)
+            cast_delay(1.5)
             windower.ffxi.cancel_buff(410)
         end
         -- set_equip = sets.waltz.pre
