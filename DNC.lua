@@ -100,7 +100,7 @@ function get_sets()
         -- feet={ name="ＨＯトーシュー+3", augments={'Enhances "Closed Position" effect',}},
         feet="ＭＣトーシュー+3",
         neck={ name="エトワールゴルゲ+2", augments={'Path: A',}},
-        waist="ケンタークベルト+1",
+        waist="ウィンバフベルト+1",
         left_ear="シェリダピアス",
         right_ear="テロスピアス",
         left_ring="シーリチリング+1",
@@ -142,7 +142,7 @@ function get_sets()
         -- body="ムンムジャケット+2",
         legs="メガナダショウス+2",
         feet="ムンムゲマッシュ+2",
-        waist="グルンフェルロープ",
+        -- waist="グルンフェルロープ",
     })
     sets.th = {
         ammo="完璧な幸運の卵",
