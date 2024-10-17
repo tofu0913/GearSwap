@@ -222,6 +222,7 @@ function setIdle()
 end
 
 function self_command(command)
+    command = command:lower()
     if command == 'pdt' then
         pdt = not pdt
         windower.add_to_chat('PDT- is: '..tostring(pdt))

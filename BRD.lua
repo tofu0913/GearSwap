@@ -240,6 +240,7 @@ function setIdle()
 end
 
 function self_command(command)
+    command = command:lower()
     if command == 'free' then
         mode = nil
         windower.add_to_chat('Mode is: '..mode)
