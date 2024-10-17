@@ -87,11 +87,15 @@ function get_sets()
         right_ring="シュネデックリング",
     }
     sets.engage = {
+        body="ＦＬオングルリヌ+3",
+        neck="リソムネックレス",
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
         left_ear="テロスピアス",
-        right_ear="セサンスピアス",
+        -- right_ear="セサンスピアス",
+        right_ear="素破の耳",
         left_ring="シーリチリング+1",
         right_ring="イフラマドリング",
+        back={ name="インタラアスケープ", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
     }
 
     sets.ja = {}
@@ -100,16 +104,19 @@ function get_sets()
         feet={ name="ビフスリッパー", augments={'Enhances "Nightingale" effect',}},
     }
     sets.ja['Troubadour'] = {
-        body="ＢＩジュストコル+1",--"ＢＩジュストコル+3",
-        -- body={ name="ＢＩジュストコル+2", augments={'Enhances "Troubadour" effect',}},
+        body={ name="ＢＩジュストコル+3", augments={'Enhances "Troubadour" effect',}},
     }
     sets.ja['Soul Voice'] = {
         legs={ name="ビフキャニオンズ", augments={'Enhances "Soul Voice" effect',}},
     }
 
     sets.ws = {
-        body="ＢＩジュストコル+1",--"ＢＩジュストコル+3",
+        range={ name="リノス", augments={'Attack+20','Sklchn.dmg.+4%','STR+5 CHR+5',}},
+        body={ name="ＢＩジュストコル+3", augments={'Enhances "Troubadour" effect',}},
         feet={ name="ニャメソルレット", augments={'Path: B',}},
+        right_ear="胡蝶のイヤリング",
+        left_ring="イラブラットリング",
+        back={ name="インタラアスケープ", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     }
 
     sets.ma = {}
