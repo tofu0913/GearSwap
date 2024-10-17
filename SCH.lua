@@ -5,8 +5,6 @@ require('mylibs/caster_lite')
 function get_sets()
     set_language('japanese')
     
-    sets.ws = {}
-
     pdt = false
     
     sets.idle = {
@@ -47,6 +45,13 @@ function get_sets()
     }
     
     sets.mb = {
+        head="ニャメヘルム",
+        body="ニャメメイル",
+        hands="ニャメガントレ",
+        legs="ニャメフランチャ",
+        feet={ name="ニャメソルレット", augments={'Path: B',}},
+        left_ring="夢神の指輪",
+        
         ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
         neck={ name="アギュトストール+2", augments={'Path: A',}},
         waist="オルペウスサッシュ",
@@ -70,6 +75,18 @@ function get_sets()
         back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
     }
 
+    sets.ws = {
+        head="ニャメヘルム",
+        body="ニャメメイル",
+        hands="ニャメガントレ",
+        legs="ニャメフランチャ",
+        feet={ name="ニャメソルレット", augments={'Path: B',}},
+        left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
+        right_ear="テロスピアス",
+        left_ring="シーリチリング+1",
+        right_ring="イフラマドリング",
+    }
+
     -- Common equipments
     sets.walk = {
         right_ring="シュネデックリング",
@@ -87,7 +104,7 @@ function get_sets()
             -- hands="ＡＢブレーサー+3",    --AF3
         -- legs={ name="アグゥスロップス", augments={'Path: A',}},    --T3
             -- feet="ＡＢローファー+3",    --AF3
-        -- neck={ name="アギュトストール+2", augments={'Path: A',}},    --AC
+            -- neck={ name="アギュトストール+2", augments={'Path: A',}},    --AC
             -- waist={ name="アキュイテベルト+1", augments={'Path: A',}},      --缺鱗
         -- left_ear="王将の耳飾り",      --Omen Ou
             -- right_ear="マリグナスピアス",
@@ -98,7 +115,7 @@ function get_sets()
 
     -- FC = {
         -- ammo="オンブルタスラム+1",  --Walk
-        -- head={ name="マーリンフード", augments={'"Mag.Atk.Bns."+3','"Fast Cast"+6','Mag. Acc.+11',}},       --DPoint
+            -- head={ name="マーリンフード", augments={'"Mag.Atk.Bns."+3','"Fast Cast"+6','Mag. Acc.+11',}},       --DPoint
         -- body="ピンガチュニック",       --Su3
         -- hands={ name="マーリンダスタナ", augments={'Mag. Acc.+9','"Fast Cast"+7','"Mag.Atk.Bns."+15',}},       --DPoint
         -- legs="ピンガズボン",          --Su3
@@ -107,9 +124,9 @@ function get_sets()
             -- waist="エンブラサッシュ",       --DPoint
         -- left_ear="エンチャンピアス+1",  --Walk
             -- right_ear="マリグナスピアス",
-        -- left_ring="キシャールリング",       --Omen GG
-        -- right_ring="プロリクスリング",      --VW
-        -- back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10',}}
+            -- left_ring="キシャールリング",       --Omen GG
+            -- right_ring="プロリクスリング",      --VW
+            -- back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10',}}
     -- }
 
     -- Magic = {    
@@ -120,13 +137,13 @@ function get_sets()
             -- hands="ＡＢブレーサー+3",    --AF3
         -- legs="アグゥスロップス",    --T3
         -- feet="アグゥピガッシュ",    --T3
-        -- neck={ name="アギュトストール+2", augments={'Path: A',}},
+            -- neck={ name="アギュトストール+2", augments={'Path: A',}},
             -- waist="オルペウスサッシュ",
         -- left_ear="王将の耳飾り",
             -- right_ear="マリグナスピアス",
             -- left_ring={ name="メタモルリング+1", augments={'Path: A',}},
         -- right_ring="女王の指輪+1",
-        -- back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10',}}
+            -- back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10',}}
     -- }
 
 
@@ -166,6 +183,9 @@ function midcast(spell)
         elseif spell.skill=='精霊魔法' then
             set_equip = sets.mb
         end
+            
+    elseif spell.type == 'WeaponSkill' then
+        set_equip = sets.ws
     end
 
     if set_equip then
