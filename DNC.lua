@@ -282,6 +282,7 @@ function precast(spell)
             cancel_spell()
             send_command(windower.to_shift_jis('input /ja "C.フラリッシュ" <me>; wait 1; input /ws '..spell.name..' <t>'))
         end
+        send_command('input //sw restart')
     end
 
     if set_equip then
