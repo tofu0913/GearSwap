@@ -28,6 +28,7 @@ function get_sets()
         legs="アヤモコッシャレ+2",
         feet="ナヴォンクラッコー",
         waist="エンブラサッシュ",
+        neck="ボルトサージトルク",
         left_ear="ロケイシャスピアス",
         -- right_ear="エンチャンピアス+1",
         left_ring="キシャールリング",
@@ -37,7 +38,6 @@ function get_sets()
     sets.fc.song = set_combine(sets.fc, {
         head="ＦＬキャロ+2",--"ＦＬキャロ+3",
         feet={ name="テルキネピガッシュ", augments={'Song spellcasting time -7%',}},
-        -- neck="ボルトサージトルク",
     })
     sets.fc.Cure = set_combine(sets.fc, {
         feet={ name="ヴァニヤクロッグ", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},

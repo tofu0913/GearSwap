@@ -68,6 +68,7 @@ function get_sets()
         legs="ギーヴトラウザ",
         feet={ name="マーリンクラッコー", augments={'"Fast Cast"+4','INT+4','Mag. Acc.+8','"Mag.Atk.Bns."+12',}},
         waist="エンブラサッシュ",
+        neck="ボルトサージトルク",
         left_ring="キシャールリング",
         right_ring="プロリクスリング",
         right_ear="マリグナスピアス",

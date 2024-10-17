@@ -163,6 +163,7 @@ function get_sets()
 
     sets.fc = {
         head="ＦＬバーゴネット+1",
+        neck="ボルトサージトルク",
         left_ear="マリグナスピアス",
         right_ear="ロケイシャスピアス",
         right_ring="プロリクスリング",
