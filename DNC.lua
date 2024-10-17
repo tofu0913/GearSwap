@@ -84,6 +84,10 @@ function get_sets()
         main="ンプガンドリング",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
     }
+    sets.mode['SW'] = {
+        main="デマサルデーゲン+1",
+        sub="トーレット",
+    }
 
     sets.tp={
         ammo="コイストボダー",
@@ -503,6 +507,8 @@ function self_command(command)
         mode = 'ACC'
     elseif command == 'p' then
         mode = 'P'
+    elseif command == 'sw' then
+        mode = 'SW'
     else
         windower.add_to_chat('==============================')
         windower.add_to_chat('Mode: '..tostring(mode))
