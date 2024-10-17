@@ -67,9 +67,12 @@ function get_sets()
     sets.buff.March = {
         hands="ＦＬマンシェト+3",
     }
+    sets.buff.Mazurka = {
+        range="ダウルダヴラ",
+    }
     sets.buff.Lullaby = {
-        -- range="ダウルダヴラ",
-        range="ギャッラルホルン",
+        range="ダウルダヴラ",
+        -- range="ギャッラルホルン",
         -- hands="ＢＲカフス+3",
     }
     sets.macc = {
@@ -187,6 +190,7 @@ function midcast(spell)
         elseif string.find(spell.english, 'Scherzo') then set_equip = set_combine(set_equip, sets.buff.Scherzo)
         elseif string.find(spell.english, 'Paeon') then set_equip = set_combine(set_equip, sets.buff.Paeon)
         elseif string.find(spell.english, 'March') then set_equip = set_combine(set_equip, sets.buff.March)
+        elseif string.find(spell.english, 'Mazurka') then set_equip = set_combine(set_equip, sets.buff.Mazurka)
         elseif string.find(spell.english, 'Lullaby') then 
             set_equip = set_combine(set_equip, sets.buff.Lullaby)
         end
