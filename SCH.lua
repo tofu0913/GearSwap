@@ -1,6 +1,6 @@
 
 mylib = require('mylib')
-require('mylibs/caster')
+require('mylibs/caster_lite')
 
 function get_sets()
     set_language('japanese')
@@ -207,13 +207,17 @@ function self_command(command)
         
     elseif command == 'suni' then
         cast_init()
-        add_spell('ja', '女神降臨の章')
+        if not buffactive['女神降臨の章'] then
+            add_spell('ja', '女神降臨の章')
+        end
         add_spell('ma', 'スニーク')
         cast_all()
     elseif command == 'regen' then
         cast_init()
-        add_spell('ja', '女神降臨の章')
-        add_spell('ma', 'リジェネIV')
+        if not buffactive['女神降臨の章'] then
+            add_spell('ja', '女神降臨の章')
+        end
+        add_spell('ma', 'リジェネV')
         cast_all()
     end
     
