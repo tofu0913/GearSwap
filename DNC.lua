@@ -133,6 +133,9 @@ function get_sets()
         right_ring="王将の指輪",
         back={ name="セヌーナマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
     }
+    sets.ws.fulltp={
+        left_ear="オドルピアス",
+    }
     sets.ws['Shark Bite'] = set_combine(sets.ws, {
         -- right_ear="オドルピアス",
         -- waist="グルンフェルロープ",
@@ -311,6 +314,9 @@ function midcast(spell)
             set_equip = sets.ws[spell.english]
         else
             set_equip = sets.ws
+        end
+        if windower.ffxi.get_player().vitals.tp == 3000 then
+            set_equip = set_combine(set_equip, sets.ws.fulltp)
         end
     end
     
