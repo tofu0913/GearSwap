@@ -339,7 +339,7 @@ function buff_change(buff,gain,buff_details)
         if gain then
             send_command(windower.to_shift_jis('input /p "死の宣告！！！Doom!!!!!!!!!!!!!<call>"'))
         else
-            send_command(windower.to_shift_jis('input /echo "死の宣告から回復した、Doom gone...."'))
+            windower.add_to_chat("死の宣告から回復した、Doom gone....")
         end
     end
 end

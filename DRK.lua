@@ -182,6 +182,13 @@ end
 function buff_change(buff,gain,buff_details)
     if buff == 'ブラッドウェポン' and not gain then
         windower.ffxi.cancel_buff(63)--暗黒
+    
+    elseif buff == '死の宣告' then
+        if gain then
+            send_command(windower.to_shift_jis('input /p 死の宣告！！！Doom!!!!!!!!!!!!!<call>'))
+        else
+            windower.add_to_chat("死の宣告から回復した、Doom gone....")
+        end
     end
 end
 
