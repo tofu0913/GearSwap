@@ -13,6 +13,7 @@ function get_sets()
         hands="ＡＢブレーサー+1",
         -- legs="ニャメフランチャ",
         feet="ＡＢローファー+1",
+        neck={ name="アギュトストール+2", augments={'Path: A',}},
         right_ring="シュネデックリング",
         back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}}
     }
