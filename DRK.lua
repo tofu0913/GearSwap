@@ -295,12 +295,15 @@ function self_command(command)
     elseif command == 'sw' then
         mode = 'Sword'
         setIdle()
+        send_command('input //ws war_sw')
     elseif command == 'cb' then
         mode = 'Club'
         setIdle()
+        send_command('input //ws war_cb')
     elseif command == 'gsw' then
         mode = 'Great Sword'
         setIdle()
+        send_command('input //ws drk_gsw')
     elseif command == 'sc' then
         mode = 'Scythe'
         setIdle()

@@ -510,12 +510,14 @@ function self_command(command)
         mode = ''
     elseif command == 'aby' then
         mode = 'ABY'
+        send_command('input //ws dnc_aby')
     elseif command == 'amb' then
         mode = 'AMB'
     elseif command == 'acc' then
         mode = 'ACC'
     elseif command == 'p' then
         mode = 'P'
+        send_command('input //ws dnc_p')
     elseif command == 'sw' then
         mode = 'SW'
     else

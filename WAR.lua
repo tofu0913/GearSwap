@@ -333,12 +333,15 @@ function self_command(command)
         mode = ''
     elseif command == 'sw' then
         mode = 'Sword'
+        send_command('input //ws war_sw')
     elseif command == 'gax' then
         mode = 'Great Axe'
     elseif command == 'cb' then
         mode = 'Club'
+        send_command('input //ws war_cb')
     elseif command == 'po' then
         mode = 'Polearm'
+        send_command('input //ws war_po')
     else
         windower.add_to_chat('==============================')
         windower.add_to_chat('Mode: '..tostring(mode))
