@@ -109,7 +109,8 @@ function get_sets()
         right_ear="テロスピアス",
         left_ring="シーリチリング+1",
         -- right_ring="ムンムリング",
-        right_ring="ペトロフリング",
+        -- right_ring="ペトロフリング",
+        right_ring="ゲリリング",
         -- back={ name="セヌーナマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
         back={ name="セヌーナマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
     }
@@ -431,8 +432,8 @@ windower.register_event('prerender',function ()
     
     local recast = windower.ffxi.get_ability_recasts()
     local mob = windower.ffxi.get_mob_by_target('t')
-    if os.clock() - lastStepCheck > 3 then
-        if step and recast[220] == 0 and recast[236] == 0 and player.vitals.tp >= 100 and mob and mob.distance<13 then
+    if os.clock() - lastStepCheck > 1.5 then
+        if step and recast[220] == 0 and recast[236] == 0 and player.vitals.tp >= 100 and mob and mob.distance<10 then
             if steploop+1 > #STEPS then
                 steploop = 1
             else
