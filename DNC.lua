@@ -125,7 +125,6 @@ function get_sets()
         body="メガナダクウィリ+2",
         -- body={ name="ヘルクリアベスト", augments={'Attack+20','Weapon skill damage +5%','Accuracy+6',}},
         legs="ＨＯタイツ+3",
-        -- feet={ name="ヘルクリアブーツ", augments={'Attack+14','Weapon skill damage +4%','DEX+10',}},
         feet={ name="ニャメソルレット", augments={'Path: B',}},
         waist="ケンタークベルト+1",
         left_ear="胡蝶のイヤリング",
@@ -206,6 +205,10 @@ function get_sets()
         left_ring="シーリチリング+1",
         right_ring="イラブラットリング",
         back={ name="セヌーナマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+    }
+    sets.buff = {}
+    sets.buff.Phalanx = {
+        feet={ name="ヘルクリアブーツ", augments={'"Dbl.Atk."+1','"Mag.Atk.Bns."+17','Phalanx +5','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
     }
     
     sets.ra = {
@@ -317,6 +320,8 @@ function midcast(spell)
         if windower.ffxi.get_player().vitals.tp == 3000 then
             set_equip = set_combine(set_equip, sets.ws.fulltp)
         end
+    elseif sets.buff[spell.english] then
+        set_equip = sets.buff[spell.english]
     end
     
     if set_equip then
@@ -499,6 +504,12 @@ function self_command(command)
     elseif command == 'all0' then
         switchAuto(false)
         
+    elseif command == 'phalanx' then
+        spell = {}
+        spell.english = 'Phalanx'
+        spell.type = '強化魔法'
+        midcast(spell)
+
     -- elseif command == 'ann' then
         -- announce = not announce
         -- windower.add_to_chat('Announce is: '..tostring(announce))
