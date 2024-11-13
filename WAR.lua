@@ -329,6 +329,10 @@ function self_command(command)
     elseif command == 'ann' then
         announce = not announce
         windower.add_to_chat('Announce is: '..tostring(announce))
+    elseif command == 'th1' then
+        th = true
+    elseif command == 'th0' then
+        th = false
     elseif command == 'th' then
         th = not th
         windower.add_to_chat('TH is: '..tostring(th))
