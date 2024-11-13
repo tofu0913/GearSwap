@@ -8,7 +8,7 @@ local texts = require('texts')
 local text_setting = {
     pos = {
         x = 15,
-        y = 751
+        y = 945
     }
 }
 function setup_text(text)
@@ -270,21 +270,19 @@ function precast(spell)
         end
         -- set_equip = sets.waltz.pre
     elseif spell.type == 'Step' then
-        -- local under3FMs = not buffactive['フィニシングムーブ3'] and not buffactive['フィニシングムーブ4'] and not buffactive['フィニシングムーブ5'] and not buffactive['フィニシングムーブ(5+)']
-        -- local under3FMs = not buffactive['フィニシングムーブ(6+)']
-        -- if windower.ffxi.get_ability_recasts()[236] < 1 and under3FMs then
         if windower.ffxi.get_ability_recasts()[236] < 1 then
-            -- cast_delay(1.1)
-            -- send_command(windower.to_shift_jis('input /ja "プレスト" <me>'))
             cancel_spell()
             send_command(windower.to_shift_jis('input /ja "プレスト" <me>; wait 1; input /ja "'..spell.name..'" <t>'))
         end
     elseif spell.type == 'WeaponSkill' then
         if cflo and not buffactive['C.フラリッシュ'] and windower.ffxi.get_ability_recasts()[226] < 1 and get_FM() > 0 then
-           -- cast_delay(1.5)
-            -- send_command(windower.to_shift_jis('input /ja "C.フラリッシュ" <me>'))
             cancel_spell()
             send_command(windower.to_shift_jis('input /ja "C.フラリッシュ" <me>; wait 1; input /ws '..spell.name..' <t>'))
+        
+        -- elseif backstep and not buffactive['プレスト'] and windower.ffxi.get_ability_recasts()[236] < 1 then
+            -- cancel_spell()
+            -- send_command(windower.to_shift_jis('input /ws '..spell.name..' <t>; wait 4; input /ja "プレスト" <me>; wait 1; input /ja "ボックスステップ" <t>'))
+            
         end
         send_command('input //sw restart')
     end
