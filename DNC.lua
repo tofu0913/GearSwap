@@ -212,6 +212,8 @@ function get_sets()
     sets.buff = {}
     sets.buff.Phalanx = {
         feet={ name="ヘルクリアブーツ", augments={'"Dbl.Atk."+1','"Mag.Atk.Bns."+17','Phalanx +5','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
+        body={ name="ヘルクリアベスト"},
+        legs={ name="ヘルクリアトラウザ"},
     }
     
     sets.ra = {
@@ -285,7 +287,7 @@ function precast(spell)
         if cflo and not buffactive['C.フラリッシュ'] and windower.ffxi.get_ability_recasts()[226] < 1 and get_FM() > 0 then
             cancel_spell()
             send_command(windower.to_shift_jis('input /ja "C.フラリッシュ" <me>; wait 1; input /ws '..spell.name..' <t>'))
-        
+			
         -- elseif backstep and not buffactive['プレスト'] and windower.ffxi.get_ability_recasts()[236] < 1 then
             -- cancel_spell()
             -- send_command(windower.to_shift_jis('input /ws '..spell.name..' <t>; wait 4; input /ja "プレスト" <me>; wait 1; input /ja "ボックスステップ" <t>'))
@@ -519,11 +521,15 @@ function self_command(command)
     elseif command == 'all0' then
         switchAuto(false)
         
-    elseif command == 'phalanx' then
-        spell = {}
+    elseif command == 'pha1' then
+        windower.add_to_chat('Phalanx ON')
+        local spell = {}
         spell.english = 'Phalanx'
         spell.type = '強化魔法'
         midcast(spell)
+    elseif command == 'pha0' then
+        windower.add_to_chat('Phalanx OFF')
+        setIdle()
 
     -- elseif command == 'ann' then
         -- announce = not announce
@@ -552,7 +558,6 @@ function self_command(command)
         mode = 'SW'
 		lockstyle()
     else
-        windower.add_to_chat('==============================')
         windower.add_to_chat('Mode: '..tostring(mode))
         windower.add_to_chat('Available modes: [aby, amb, acc, p]')
         windower.add_to_chat('PDT: '..tostring(pdt))
@@ -565,6 +570,8 @@ function self_command(command)
         -- windower.add_to_chat('Announce is: '..tostring(announce))
     end
     
-    setIdle()
+    if command ~= 'pha1' then
+        setIdle()
+    end
     updateText()
 end
