@@ -67,10 +67,12 @@ function get_sets()
     step = true
     mode = ''
     updateText()
+	default_style = 5
         
     sets.mode['ABY'] = {
         main={ name="トゥワシュトラ", augments={'Path: A',}},
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
+		style=11,
     }
     sets.mode['AMB'] = {
         main="トーレット",
@@ -79,6 +81,7 @@ function get_sets()
     sets.mode['ACC'] = {
         main={ name="トゥワシュトラ", augments={'Path: A',}},
         sub="ンプガンドリング",
+		style=11,
     }
     sets.mode['P'] = {
         main="ンプガンドリング",
@@ -251,7 +254,7 @@ function get_sets()
     }
 
     send_command('input /macro book 6; ')
-    send_command('wait 2;input /lockstyleset 5')
+    send_command('wait 2;input /lockstyleset '..default_style)
 end
 
 function pretarget(spell,action)
@@ -473,11 +476,23 @@ function switchAuto(on)
     windower.add_to_chat('Step is: '..tostring(step))
 end
 
+function lockstyle()
+	if mode ~='' and sets.mode[mode] and sets.mode[mode].style then
+		send_command('input /lockstyleset '..sets.mode[mode].style)
+	else
+		send_command('input /lockstyleset '..default_style)
+	end
+end
+
 function self_command(command)
     command = command:lower()
     if command == 'pdt' then
         pdt = not pdt
         windower.add_to_chat('PDT- is: '..tostring(pdt))
+		
+    elseif command == 'style' or command == 's' then
+		lockstyle()
+
     elseif command == 'cflo' then
         cflo = not cflo
         windower.add_to_chat('C.Flour is: '..tostring(cflo))
@@ -518,18 +533,24 @@ function self_command(command)
         windower.add_to_chat('TH is: '..tostring(th))
     elseif command == 'free' then
         mode = ''
+		lockstyle()
     elseif command == 'aby' then
         mode = 'ABY'
         send_command('input //ws dnc_aby')
+		lockstyle()
     elseif command == 'amb' then
         mode = 'AMB'
+		lockstyle()
     elseif command == 'acc' then
         mode = 'ACC'
+		lockstyle()
     elseif command == 'p' then
         mode = 'P'
+		lockstyle()
         send_command('input //ws dnc_p')
     elseif command == 'sw' then
         mode = 'SW'
+		lockstyle()
     else
         windower.add_to_chat('==============================')
         windower.add_to_chat('Mode: '..tostring(mode))

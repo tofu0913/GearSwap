@@ -16,14 +16,17 @@ function get_sets()
     acc = false
     th = false
     mode = ''
+	default_style = 1
     
     sets.mode['Sword'] = {
         main="ネイグリング",
         sub="ブラーシールド+1",
+		style=1,
     }
     sets.mode['Great Axe'] = {
         main={ name="シャンゴル", augments={'Path: A',}},
         sub="ウトゥグリップ",
+		style=18,
     }
     sets.mode['Club'] = {
         main={ name="ロクソテクメイス+1", augments={'Path: A',}},
@@ -181,7 +184,7 @@ function get_sets()
         -- left_ring="Purity Ring",
     }
 
-    send_command('input /macro book 9;wait 2;input /lockstyleset 1')
+    send_command('input /macro book 9;wait 2;input /lockstyleset '..default_style)
 end
 
 function precast(spell)
@@ -315,11 +318,23 @@ function sub_job_change(new,old)
     send_command('wait 4;input /lockstyleset 1')
 end
 
+function lockstyle()
+	if mode ~='' and sets.mode[mode] and sets.mode[mode].style then
+		send_command('input /lockstyleset '..sets.mode[mode].style)
+	else
+		send_command('input /lockstyleset '..default_style)
+	end
+end
+
 function self_command(command)
     command = command:lower()
     if command == 'pdt' then
         pdt = not pdt
         windower.add_to_chat('PDT- is: '..tostring(pdt))
+		
+    elseif command == 'style' or command == 's' then
+		lockstyle()
+		
     elseif command == 'uncap' then
         uncap = not uncap
         windower.add_to_chat('Uncapped is: '..tostring(uncap))
@@ -338,17 +353,24 @@ function self_command(command)
         windower.add_to_chat('TH is: '..tostring(th))
     elseif command == 'free' then
         mode = ''
+		lockstyle()
     elseif command == 'sw' then
         mode = 'Sword'
         send_command('input //ws war_sw')
+		lockstyle()
     elseif command == 'gax' then
         mode = 'Great Axe'
+        send_command('input //ws s')
+		lockstyle()
     elseif command == 'cb' then
         mode = 'Club'
         send_command('input //ws war_cb')
+		lockstyle()
     elseif command == 'po' then
         mode = 'Polearm'
         send_command('input //ws war_po')
+		lockstyle()
+        
     else
         windower.add_to_chat('==============================')
         windower.add_to_chat('Mode: '..tostring(mode))
