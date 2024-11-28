@@ -26,19 +26,17 @@ function get_sets()
     sets.mode['Great Axe'] = {
         main={ name="シャンゴル", augments={'Path: A',}},
         sub="ウトゥグリップ",
-		style=18,
+		style=25,
     }
     sets.mode['Club'] = {
         main={ name="ロクソテクメイス+1", augments={'Path: A',}},
         sub="ブラーシールド+1",
-    }
-    sets.mode['Club'] = {
-        main={ name="ロクソテクメイス+1", augments={'Path: A',}},
-        sub="ブラーシールド+1",
+		style=21,
     }
     sets.mode['Polearm'] = {
         main="シャイニングワン",
         sub="ウトゥグリップ",
+		style=22,
     }
     
     

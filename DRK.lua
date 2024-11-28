@@ -12,22 +12,27 @@ function get_sets()
     uncap = false
     th = false
     mode = ''
+	default_style = 2
         
     sets.mode['Sword'] = {
         main="ネイグリング",
         sub="ブラーシールド+1",
+		style=3,
     }
     sets.mode['Great Sword'] = {
         main={ name="カラドボルグ", augments={'Path: A',}},
         sub="ウトゥグリップ",
+		style=2,
     }
     sets.mode['Scythe'] = {
         main={ name="アポカリプス", augments={'Path: A',}},
         sub="ウトゥグリップ",
+		style=23,
     }
     sets.mode['Club'] = {
         main={ name="ロクソテクメイス+1", augments={'Path: A',}},
         sub="ブラーシールド+1",
+		style=21,
     }
     sets.tp={
         -- ammo="銀銭",
@@ -176,7 +181,7 @@ function get_sets()
         body="カウンセラーガーブ",
     })
 
-    send_command('input /macro book 3; wait 2;input /lockstyleset 2')
+    send_command('input /macro book 3; wait 2;input /lockstyleset '..default_style)
 end
 
 function buff_change(buff,gain,buff_details)
@@ -272,10 +277,22 @@ function setIdle()
     end
 end
 
+function lockstyle()
+	if mode ~='' and sets.mode[mode] and sets.mode[mode].style then
+		send_command('input /lockstyleset '..sets.mode[mode].style)
+	else
+		send_command('input /lockstyleset '..default_style)
+	end
+end
+
 function self_command(command)
     if command == 'pdt' then
         pdt = not pdt
         windower.add_to_chat('PDT- is: '..tostring(pdt))
+		
+    elseif command == 'style' or command == 's' then
+		lockstyle()
+		
     elseif command == 'uncap' then
         uncap = not uncap
         windower.add_to_chat('Uncapped is: '..tostring(uncap))
@@ -291,22 +308,22 @@ function self_command(command)
         end
     elseif command == 'free' then
         mode = ''
-        setIdle()
+		lockstyle()
     elseif command == 'sw' then
         mode = 'Sword'
-        setIdle()
+		lockstyle()
         send_command('input //ws war_sw')
     elseif command == 'cb' then
         mode = 'Club'
-        setIdle()
+		lockstyle()
         send_command('input //ws war_cb')
     elseif command == 'gsw' then
         mode = 'Great Sword'
-        setIdle()
+		lockstyle()
         send_command('input //ws drk_gsw')
     elseif command == 'sc' then
         mode = 'Scythe'
-        setIdle()
+		lockstyle()
     else
         windower.add_to_chat('==============================')
         windower.add_to_chat('Mode: '..tostring(mode))
