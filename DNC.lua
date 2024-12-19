@@ -150,6 +150,9 @@ function get_sets()
     sets.ws['Evisceration'] = set_combine(sets.ws, {
         -- right_ear="オドルピアス",
         -- waist="グルンフェルロープ",
+        -- neck="フォシャゴルゲット",
+        -- waist="フォシャベルト",
+        -- right_ear="オドルピアス",
     })
     sets.ws['Exenterator'] = set_combine(sets.ws, {
         -- right_ear="オドルピアス",
@@ -157,6 +160,10 @@ function get_sets()
         legs="メガナダショウス+2",
         feet="ムンムゲマッシュ+2",
         -- waist="グルンフェルロープ",
+    })
+    sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {
+        -- neck="フォシャゴルゲット",
+        waist="フォシャベルト",
     })
     sets.th = {
         ammo="完璧な幸運の卵",
@@ -215,9 +222,10 @@ function get_sets()
     }
     sets.buff = {}
     sets.buff.Phalanx = {
-        feet={ name="ヘルクリアブーツ", augments={'"Dbl.Atk."+1','"Mag.Atk.Bns."+17','Phalanx +5','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
         body={ name="ヘルクリアベスト"},
+        hands={ name="ヘルクリアグローブ"},
         legs={ name="ヘルクリアトラウザ"},
+        feet={ name="ヘルクリアブーツ", augments={'"Dbl.Atk."+1','"Mag.Atk.Bns."+17','Phalanx +5','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
     }
     
     sets.ra = {
