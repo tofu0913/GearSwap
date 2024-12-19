@@ -78,7 +78,7 @@ function get_sets()
         main="トーレット",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
     }
-    sets.mode['ACC'] = {
+    sets.mode['ABYP'] = {
         main={ name="トゥワシュトラ", augments={'Path: A',}},
         sub="ンプガンドリング",
 		style=11,
@@ -86,6 +86,10 @@ function get_sets()
     sets.mode['P'] = {
         main="ンプガンドリング",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
+    }
+    sets.mode['PABY'] = {
+        main="ンプガンドリング",
+        sub={ name="トゥワシュトラ", augments={'Path: A',}},
     }
     sets.mode['SW'] = {
         main="デマサルデーゲン+1",
@@ -387,7 +391,7 @@ end
 
 local lastStepCheck = os.clock()
 local lastBfloCheck = os.clock()
-res = require('resources')
+
 local steploop = 1
 STEPS = {
     "ボックスステップ",
@@ -544,14 +548,18 @@ function self_command(command)
         mode = 'ABY'
         send_command('input //ws dnc_aby')
 		lockstyle()
+    elseif command == 'abyp' then
+        mode = 'ABYP'
+		lockstyle()
     elseif command == 'amb' then
         mode = 'AMB'
 		lockstyle()
-    elseif command == 'acc' then
-        mode = 'ACC'
-		lockstyle()
     elseif command == 'p' then
         mode = 'P'
+		lockstyle()
+        send_command('input //ws dnc_p')
+    elseif command == 'paby' then
+        mode = 'PABY'
 		lockstyle()
         send_command('input //ws dnc_p')
     elseif command == 'sw' then
