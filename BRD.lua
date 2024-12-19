@@ -5,6 +5,7 @@ require('mylibs/caster_lite')
 function get_sets()
     set_language('japanese')
     
+    ef = false
     dummy = false
     mode = nil
     
@@ -249,6 +250,13 @@ function setIdle()
     end
 end
 
+function buff_change(buff,gain,buff_details)
+    if ef and buff == 'クラリオンコール' and gain then
+        windower.add_to_chat('SP ON')
+		windower.send_command('input //lua r singer; wait 2; input //sing on')
+	end
+end
+
 function self_command(command)
     command = command:lower()
     if command == 'free' then
@@ -267,6 +275,10 @@ function self_command(command)
         -- mode = 'MARS'
         -- windower.add_to_chat('Mode is: '..mode)
         
+    elseif command == 'ef' then
+        ef = not ef
+        windower.add_to_chat('EF mode is: '..tostring(ef))
+
     elseif command == 'dummy' then
         dummy = true
         -- windower.add_to_chat('Dummy mode is ON')
