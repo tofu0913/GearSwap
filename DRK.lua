@@ -119,6 +119,11 @@ function get_sets()
         hands={ name="オディシアガントレ", augments={'Accuracy+13 Attack+13','Weapon skill damage +4%','Accuracy+15','Attack+14',}},
     })
     
+	sets.buff = {}
+    sets.buff.Phalanx = {
+        legs="サクパタクウィス",
+	}
+	
     sets.pdt = {
         -- head="ニャメヘルム",
         head="サクパタヘルム",
@@ -247,6 +252,8 @@ function midcast(spell)
         set_equip = sets.drk_magic
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
+    elseif sets.buff[spell.english] then
+        set_equip = sets.buff[spell.english]
     end
 
     if set_equip then
@@ -322,6 +329,15 @@ function self_command(command)
             enable('legs', 'ammo')
             setIdle()
         end
+    elseif command == 'pha1' then
+        windower.add_to_chat('Phalanx ON')
+        local spell = {}
+        spell.name = 'ファランクス'
+        spell.english = 'Phalanx'
+        spell.type = '強化魔法'
+        midcast(spell)
+    elseif command == 'pha0' then
+        windower.add_to_chat('Phalanx OFF')
     elseif command == 'free' then
         mode = ''
 		lockstyle()
@@ -349,5 +365,7 @@ function self_command(command)
         windower.add_to_chat('TH: '..tostring(th))
     end
     
-    setIdle()
+    if command ~= 'pha1' then
+        setIdle()
+    end
 end
