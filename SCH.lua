@@ -2,11 +2,52 @@
 mylib = require('mylib')
 require('mylibs/caster_lite')
 
+-- Widget
+local texts = require('texts')
+local text_setting = {
+    pos = {
+        x = 15,
+        y = 945
+    }
+}
+function setup_text(text)
+    text:bg_alpha(255)
+    text:bg_visible(true)
+    text:font('ＭＳ ゴシック')
+    text:size(11)
+    text:color(255,255,255,255)
+    text:stroke_alpha(200)
+    text:stroke_color(20,20,20)
+    text:stroke_width(2)
+	text:show()
+end
+text = texts.new("${flags}", text_setting, {})
+setup_text(text)
+
+function updateText()
+    local flags = ' '
+	if lowsc then
+        flags = flags..'Low '
+    end
+	if subling then
+        flags = flags..'Sub '
+    end
+	if mbmode then
+        flags = flags..'MB '
+	else
+        flags = flags..' '
+	end
+    -- windower.add_to_chat('Low Haste: '..tostring(lowhaste))
+    -- windower.add_to_chat('TH: '..tostring(th))
+    text.flags = flags
+end
+
 function get_sets()
     set_language('japanese')
     
     lowsc = false
 	subling = false
+	mbmode = false
     
     sets.idle = {
         main="ムサ",
@@ -134,6 +175,7 @@ function get_sets()
     })
     
     send_command('input /macro book 12; wait 2;input /lockstyleset 7')
+	updateText()
 end
 
 function precast(spell)
@@ -146,6 +188,10 @@ function precast(spell)
 			windower.ffxi.cancel_buff(71)
 		end
 		
+        -- if spell.english == 'Firestorm' then
+            -- cancel_spell()
+            -- send_command(windower.to_shift_jis('input /ma "熱波の陣II" <me>'))
+        -- end
         -- if spell.english == 'Adloquium' and (buffactive['白のグリモア']) then
             -- cancel_spell()
             -- send_command(windower.to_shift_jis('input /ja 女神降臨の章 <me>; wait 1; input /ma "'..spell.name..'" <me>'))
@@ -234,9 +280,11 @@ function self_command(command)
     if command == 'low1' then
         lowsc = true
         windower.add_to_chat('LowSC is: '..tostring(lowsc))
+		updateText()
     elseif command == 'low0' then
         lowsc = false
         windower.add_to_chat('LowSC is: '..tostring(lowsc))
+		updateText()
     elseif command == 's' then
         windower.add_to_chat('==============================')
         windower.add_to_chat('LowSC is: '..tostring(lowsc))
