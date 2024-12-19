@@ -275,6 +275,20 @@ function buff_change(buff,gain,buff_details)
 	end
 end
 
+sc = {
+    ['fire'] =    {['1']='ストーン',  ['2']='火門の計', ['3']='ファイアV', ['ann']="「溶解」 MB:火"},
+    ['stone'] =   {['1']='エアロ',   ['2']='土門の計', ['3']='ストーンV', ['ann']="「切断」 MB:土"},
+    ['water'] =   {['1']='ストーン',  ['2']='水門の計', ['3']='ウォータV', ['ann']="「振動」 MB:水"},
+    ['wind'] =    {['1']='ストーン',  ['2']='風門の計', ['3']='エアロV', ['ann']="「炸裂」 MB:風"},
+    ['ice'] =     {['1']='ウォータ',  ['2']='氷門の計', ['3']='ブリザドV', ['ann']="「硬化」 MB:氷"},
+    ['thunder'] = {['1']='ブリザド',  ['2']='雷門の計', ['3']='サンダーV', ['ann']="「衝撃」 MB:雷"},
+    ['light'] =   {['1']='闇門の計', ['2']='光門の計',['3']='', ['ann']="「貫通」 MB:光"},
+    ['dark'] =    {['1']='ブリザド',  ['2']='闇門の計', ['3']='', ['ann']="「収縮」 MB:闇"},
+    ['fusion'] =  {['1']='ファイア',  ['2']='雷門の計', ['3']='ファイアV', ['ann']="「核熱」 MB:火・光"},
+    ['frag'] =     {['1']='ブリザド',  ['2']='水門の計', ['3']='サンダーV', ['ann']="「分解」 MB:風・雷"},
+    ['grav'] =     {['1']='エアロ',   ['2']='闇門の計', ['3']='ストーンV', ['ann']="「重力」 MB:土・闇"},
+    ['disto'] =     {['1']='光門の計', ['2']='土門の計', ['3']='ブリザドV', ['ann']="「湾曲」 MB:水・氷"},
+}
 function self_command(command)
     command = command:lower()
     if command == 'low1' then
@@ -296,13 +310,65 @@ function self_command(command)
         end
         add_spell('ma', 'スニーク')
         cast_all()
+    elseif command == 'inv' then
+        cast_init()
+        if not buffactive['女神降臨の章'] then
+            add_spell('ja', '女神降臨の章')
+        end
+        add_spell('ma', 'インビジ')
+        cast_all()
+		
     elseif command == 'regen' then
         cast_init()
         if not buffactive['女神降臨の章'] then
             add_spell('ja', '女神降臨の章')
         end
+        if not buffactive['令狸執鼠の章'] then
+            add_spell('ja', '令狸執鼠の章')
+        end
         add_spell('ma', 'リジェネV')
         cast_all()
+		
+    elseif command == '2' then
+        cast_init()
+        if not buffactive['女神降臨の章'] then
+            add_spell('ja', '女神降臨の章')
+        end
+        if not buffactive['令狸執鼠の章'] then
+            add_spell('ja', '令狸執鼠の章')
+        end
+        cast_all()
+		
+    elseif command == 'prosh' then
+        cast_init()
+        if not buffactive['女神降臨の章'] then
+            add_spell('ja', '女神降臨の章')
+        end
+        add_spell('ma', 'プロテスV')
+		add_spell('ja', '女神降臨の章')
+        add_spell('ma', 'シェルV')
+        cast_all()
+		
+    elseif sc[command] then
+		if not buffactive['黒のグリモア'] and not buffactive['黒の補遺'] then
+			windower.add_to_chat('No グリモア')
+			return
+		end
+        cast_init()
+        add_command('/p 震天連携2秒前 =>'..sc[command]['ann']..' <call10>')
+        add_command('//gc low1')
+        if not buffactive['震天動地の章'] then
+            add_spell('ja', '震天動地の章')
+        end
+        add_spell('ma', sc[command]['1'], 't')
+        add_spell('ja', '震天動地の章')
+        add_spell('ma', sc[command]['2'], 't')
+        add_command('//gc low0')
+        add_command('/p ======== ＭＢ Let\'s go ======== <call11>')
+        -- add_spell('ja', '気炎万丈の章')
+        -- add_spell('ma', sc[command]['3'], 't')
+        cast_all()
+    
     end
     
     setIdle()
