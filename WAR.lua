@@ -107,6 +107,12 @@ function get_sets()
         left_ring="イフラマドリング",
         right_ring="王将の指輪",
     }
+	
+	sets.buff = {}
+    sets.buff.Phalanx = {
+        legs="サクパタクウィス",
+	}
+	
     sets.pdt = {
         head="ＢＩマスク+3",
         -- body="ニャメメイル",
@@ -222,6 +228,8 @@ function midcast(spell)
         end
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
+    elseif sets.buff[spell.english] then
+        set_equip = sets.buff[spell.english]
     end
 
     if set_equip then
@@ -350,6 +358,14 @@ function self_command(command)
     elseif command == 'th' then
         th = not th
         windower.add_to_chat('TH is: '..tostring(th))
+    elseif command == 'pha1' then
+        windower.add_to_chat('Phalanx ON')
+        local spell = {}
+        spell.english = 'Phalanx'
+        spell.type = '強化魔法'
+        midcast(spell)
+    elseif command == 'pha0' then
+        windower.add_to_chat('Phalanx OFF')
     elseif command == 'free' then
         mode = ''
 		lockstyle()
@@ -371,16 +387,18 @@ function self_command(command)
         send_command('input //ws war_po')
 		lockstyle()
         
-    else
-        windower.add_to_chat('==============================')
-        windower.add_to_chat('Mode: '..tostring(mode))
-        windower.add_to_chat('Available modes: [sw, gax, cb, po]')
-        windower.add_to_chat('PDT: '..tostring(pdt))
-        windower.add_to_chat('Accuracy: '..tostring(acc))
-        windower.add_to_chat('Uncapped: '..tostring(uncap))
-        windower.add_to_chat('TH: '..tostring(th))
-        windower.add_to_chat('Announce: '..tostring(announce))
+    -- else
+        -- windower.add_to_chat('==============================')
+        -- windower.add_to_chat('Mode: '..tostring(mode))
+        -- windower.add_to_chat('Available modes: [sw, gax, cb, po]')
+        -- windower.add_to_chat('PDT: '..tostring(pdt))
+        -- windower.add_to_chat('Accuracy: '..tostring(acc))
+        -- windower.add_to_chat('Uncapped: '..tostring(uncap))
+        -- windower.add_to_chat('TH: '..tostring(th))
+        -- windower.add_to_chat('Announce: '..tostring(announce))
     end
     
-    setIdle()
+    if command ~= 'pha1' then
+        setIdle()
+    end
 end
