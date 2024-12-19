@@ -36,10 +36,12 @@ function get_sets()
     }
     sets.tp={
         -- ammo="銀銭",
-        ammo={ name="シーズボムレット+1", augments={'Path: A',}},
+        -- ammo={ name="シーズボムレット+1", augments={'Path: A',}},
+        ammo="コイストボダー",
         
         head="ＨＴバゴネット+3",
         -- body="デーゴンブレスト",
+        body="フロプトブレスト",
         legs="ＩＧフランチャ+3",
         
         -- ### Ambuscade set ###
@@ -50,7 +52,7 @@ function get_sets()
         feet="フラマガンビエラ+2",
         
         -- ### Sakpata set ###
-        body="サクパタブレスト",
+        -- body="サクパタブレスト",
         hands="サクパタガントレ",
         -- legs="サクパタクウィス",
     
@@ -85,6 +87,7 @@ function get_sets()
         hands="サクパタガントレ",
         legs={ name="ＦＬフランチャー+3", augments={'Enhances "Muted Soul" effect',}},
         feet="ＨＴソルレット+3",
+        neck={ name="暗黒の数珠+2", augments={'Path: A',}},
         -- left_ring="シーリチリング+1",
         left_ring="イフラマドリング",
         right_ring="王将の指輪",
@@ -96,15 +99,20 @@ function get_sets()
     sets.ws.Catastrophe = set_combine(sets.ws, {
         -- head="ラトリサリット",
         -- body="ラトリブレスト",
+        waist="フォシャベルト",
         hands="ラトリガドリング",
     })
+    sets.ws.Resolution = set_combine(sets.ws, {
+        waist="フォシャベルト",
+	})
     sets.ws.Torcleaver = set_combine(sets.ws, {
         -- head="サクパタヘルム",
         -- head={ name="オディシアヘルム", augments={'Attack+15','Weapon skill damage +1%','VIT+13','Accuracy+9',}},
         -- body="サクパタブレスト",
-        -- hands={ name="オディシアガントレ", augments={'Accuracy+13 Attack+13','Weapon skill damage +4%','Accuracy+15','Attack+14',}},
+        hands={ name="オディシアガントレ", augments={'Accuracy+13 Attack+13','Weapon skill damage +4%','Accuracy+15','Attack+14',}},
         -- legs="サクパタクウィス",
         -- feet="スレビアレギンス+2",
+        -- waist="フォシャベルト",
         back={ name="アンコウマント", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
     })
     sets.ws['Savage Blade'] = set_combine(sets.ws, {
@@ -112,11 +120,16 @@ function get_sets()
     })
     
     sets.pdt = {
-        head="ニャメヘルム",
-        body="ニャメメイル",
-        hands="ニャメガントレ",
-        legs="ニャメフランチャ",
-        feet={ name="ニャメソルレット", augments={'Path: B',}},
+        -- head="ニャメヘルム",
+        head="サクパタヘルム",
+        -- body="ニャメメイル",
+        body="フロプトブレスト",
+        -- hands="ニャメガントレ",
+        hands="サクパタガントレ",
+        -- legs="ニャメフランチャ",
+        legs="サクパタクウィス",
+		feet="サクパタレギンス",
+        -- feet={ name="ニャメソルレット", augments={'Path: B',}},
     }
     sets.uncap = {
         body="サクパタブレスト",
@@ -137,6 +150,9 @@ function get_sets()
     }
     sets.ja['Blood Weapon'] = {
         hands="ＦＬキュイラス+1",
+    }
+    sets.ja['Weapon Bash'] = {
+        hands="ＩＧガントレ+2",--+3
     }
     
     sets.drk_magic = {
