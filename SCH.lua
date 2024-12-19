@@ -5,7 +5,7 @@ require('mylibs/caster_lite')
 function get_sets()
     set_language('japanese')
     
-    pdt = false
+    lowsc = false
     
     sets.idle = {
         main="ムサ",
@@ -167,6 +167,9 @@ function midcast(spell)
 		elseif string.find(spell.english,'storm') then
 			set_equip = sets.ma.storm
             
+        elseif buffactive['震天動地の章'] and lowsc then
+            set_equip = sets.lowsc
+            
         elseif sets.ma[spell.english] then
             set_equip = sets.ma[spell.english]
             
@@ -212,12 +215,15 @@ end
 
 function self_command(command)
     command = command:lower()
-    if command == 'pdt' then
-        pdt = not pdt
-        windower.add_to_chat('PDT- is: '..tostring(pdt))
+    if command == 'low1' then
+        lowsc = true
+        windower.add_to_chat('LowSC is: '..tostring(lowsc))
+    elseif command == 'low0' then
+        lowsc = false
+        windower.add_to_chat('LowSC is: '..tostring(lowsc))
     elseif command == 's' then
         windower.add_to_chat('==============================')
-        windower.add_to_chat('PDT- is: '..tostring(pdt))
+        windower.add_to_chat('LowSC is: '..tostring(lowsc))
         
     elseif command == 'suni' then
         cast_init()
