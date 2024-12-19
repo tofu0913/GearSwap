@@ -37,7 +37,7 @@ function get_sets()
     }
     sets.fc.song = set_combine(sets.fc, {
         head="ＦＬキャロ+2",--"ＦＬキャロ+3",
-        feet={ name="テルキネピガッシュ", augments={'Song spellcasting time -7%',}},
+		feet={ name="テルキネピガッシュ", augments={'Song spellcasting time -7%','Enh. Mag. eff. dur. +9',}},
     })
     sets.fc.Cure = set_combine(sets.fc, {
         feet={ name="ヴァニヤクロッグ", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
@@ -46,20 +46,20 @@ function get_sets()
     })
     
     sets.buff = {
-        main="カーリ",-- { name="カルンウェナン", augments={'Path: A',}},
+        -- main="カルンウェナン",
         -- sub="アムラピシールド",
         body="ＦＬオングルリヌ+3",
         hands="ＦＬマンシェト+3",
         legs="インヤガシャルワ+2",
-        feet="ＢＲスリッパー+2",--"ＢＲスリッパー+3",
+        feet="ＢＲスリッパー+3",
         neck="月虹の呼び子+1",
         right_ear={ name="フィリピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}},
     }
     sets.buff.Ballad = {
-        legs="ＦＬラングラヴ+1",--"ＦＬラングラヴ+3",
+        -- legs="ＦＬラングラヴ+1",--"ＦＬラングラヴ+3",
     }
     sets.buff.Scherzo = {
-        legs="フィリコテュルヌ",--"ＦＬコテュルヌ+2",
+        feet	="ＦＬコテュルヌ+2",--"ＦＬコテュルヌ+3",
     }
     sets.buff.Paeon = {
         -- head="Brioso Roundlet +2",
@@ -73,29 +73,39 @@ function get_sets()
     sets.buff.Lullaby = {
         range="ダウルダヴラ",
         -- range="ギャッラルホルン",
-        -- hands="ＢＲカフス+3",
+        hands="ＢＲカフス+2",--"ＢＲカフス+3",
     }
     sets.macc = {
         main="トーレット",
     }
 
     sets.idle = {
-        head="ニャメヘルム",--"ＦＬキャロ+3",
+		-- main={ name="ニビルナイフ", augments={'Accuracy+20','Attack+15','Evasion+20',}},
+		range={ name="リノス", augments={'Evasion+15','Phys. dmg. taken -4%','AGI+8',}},
+        head="ニャメヘルム",
         body="ニャメメイル",
-        hands="ＦＬマンシェト+3",
+        hands="ニャメガントレ",
         legs="ニャメフランチャ",
-        feet={ name="ニャメソルレット", augments={'Path: B',}},
+        feet="ＦＬコテュルヌ+2",--"ＦＬコテュルヌ+3",
         neck="バーシチョーカー+1",
         waist="プラチナモグベルト",
+        left_ear="インフューズピアス",
+        right_ear="エアバニピアス",
+        left_ring="シーリチリング+1",
         right_ring="シュネデックリング",
     }
     sets.engage = {
-        body="ＦＬオングルリヌ+3",
-        neck="リソムネックレス",
+        range={ name="リノス", augments={'Accuracy+20','"Dbl.Atk."+2','Quadruple Attack +3',}},
+        head="ニャメヘルム",
+		body="アヤモコラッツァ+2",
+		hands="ＦＬマンシェト+3",
+        legs="ニャメフランチャ",
+		feet={ name="ニャメソルレット", augments={'Path: B',}},
+        neck="クロタリウストルク",
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
         left_ear="テロスピアス",
-        -- right_ear="セサンスピアス",
-        right_ear="素破の耳",
+        right_ear="セサンスピアス",
+        -- right_ear="素破の耳",
         left_ring="シーリチリング+1",
         right_ring="イフラマドリング",
         back={ name="インタラアスケープ", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
@@ -114,7 +124,7 @@ function get_sets()
     }
 
     sets.ws = {
-        range={ name="リノス", augments={'Attack+20','Sklchn.dmg.+4%','STR+5 CHR+5',}},
+        range={ name="リノス", augments={'Attack+20','Weapon skill damage +3%','STR+6 DEX+6',}},
         body={ name="ＢＩジュストコル+3", augments={'Enhances "Troubadour" effect',}},
         feet={ name="ニャメソルレット", augments={'Path: B',}},
         right_ear="胡蝶のイヤリング",
