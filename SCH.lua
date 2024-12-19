@@ -6,6 +6,7 @@ function get_sets()
     set_language('japanese')
     
     lowsc = false
+	subling = false
     
     sets.idle = {
         main="ムサ",
@@ -202,11 +203,13 @@ function setIdle()
 
     if windower.ffxi.get_player().status == 1 then
         set_equip = set_combine(sets.idle, sets.engage)
-        
-        if  mylib.is_in_adoulin(world.area) then
-            set_equip = set_combine(set_equip, sets.walk.adoulin)
-        end
-    end
+	
+	elseif subling then
+		set_equip = sets.idle.Sublimation
+		
+	elseif mylib.is_in_adoulin(world.area) then
+		set_equip = set_combine(set_equip, sets.walk.adoulin)
+	end
 
     if set_equip then
         equip(set_equip)
