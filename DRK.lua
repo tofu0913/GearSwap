@@ -9,6 +9,7 @@ function get_sets()
     sets.tp = {}
 
     pdt = false
+    blow = false
     uncap = false
     th = false
     mode = ''
@@ -124,6 +125,14 @@ function get_sets()
         legs="サクパタクウィス",
 	}
 	
+    sets.blow = {
+        head="サクパタヘルム",
+        body="デーゴンブレスト",
+        hands="サクパタガントレ",
+        legs="サクパタクウィス",
+		feet="サクパタレギンス",
+		neck="バーシチョーカー+1",
+    }
     sets.pdt = {
         -- head="ニャメヘルム",
         head="サクパタヘルム",
@@ -279,6 +288,8 @@ function setIdle()
     end
     if pdt then
         set_equip = set_combine(sets.tp, sets.pdt)
+	elseif blow then
+        set_equip = set_combine(sets.tp, sets.blow)
     else
         set_equip = sets.tp
     end
@@ -312,6 +323,10 @@ function self_command(command)
     if command == 'pdt' then
         pdt = not pdt
         windower.add_to_chat('PDT- is: '..tostring(pdt))
+		
+    elseif command == 'blow' then
+        blow = not blow
+        windower.add_to_chat('Blow- is: '..tostring(blow))
 		
     elseif command == 'style' or command == 's' then
 		lockstyle()
