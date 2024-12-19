@@ -182,6 +182,9 @@ function precast(spell)
         else
             set_equip = sets.fc
         end
+		if spell.english == 'Sneak' then
+			windower.ffxi.cancel_buff(71)
+		end
         
     elseif spell.english == 'Spectral Jig' and windower.ffxi.get_ability_recasts()[218] == 0 then
         windower.ffxi.cancel_buff(71)
