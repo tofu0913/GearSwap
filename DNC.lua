@@ -305,7 +305,7 @@ function precast(spell)
             -- send_command(windower.to_shift_jis('input /ws '..spell.name..' <t>; wait 4; input /ja "プレスト" <me>; wait 1; input /ja "ボックスステップ" <t>'))
             
         end
-        send_command('input //sw restart')
+        send_command('input //stw restart')
     end
 
     if set_equip then
