@@ -272,7 +272,29 @@ function buff_change(buff,gain,buff_details)
 		subling = gain
 		updateText()
 		setIdle()
+	elseif gain and string.find(buff, 'の章') then
+		local books = getBookCount()
+		-- windower.add_to_chat('book: '..books)
+		if books <= 1 then
+			send_command(windower.to_shift_jis('input /p ====== 戦術魔道書残量：'..books..' ======'))
+		end
 	end
+end
+
+function getBookCount()
+	local recast = windower.ffxi.get_ability_recasts()[231]
+	if recast == 0 then
+		return 5
+	elseif recast < 33 then
+		return 4
+	elseif recast < 66 then
+		return 3
+	elseif recast < 99 then
+		return 2
+	elseif recast < 132 then
+		return 1
+	end
+	return 0
 end
 
 sc = {
