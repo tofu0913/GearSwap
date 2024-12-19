@@ -216,6 +216,15 @@ function setIdle()
     end
 end
 
+function buff_change(buff,gain,buff_details)
+	-- windower.add_to_chat(buff)
+	if buff == '机上演習:蓄積中' then
+		subling = gain
+		updateText()
+		setIdle()
+	end
+end
+
 function self_command(command)
     command = command:lower()
     if command == 'low1' then
