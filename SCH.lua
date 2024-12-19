@@ -141,7 +141,11 @@ function precast(spell)
 
     if spell.type == 'Trust' or string.find(spell.type, 'Magic') then
         set_equip = sets.fc
-
+		
+		if spell.english == 'Sneak' then
+			windower.ffxi.cancel_buff(71)
+		end
+		
         -- if spell.english == 'Adloquium' and (buffactive['白のグリモア']) then
             -- cancel_spell()
             -- send_command(windower.to_shift_jis('input /ja 女神降臨の章 <me>; wait 1; input /ma "'..spell.name..'" <me>'))
