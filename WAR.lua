@@ -88,6 +88,7 @@ function get_sets()
         feet="ＢＩカリガ+2",
     })
     sets.ws["Upheaval"]=set_combine(sets.ws, {
+        waist="フォシャベルト",
         back={ name="シコルマント", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
     })
     
@@ -359,6 +360,7 @@ function self_command(command)
     elseif command == 'gax' then
         mode = 'Great Axe'
         send_command('input //ws s')
+        -- send_command('input //ws war_gax')
 		lockstyle()
     elseif command == 'cb' then
         mode = 'Club'
