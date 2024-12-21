@@ -8,6 +8,7 @@ function get_sets()
     ef = false
     dummy = false
     mode = nil
+    duo = false
     
     sets.instrument = {}
     sets.instrument.horn = {
@@ -22,6 +23,16 @@ function get_sets()
         range="ダウルダヴラ",
         ammo=empty,
     }
+	
+	sets.duo = {}
+	sets.duo.buff = {
+        main="カルンウェナン",
+		sub="カーリ",
+	}
+	sets.duo.melee = {
+        main="ネイグリング",
+        sub={ name="フセット+2", augments={'TP Bonus +1000',}},
+	}
     
     sets.fc = {
         body="インヤガジュバ+2",
@@ -47,7 +58,6 @@ function get_sets()
     })
     
     sets.buff = {
-        -- main="カルンウェナン",
         -- sub="アムラピシールド",
         body="ＦＬオングルリヌ+3",
         hands="ＦＬマンシェト+3",
@@ -167,7 +177,8 @@ function precast(spell)
         elseif spell.english == 'Honor March' then
             set_equip = sets.instrument.HonorMarch
         else
-            if string.find(spell.english, 'Paeon') or mode == 'HARP' then
+            if string.find(spell.english, 'Paeon') --or string.find(spell.english, 'Threnody') 
+			or mode == 'HARP' then
                 set_equip = sets.instrument.dummy
             else
                 set_equip = sets.instrument.horn
@@ -208,6 +219,9 @@ function midcast(spell)
         elseif string.find(spell.english, 'Lullaby') then 
             set_equip = set_combine(set_equip, sets.buff.Lullaby)
         end
+		if duo then
+			set_equip = set_combine(set_equip, sets.duo.buff)
+		end
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
         
@@ -242,6 +256,9 @@ function setIdle()
 
     if windower.ffxi.get_player().status == 1 then
         set_equip = set_combine(sets.idle, sets.engage)
+		if duo then
+			set_equip = set_combine(set_equip, sets.duo.melee)
+		end
         
         if  mylib.is_in_adoulin(world.area) then
             set_equip = set_combine(set_equip, sets.walk.adoulin)
@@ -281,6 +298,10 @@ function self_command(command)
     elseif command == 'ef' then
         ef = not ef
         windower.add_to_chat('EF mode is: '..tostring(ef))
+        
+    elseif command == 'duo' then
+        duo = not duo
+        windower.add_to_chat('Duo mode: '..tostring(duo))
 
     elseif command == 'dummy' then
         dummy = true
