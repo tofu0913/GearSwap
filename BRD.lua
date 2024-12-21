@@ -7,7 +7,7 @@ function get_sets()
     
     dummy = false
     mode = nil
-    duo = false
+    weapon = nil--nil, engage, flee
     
     sets.instrument = {}
     sets.instrument.horn = {
@@ -23,14 +23,18 @@ function get_sets()
         ammo=empty,
     }
 	
-	sets.duo = {}
-	sets.duo.buff = {
+	sets.weapon = {}
+	sets.weapon.buff = {
         main="カルンウェナン",
 		sub="カーリ",
 	}
-	sets.duo.melee = {
+	sets.weapon.engage = {
         main="ネイグリング",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
+	}
+	sets.weapon.flee = {
+        main="カルンウェナン",
+		sub={ name="ニビルナイフ", augments={'Accuracy+20','Attack+15','Evasion+20',}},
 	}
     
     sets.fc = {
@@ -72,7 +76,7 @@ function get_sets()
         feet	="ＦＬコテュルヌ+2",--"ＦＬコテュルヌ+3",
     }
     sets.buff.Paeon = {
-        -- head="Brioso Roundlet +2",
+        -- head="ＢＲランドリト+2",
     }
     sets.buff.March = {
         hands="ＦＬマンシェト+3",
@@ -86,11 +90,10 @@ function get_sets()
         hands="ＢＲカフス+2",--"ＢＲカフス+3",
     }
     sets.macc = {
-        main="トーレット",
+        main="ンプガンドリング",
     }
 
     sets.idle = {
-		-- main={ name="ニビルナイフ", augments={'Accuracy+20','Attack+15','Evasion+20',}},
 		range={ name="リノス", augments={'Evasion+15','Phys. dmg. taken -4%','AGI+8',}},
         head="ニャメヘルム",
         body="ニャメメイル",
@@ -177,8 +180,7 @@ function precast(spell)
         elseif spell.english == 'Honor March' then
             set_equip = sets.instrument.HonorMarch
         else
-            if string.find(spell.english, 'Paeon') --or string.find(spell.english, 'Threnody') 
-			or mode == 'HARP' then
+            if string.find(spell.english, 'Paeon') or mode == 'HARP' then
                 set_equip = sets.instrument.dummy
             else
                 set_equip = sets.instrument.horn
@@ -219,8 +221,8 @@ function midcast(spell)
         elseif string.find(spell.english, 'Lullaby') then 
             set_equip = set_combine(set_equip, sets.buff.Lullaby)
         end
-		if duo then
-			set_equip = set_combine(set_equip, sets.duo.buff)
+		if weapon ~= nil then
+			set_equip = set_combine(set_equip, sets.weapon.buff)
 		end
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
@@ -256,13 +258,17 @@ function setIdle()
 
     if windower.ffxi.get_player().status == 1 then
         set_equip = set_combine(sets.idle, sets.engage)
-		if duo then
-			set_equip = set_combine(set_equip, sets.duo.melee)
+		if weapon == 'engage' then
+			set_equip = set_combine(set_equip, sets.weapon.engage)
 		end
         
         if  mylib.is_in_adoulin(world.area) then
             set_equip = set_combine(set_equip, sets.walk.adoulin)
         end
+	else
+		if weapon == 'flee' then
+			set_equip = set_combine(set_equip, sets.weapon.flee)
+		end
     end
 
     if set_equip then
@@ -288,9 +294,15 @@ function self_command(command)
         -- mode = 'MARS'
         -- windower.add_to_chat('Mode is: '..mode)
         
-    elseif command == 'duo' then
-        duo = not duo
-        windower.add_to_chat('Duo mode: '..tostring(duo))
+    elseif command == 'engage' then
+        weapon = 'engage'
+        windower.add_to_chat('Weapon mode: '..tostring(weapon))
+    elseif command == 'flee' then
+        weapon = 'flee'
+        windower.add_to_chat('Weapon mode: '..tostring(weapon))
+    elseif command == 'weapon' then
+        weapon = nil
+        windower.add_to_chat('Weapon mode: Non')
 
     elseif command == 'dummy' then
         dummy = true
