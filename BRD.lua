@@ -137,6 +137,7 @@ function get_sets()
     sets.ws = {
         range={ name="リノス", augments={'Attack+20','Weapon skill damage +3%','STR+6 DEX+6',}},
         body={ name="ＢＩジュストコル+3", augments={'Enhances "Troubadour" effect',}},
+        hands={ name="ニャメガントレ", augments={'Path: B',}},
         feet={ name="ニャメソルレット", augments={'Path: B',}},
         right_ear="胡蝶のイヤリング",
         left_ring="イラブラットリング",

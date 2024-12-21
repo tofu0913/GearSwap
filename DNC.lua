@@ -163,7 +163,7 @@ function get_sets()
     })
     sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {
         -- neck="フォシャゴルゲット",
-        waist="フォシャベルト",
+        -- waist="フォシャベルト",
     })
     sets.th = {
         ammo="完璧な幸運の卵",

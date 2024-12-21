@@ -71,6 +71,7 @@ function get_sets()
 		body={ name="テルキネシャジュブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
         -- hands="ＡＢブレーサー+1",--"ＡＢブレーサー+3",
 		legs={ name="テルキネブラコーニ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		feet={ name="テルキネピガッシュ", augments={'Enh. Mag. eff. dur. +10',}},
         neck="インカンタートルク",
         waist="エンブラサッシュ",
         left_ear="ミミルピアス",
@@ -78,8 +79,7 @@ function get_sets()
     }
 
     sets.mb = {
-		main="ノダルワンド",
-		sub="玄武盾",
+		-- sub="玄武盾",
         head="ニャメヘルム",
         body="ニャメメイル",
         hands="ニャメガントレ",
@@ -88,8 +88,8 @@ function get_sets()
         
         ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
         neck="水影の首飾り",
-        -- waist="八輪の帯",
-        waist="オルペウスサッシュ",
+        waist="八輪の帯",
+        -- waist="オルペウスサッシュ",
         right_ear="マリグナスピアス",
 		left_ear="王将の耳飾り",
 		-- right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
