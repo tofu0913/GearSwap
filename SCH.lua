@@ -48,6 +48,7 @@ function get_sets()
     lowsc = false
 	subling = false
 	mbmode = false
+	nobook = false
     
     sets.idle = {
         main="ムサ",
@@ -285,7 +286,7 @@ function buff_change(buff,gain,buff_details)
 		subling = gain
 		updateText()
 		setIdle()
-	elseif gain and string.find(buff, 'の章') then
+	elseif nobook and gain and string.find(buff, 'の章') then
 		local books = getBookCount()
 		-- windower.add_to_chat('book: '..books)
 		if books <= 1 then
@@ -383,6 +384,10 @@ function self_command(command)
 		add_spell('ja', '女神降臨の章')
         add_spell('ma', 'シェルV')
         cast_all()
+        
+    elseif command == 'nobook' then
+        nobook = not nobook
+        windower.add_to_chat('No book notify: '..tostring(nobook))
 		
     elseif sc[command] then
 		if not buffactive['黒のグリモア'] and not buffactive['黒の補遺'] then
