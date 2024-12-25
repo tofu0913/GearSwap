@@ -122,7 +122,7 @@ function precast(spell)
     if spell.type == 'Trust' or string.find(spell.type, 'Magic') then
         set_equip = sets.fc
 		
-		if spell.english == 'Sneak' then
+		if spell.english == 'Sneak' and spell.target.name == player.name then
 			windower.ffxi.cancel_buff(71)
 		end
 	end
