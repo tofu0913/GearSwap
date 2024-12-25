@@ -51,6 +51,7 @@ function get_sets()
         neck="インカンタートルク",
         waist="オリンポスサッシュ",
         left_ear="ミミルピアス",
+		right_ear="アンドアーピアス",
         back={ name="ゴストファイケープ", augments={'Enfb.mag. skill +8','Enha.mag. skill +9','Enh. Mag. eff. dur. +17',}},
     }
     sets.buff.weapon = {

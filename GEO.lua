@@ -75,7 +75,8 @@ function get_sets()
         neck="インカンタートルク",
         waist="エンブラサッシュ",
         left_ear="ミミルピアス",
-		right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
+		right_ear="アンドアーピアス",
+		-- right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
     }
 
     sets.mb = {

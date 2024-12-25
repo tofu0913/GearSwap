@@ -111,7 +111,7 @@ function get_sets()
         range={ name="リノス", augments={'Accuracy+20','"Dbl.Atk."+2','Quadruple Attack +3',}},
         head="ニャメヘルム",
 		body="アヤモコラッツァ+2",
-		hands="ＦＬマンシェト+3",
+        hands="ニャメガントレ",
         legs="ニャメフランチャ",
 		feet={ name="ニャメソルレット", augments={'Path: B',}},
         neck="クロタリウストルク",

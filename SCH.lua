@@ -55,7 +55,7 @@ function get_sets()
 		ammo={ name="ガストリタスラム+1", augments={'Path: A',}},--'pdt',
         sub="コーンスー",
         head="ニャメヘルム",
-        body="ＡＢガウン+2",--"+3"
+        body="ＡＢガウン+3",
         hands="ニャメガントレ",
         legs="ニャメフランチャ",
         feet="ニャメソルレット",
@@ -86,7 +86,7 @@ function get_sets()
     })
     sets.ma.Cure = {
         neck="ノデンズゴルゲット",
-		body="ＡＢガウン+2",
+		body="ＡＢガウン+3",
 		legs="ギーヴトラウザ",
         feet="ヴァニヤクロッグ",
 		waist="オステリベルト+1",
@@ -97,13 +97,15 @@ function get_sets()
 
     sets.buff = {
 		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
-		body={ name="テルキネシャジュブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		body={ name="テルキネシャジュブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},--"ＰＤガウン+3",
         hands="ＡＢブレーサー+2",--"ＡＢブレーサー+3",
 		legs={ name="テルキネブラコーニ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 		feet={ name="テルキネピガッシュ", augments={'Enh. Mag. eff. dur. +10',}},
         neck="インカンタートルク",
         waist="エンブラサッシュ",
         left_ear="ミミルピアス",
+		right_ear="アンドアーピアス",
+		-- back="フィフォレケープ+1",
     }
     sets.ma.Regen = set_combine(sets.buff, {
 		head="ＡＢボネット+3",
@@ -115,15 +117,16 @@ function get_sets()
     sets.lowsc = {
         -- main="ハーミットワンド",
         head={ name="カイロンハット", augments={'Spell interruption rate down -10%','VIT+10',}},
-        legs="クァーケンブレー",
         body="ロゼトジャズラン+1",
         hands={ name="カイロングローブ", augments={'Mag. Acc.+2','Spell interruption rate down -8%','CHR+4','"Mag.Atk.Bns."+4',}},
+        legs="クァーケンブレー",
         waist="エンパチコスロープ",
+        back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
     }
     
     sets.mb = {
         head="ＡＢボネット+3",
-        body="ＡＢガウン+2",--"アグゥローブ",
+        body="ＡＢガウン+3",--"アグゥローブ",
         hands="ＡＢブレーサー+2",--"アグゥゲージ",
         legs="ＡＢパンツ+2",--"アグゥスロップス",
         feet="ＡＢローファー+3",
@@ -159,7 +162,7 @@ function get_sets()
     sets.ws = {
         head="ニャメヘルム",
         body="ニャメメイル",
-        hands="ニャメガントレ",
+        hands={ name="ニャメガントレ", augments={'Path: B',}},
         legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
         left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
@@ -168,6 +171,16 @@ function get_sets()
         right_ring="イフラマドリング",
     }
 
+    sets.engage = {
+        head="ニャメヘルム",
+        body="ニャメメイル",
+        hands={ name="ニャメガントレ", augments={'Path: B',}},
+        legs="ニャメフランチャ",
+        feet={ name="ニャメソルレット", augments={'Path: B',}},
+        right_ear="テロスピアス",
+        left_ring="シーリチリング+1",
+        right_ring="イフラマドリング",
+	}
     -- Common equipments
 	sets.walk = {}
     sets.walk.adoulin = set_combine(sets.walk, {
