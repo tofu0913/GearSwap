@@ -217,6 +217,12 @@ function precast(spell)
     end
 end
 
+lowsc_magics = T{
+	'ファイア', '雷門の計',
+	'ブリザド', '水門の計', 
+	'エアロ',   '闇門の計',
+	'光門の計', '土門の計',
+}
 function midcast(spell)
     local set_equip = nil
 
@@ -232,7 +238,7 @@ function midcast(spell)
 		elseif string.find(spell.english,'storm') then
 			set_equip = sets.ma.storm
             
-        elseif buffactive['震天動地の章'] and lowsc then
+        elseif lowsc then
             set_equip = sets.lowsc
             
         elseif sets.ma[spell.english] then
