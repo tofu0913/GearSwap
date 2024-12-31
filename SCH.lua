@@ -49,6 +49,7 @@ function get_sets()
 	subling = false
 	mbmode = false
 	nobook = false
+	default_style = 7
     
     sets.idle = {
         main="ムサ",
@@ -188,7 +189,7 @@ function get_sets()
         body="カウンセラーガーブ",
     })
     
-    send_command('input /macro book 12; wait 2;input /lockstyleset 7')
+    send_command('input /macro book 12; wait 2;input /lockstyleset '..default_style)
 	updateText()
 end
 
@@ -317,6 +318,18 @@ function getBookCount()
 	return 0
 end
 
+function lockstyle()
+	-- if mode ~='' and sets.mode[mode] and sets.mode[mode].style then
+		-- send_command('input /lockstyleset '..sets.mode[mode].style)
+	-- else
+		send_command('input /lockstyleset '..default_style)
+	-- end
+end
+
+function file_unload(file_name)
+	send_command('input //lua u autosch')
+end
+
 function self_command(command)
     command = command:lower()
     if command == 'low1' then
@@ -327,6 +340,9 @@ function self_command(command)
         lowsc = false
         windower.add_to_chat('LowSC is: '..tostring(lowsc))
 		updateText()
+		
+    elseif command == 'style' or command == 's' then
+		lockstyle()
 		
     elseif command == 'nobook' then
         nobook = not nobook
