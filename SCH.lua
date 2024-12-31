@@ -1,6 +1,5 @@
 
 mylib = require('mylib')
-require('mylibs/caster_lite')
 
 -- Widget
 local texts = require('texts')
@@ -200,6 +199,7 @@ function get_sets()
     
     send_command('input /macro book 12; wait 2;input /lockstyleset '..default_style)
 	updateText()
+	send_command('input //lua r autosch')
 end
 
 function precast(spell)
@@ -227,12 +227,6 @@ function precast(spell)
     end
 end
 
-lowsc_magics = T{
-	'ファイア', '雷門の計',
-	'ブリザド', '水門の計', 
-	'エアロ',   '闇門の計',
-	'光門の計', '土門の計',
-}
 function midcast(spell)
     local set_equip = nil
 
@@ -360,28 +354,16 @@ function self_command(command)
     elseif command == 'nobook' then
         nobook = not nobook
         windower.add_to_chat('No book notify: '..tostring(nobook))
-
-	elseif command == 'dsc' then
-		if not buffactive['黒のグリモア'] and not buffactive['黒の補遺'] then
-			windower.add_to_chat('No グリモア')
-			return
-		end
-        cast_init()
-        add_command('//gc low1')
-        if not buffactive['震天動地の章'] then
-			add_spell('ja', '震天動地の章')
-		end
-        add_spell('ma', 'ウォータ', 't')
-		add_spell('ja', '動地の章')
-        add_spell('ma', 'サンダー', 't')
-		add_spell('ja', '震天動地の章')
-        add_spell('ma', 'ファイア', 't')
-		add_spell('ja', '震天動地の章')
-        add_spell('ma', 'サンダー', 't')
-        add_command('//gc low0')
-        add_spell('ma', 'ファイアV', 't')
-        cast_all()
     
+    -- elseif string.find(command, "sc ") then
+	
+		-- local _, scname = command:match("^(%S+)%s+(.+)")
+		-- if scname ~= '0' then
+			-- mbmode = true
+		-- else
+			-- mbmode = false
+		-- end
+		-- updateText()
     end
     
     setIdle()
