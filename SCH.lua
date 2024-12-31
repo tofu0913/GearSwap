@@ -14,7 +14,7 @@ function setup_text(text)
     text:bg_alpha(255)
     text:bg_visible(true)
     text:font('ＭＳ ゴシック')
-    text:size(11)
+    text:size(12)
     text:color(255,255,255,255)
     text:stroke_alpha(200)
     text:stroke_color(20,20,20)
@@ -26,11 +26,20 @@ setup_text(text)
 
 function updateText()
     local flags = ' '
+	if buffactive['白のグリモア'] then
+        flags = flags..'白 '
+	elseif buffactive['白の補遺'] then
+        flags = flags..'白+ '
+	elseif buffactive['黒のグリモア'] then
+        flags = flags..'黒 '
+	elseif buffactive['黒の補遺'] then
+        flags = flags..'黒+ '
+    end
 	if lowsc then
-        flags = flags..'Low '
+        flags = flags..'弱 '
     end
 	if subling then
-        flags = flags..'Sub '
+        flags = flags..'机 '
     end
 	if mbmode then
         flags = flags..'MB '
@@ -299,6 +308,10 @@ function buff_change(buff,gain,buff_details)
 		if books <= 1 then
 			send_command(windower.to_shift_jis('input /p ====== 戦術魔道書残量：'..books..' ======'))
 		end
+	end
+	
+	if T{'白のグリモア','白の補遺','黒のグリモア','黒の補遺'}:contains(buff) then
+		updateText()
 	end
 end
 
