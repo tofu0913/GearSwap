@@ -12,8 +12,8 @@ function get_sets()
 		sub="玄武盾",
 		range={ name="デュンナ", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="ＡＺフード+1",--"ＡＺフード+3",
-        -- body="ＡＺコート+1",
-        body="ニャメメイル",
+        body="ＡＺコート+2",
+        -- body="ニャメメイル",
 		hands="ＧＯミテーヌ+2",--"ＧＯミテーヌ+3",
 		legs="ＢＡパンツ+1",--"ＢＡパンツ+3",
 		feet="ＡＺゲートル+1",
@@ -23,7 +23,10 @@ function get_sets()
 		right_ear="インフューズピアス",
 		left_ring="シーリチリング+1",
 		right_ring="シュネデックリング",
-		back="ナントセルタケープ",
+		back={ name="ナントセルタケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Acc.+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
+	}
+	sets.idle.geo = {
+		feet="ＢＡサンダル+1",
 	}
 	
     sets.fc = {
@@ -82,12 +85,12 @@ function get_sets()
     sets.mb = {
 		-- sub="玄武盾",
         head="ニャメヘルム",
-        body="ニャメメイル",
         hands="ニャメガントレ",
         legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
         
         ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
+        body="ＡＺコート+2",--"+3"
         neck="水影の首飾り",
         waist="八輪の帯",
         -- waist="オルペウスサッシュ",
@@ -96,7 +99,7 @@ function get_sets()
 		-- right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
         left_ring="フレキリング",
         right_ring="メタモルリング+1",--{ name="メタモルリング+1", augments={'Path: A',}},
-        -- back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+		back={ name="ナントセルタケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
     }
 	
 	sets.engage = {
