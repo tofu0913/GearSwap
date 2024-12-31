@@ -80,7 +80,7 @@ function get_sets()
     }
 	sets.idle.Sublimation = set_combine(sets.idle, {
         head="ＡＣボード+2",
-        body="ＰＤガウン+1",--'ＰＤガウン+3',
+        body="ＰＤガウン+2",--'ＰＤガウン+3',
         right_ear="サバントピアス",
 	})
     
@@ -109,7 +109,7 @@ function get_sets()
     sets.buff = {
 		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 		body={ name="テルキネシャジュブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},--"ＰＤガウン+3",
-        hands="ＡＢブレーサー+2",--"ＡＢブレーサー+3",
+        hands="ＡＢブレーサー+3",
 		legs={ name="テルキネブラコーニ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 		feet={ name="テルキネピガッシュ", augments={'Enh. Mag. eff. dur. +10',}},
         neck="インカンタートルク",
@@ -138,7 +138,7 @@ function get_sets()
     sets.mb = {
         head="ＡＢボネット+3",
         body="ＡＢガウン+3",--"アグゥローブ",
-        hands="ＡＢブレーサー+2",--"アグゥゲージ",
+        hands="ＡＢブレーサー+3",--"アグゥゲージ",
         legs="ＡＢパンツ+2",--"アグゥスロップス",
         feet="ＡＢローファー+3",
         
