@@ -6,6 +6,7 @@ function get_sets()
     set_language('japanese')
     
 	skillup = false
+	default_style = 10
 	
 	sets.idle = {
 		main="イドリス",
@@ -117,7 +118,7 @@ function get_sets()
         right_ear="セサンスピアス",
 	}
 	
-    send_command('input /macro book 14; wait 2;input /lockstyleset 10')
+    send_command('input /macro book 14; wait 2;input /lockstyleset '..default_style)
 end
 
 function precast(spell)
@@ -211,6 +212,14 @@ function setIdle()
     end
 end
 
+function lockstyle()
+	-- if mode ~='' and sets.mode[mode] and sets.mode[mode].style then
+		-- send_command('input /lockstyleset '..sets.mode[mode].style)
+	-- else
+		send_command('input /lockstyleset '..default_style)
+	-- end
+end
+
 function self_command(command)
     if command == 'pdt' then
         -- mode = 'pdt'
@@ -219,6 +228,9 @@ function self_command(command)
     elseif command == 'skillup' then
         skillup = not skillup
         windower.add_to_chat('Skillup: '..tostring(skillup))
+		
+    elseif command == 'style' or command == 's' then
+		lockstyle()
 		
     -- else
         -- mode = 'normal'
