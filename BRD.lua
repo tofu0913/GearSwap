@@ -1,6 +1,5 @@
 
 mylib = require('mylib')
-require('mylibs/caster_lite')
 
 function get_sets()
     set_language('japanese')
@@ -168,6 +167,7 @@ function get_sets()
 
     send_command('input /macro book 1;')
     send_command('wait 2;input /lockstyleset 4')
+	send_command('input //lua l autobrd')
 end
 
 function precast(spell)
@@ -276,6 +276,10 @@ function setIdle()
     end
 end
 
+function file_unload(file_name)
+	send_command('input //lua u autobrd')
+end
+
 function self_command(command)
     command = command:lower()
     if command == 'free' then
@@ -308,73 +312,6 @@ function self_command(command)
         dummy = true
         -- windower.add_to_chat('Dummy mode is ON')
         
-    elseif command == 'hp' then
-        cast_init()
-        add_spell('so', '戦士達のピーアンVI')
-        add_spell('so', '戦士達のピーアンV')
-        add_spell('so', '戦士達のピーアンIV')
-        add_spell('so', '戦士達のピーアンIII')
-        if buffactive['クラリオンコール'] then
-            add_spell('so', '戦士達のピーアンII')
-        end
-        cast_all()
-    elseif command == 'aamm' then
-        cast_init()
-        add_spell('so', '栄典の戴冠マーチ')
-        add_spell('so', '猛者のメヌエットV')
-        add_spell('so', '猛者のメヌエットIV')
-        add_spell('so', '栄光の凱旋マーチ')
-        -- if buffactive['クラリオンコール'] then
-            -- add_spell('so', '猛者のメヌエットIII')
-        -- end
-        cast_all()
-    elseif command == 'mmmm' then
-        cast_init()
-        add_spell('so', '栄典の戴冠マーチ')
-        add_spell('so', '魔道士のバラードIII')
-        add_spell('so', '重装騎兵のミンネIV')
-        add_spell('so', '重装騎兵のミンネIII')
-        -- if buffactive['クラリオンコール'] then
-            -- add_spell('so', '猛者のメヌエットIII')
-        -- end
-        cast_all()
-    elseif command == '4' then
-        cast_init()
-        add_spell('so', '栄典の戴冠マーチ')
-        add_spell('so', '栄光の凱旋マーチ')
-        add_spell('so', '戦士達のピーアンVI')
-        add_spell('so', '戦士達のピーアンV')
-        add_spell('so', '猛者のメヌエットV')
-        add_spell('so', '猛者のメヌエットIV')
-        cast_all()
-	
-    elseif command == 'sp' then
-        cast_init()
-        add_spell('ja', 'ナイチンゲール')
-        add_spell('ja', 'トルバドゥール')
-        add_spell('ja', 'ソウルボイス')
-        add_spell('ja', 'クラリオンコール')
-        add_spell('so', '栄典の戴冠マーチ')
-        add_spell('so', '警戒のスケルツォ')
-        add_spell('so', '戦士達のピーアンIII')
-        add_spell('so', '戦士達のピーアンII')
-        add_spell('so', '戦士達のピーアンI')
-        cast_all()
-    elseif command == 'a' then
-        cast_init()
-        add_spell('so', '猛者のメヌエットV')
-        add_spell('so', '猛者のメヌエットIV')
-        add_spell('so', '猛者のメヌエットIII')
-        -- add_spell('so', '耐波カロル第二楽章')
-        add_spell('so', '警戒のスケルツォ')
-        cast_all()
-    elseif command == 'b' then
-        cast_init()
-        add_spell('so', '冒険者のダージュ')
-        add_spell('so', '魔道士のバラードII')
-        add_spell('so', '魔道士のバラードIII')
-        add_spell('so', '警戒のスケルツォ')
-        cast_all()
 		
     elseif string.find(command, "sc ") then
 	
