@@ -168,7 +168,7 @@ function get_sets()
 
     send_command('input /macro book 1;')
     send_command('wait 2;input /lockstyleset '..default_style)
-	send_command('input //lua l autobrd')
+	send_command('input //lua r autobrd')
 end
 
 function precast(spell)
