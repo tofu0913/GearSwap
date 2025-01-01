@@ -7,6 +7,7 @@ function get_sets()
     dummy = false
     mode = nil
     weapon = nil--nil, engage, flee
+	default_style = 4
     
     sets.instrument = {}
     sets.instrument.horn = {
@@ -166,7 +167,7 @@ function get_sets()
     })
 
     send_command('input /macro book 1;')
-    send_command('wait 2;input /lockstyleset 4')
+    send_command('wait 2;input /lockstyleset '..default_style)
 	send_command('input //lua l autobrd')
 end
 
@@ -280,6 +281,14 @@ function file_unload(file_name)
 	send_command('input //lua u autobrd')
 end
 
+function lockstyle()
+	-- if mode ~='' and sets.mode[mode] and sets.mode[mode].style then
+		-- send_command('input /lockstyleset '..sets.mode[mode].style)
+	-- else
+		send_command('input /lockstyleset '..default_style)
+	-- end
+end
+
 function self_command(command)
     command = command:lower()
     if command == 'free' then
@@ -297,6 +306,9 @@ function self_command(command)
     -- elseif command == 'ma' then
         -- mode = 'MARS'
         -- windower.add_to_chat('Mode is: '..mode)
+		
+    elseif command == 'style' or command == 's' then
+		lockstyle()
         
     elseif command == 'engage' then
         weapon = 'engage'
