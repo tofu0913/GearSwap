@@ -119,6 +119,7 @@ function get_sets()
 	}
 	
     send_command('input /macro book 14; wait 2;input /lockstyleset '..default_style)
+	send_command('input //lua r autogeo')
 end
 
 function precast(spell)
@@ -218,6 +219,10 @@ function lockstyle()
 	-- else
 		send_command('input /lockstyleset '..default_style)
 	-- end
+end
+
+function file_unload(file_name)
+	send_command('input //lua u autogeo')
 end
 
 function self_command(command)
