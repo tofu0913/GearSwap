@@ -197,6 +197,13 @@ function buff_change(name,gain,buff_details)
     -- end
 end
 
+function pet_change(pet,gain)
+	if not gain then
+		windower.add_to_chat('Luopan dead...')
+	end
+	setIdle()
+end
+
 function setIdle()
     local set_equip = sets.idle
 
@@ -206,6 +213,11 @@ function setIdle()
         -- if  mylib.is_in_adoulin(world.area) then
             -- set_equip = set_combine(set_equip, sets.walk.adoulin)
         -- end
+	else
+		local luopan = windower.ffxi.get_mob_by_target('pet')
+		if luopan then
+			set_equip = set_combine(set_equip, sets.idle.geo)
+		end
     end
 
     if set_equip then
