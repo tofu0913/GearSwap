@@ -66,7 +66,7 @@ function get_sets()
 		main="イドリス",
 		sub="玄武盾",
 		range={ name="デュンナ", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		neck="インカンタートルク",
+		neck="バグアチャーム+2",
 		right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
 	})
 	
