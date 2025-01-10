@@ -157,6 +157,7 @@ function get_sets()
     sets.ma.Stoneskin = {
         neck="ノデンズゴルゲット",
         waist="ジーゲルサッシュ",
+		right_ear="アースクライピアス",
     }
     
     sets.walk = {

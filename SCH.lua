@@ -79,62 +79,12 @@ function get_sets()
     }
 	sets.idle.Sublimation = set_combine(sets.idle, {
         head="ＡＣボード+2",
-        body="ＰＤガウン+2",--'ＰＤガウン+3',
+        body="ＰＤガウン+3",
         right_ear="サバントピアス",
 	})
     
-    sets.ja = {}
-    sets.ja['Tabula Rasa'] = {
-		legs="ペダゴギパンツ",
-	}
-    
-    sets.ma = {}
-    sets.ma.EnhancingDuration = {}
-    sets.ma.Stoneskin = set_combine(sets.ma.EnhancingDuration,{
-        waist="ジーゲルサッシュ",
-        neck="ノデンズゴルゲット",
-    })
-    sets.ma.Cure = {
-        neck="ノデンズゴルゲット",
-		body="ＡＢガウン+3",
-		legs="ギーヴトラウザ",
-        feet="ヴァニヤクロッグ",
-		waist="オステリベルト+1",
-        left_ear="メンデカントピアス",
-        right_ear="カラミタスピアス",
-        left_ring="ナジの包帯",
-    }
-
-    sets.buff = {
-		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
-		body={ name="テルキネシャジュブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},--"ＰＤガウン+3",
-        hands="ＡＢブレーサー+3",
-		legs={ name="テルキネブラコーニ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
-		feet={ name="テルキネピガッシュ", augments={'Enh. Mag. eff. dur. +10',}},
-        neck="インカンタートルク",
-        waist="エンブラサッシュ",
-        left_ear="ミミルピアス",
-		right_ear="アンドアーピアス",
-		-- back="フィフォレケープ+1",
-    }
-    sets.ma.Regen = set_combine(sets.buff, {
-		head="ＡＢボネット+3",
-	})
-	sets.ma.storm = set_combine(sets.buff, {
-		feet="ペダゴギローファー",
-	})
-    
-    sets.lowsc = {
-        -- main="ハーミットワンド",
-        head={ name="カイロンハット", augments={'Spell interruption rate down -10%','VIT+10',}},
-        body="ロゼトジャズラン+1",
-        hands={ name="カイロングローブ", augments={'Mag. Acc.+2','Spell interruption rate down -8%','CHR+4','"Mag.Atk.Bns."+4',}},
-        legs="クァーケンブレー",
-        waist="エンパチコスロープ",
-        back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
-    }
-    
     sets.mb = {
+		-- main="マクセンチアス",
         head="ＡＢボネット+3",
         body="ＡＢガウン+3",--"アグゥローブ",
         hands="ＡＢブレーサー+3",--"アグゥゲージ",
@@ -152,6 +102,62 @@ function get_sets()
         -- left_ring="夢神の指輪",
         right_ring={ name="メタモルリング+1", augments={'Path: A',}},
         back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+    }
+    
+    sets.ja = {}
+    sets.ja['Tabula Rasa'] = {
+		legs="ペダゴギパンツ",
+	}
+
+    sets.buff = {
+		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		body="ＰＤガウン+3",
+        hands="ＡＢブレーサー+3",
+		legs={ name="テルキネブラコーニ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		feet={ name="テルキネピガッシュ", augments={'Enh. Mag. eff. dur. +10',}},
+        neck="インカンタートルク",
+        waist="エンブラサッシュ",
+        left_ear="ミミルピアス",
+		right_ear="アンドアーピアス",
+		-- back="フィフォレケープ+1",
+    }
+    
+    sets.ma = {}
+    sets.ma.Stoneskin = set_combine(sets.buff,{
+        waist="ジーゲルサッシュ",
+        neck="ノデンズゴルゲット",
+		right_ear="アースクライピアス",
+    })
+    sets.ma.Cure = {
+        neck="ノデンズゴルゲット",
+		body="ＡＢガウン+3",
+		legs="ギーヴトラウザ",
+        feet="ヴァニヤクロッグ",
+		waist="オステリベルト+1",
+        left_ear="メンデカントピアス",
+        right_ear="カラミタスピアス",
+        left_ring="ナジの包帯",
+    }
+    sets.ma.Regen = set_combine(sets.buff, {
+		head="ＡＢボネット+3",
+	})
+	sets.ma.storm = set_combine(sets.buff, {
+		feet="ペダゴギローファー",
+	})
+	sets.ma.Klimaform = set_combine(sets.buff, {
+		feet="ＡＢローファー+3",
+	})
+    
+    sets.lowsc = {
+        -- main="ハーミットワンド",
+        main="コブラスタッフ",
+        head={ name="カイロンハット", augments={'Spell interruption rate down -10%','VIT+10',}},
+        body="ロゼトジャズラン+1",
+        hands={ name="カイロングローブ", augments={'Mag. Acc.+2','Spell interruption rate down -8%','CHR+4','"Mag.Atk.Bns."+4',}},
+        legs="クァーケンブレー",
+        waist="エンパチコスロープ",
+		right_ear="カラミタスピアス",
+        back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
     }
 
     sets.fc = {

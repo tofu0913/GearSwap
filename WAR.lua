@@ -78,6 +78,7 @@ function get_sets()
         legs="ＢＩクウィス+3",
         -- feet="スレビアレギンス+2",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
+        neck="戦士の数珠+2",
         left_ring="イフラマドリング",
         right_ring="王将の指輪",
         left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
