@@ -203,6 +203,8 @@ function precast(spell)
         
     elseif spell.english == 'Spectral Jig' and windower.ffxi.get_ability_recasts()[218] == 0 then
         windower.ffxi.cancel_buff(71)
+    elseif sets.ja[spell.english] then
+        set_equip = sets.ja[spell.english]
     end
 
     if set_equip then

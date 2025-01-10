@@ -226,6 +226,8 @@ function precast(spell)
             -- cancel_spell()
             -- send_command(windower.to_shift_jis('input /ja 女神降臨の章 <me>; wait 1; input /ma "'..spell.name..'" <me>'))
         -- end
+    elseif sets.ja[spell.english] then
+        set_equip = sets.ja[spell.english]
     end
 
     if set_equip then

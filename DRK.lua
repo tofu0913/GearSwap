@@ -236,6 +236,8 @@ function precast(spell)
         windower.ffxi.cancel_buff(71)
     elseif spell.action_type == 'Ranged Attack' then
          set_equip = sets.ra
+    elseif sets.ja[spell.english] then
+        set_equip = sets.ja[spell.english]
     end
 
     if set_equip then

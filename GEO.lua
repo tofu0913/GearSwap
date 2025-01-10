@@ -131,6 +131,8 @@ function precast(spell)
 		if spell.english == 'Sneak' and spell.target.name == player.name then
 			windower.ffxi.cancel_buff(71)
 		end
+    elseif sets.ja[spell.english] then
+        set_equip = sets.ja[spell.english]
 	end
 
     if set_equip then
