@@ -9,9 +9,10 @@ function get_sets()
     sets.tp = {}
 
     pdt = false
-    blow = false
     uncap = false
     th = false
+    blow = false
+    lowhate = false
     mode = ''
 	default_style = 2
         
@@ -133,6 +134,9 @@ function get_sets()
 		feet="サクパタレギンス",
 		neck="バーシチョーカー+1",
     }
+	sets.lowhate = {
+		right_ear="シェレピアス",
+	}
     sets.pdt = {
         -- head="ニャメヘルム",
         head="サクパタヘルム",
@@ -254,6 +258,9 @@ function midcast(spell)
         else
             set_equip = sets.ws
         end
+        if lowhate then
+            set_equip = set_combine(set_equip, sets.lowhate)
+        end
         if uncap then
             set_equip = set_combine(set_equip, sets.uncap)
         end
@@ -329,6 +336,10 @@ function self_command(command)
     elseif command == 'blow' then
         blow = not blow
         windower.add_to_chat('Blow- is: '..tostring(blow))
+		
+    elseif command == 'lowhate' then
+        lowhate = not lowhate
+        windower.add_to_chat('Hate-: '..tostring(lowhate))
 		
     elseif command == 'style' or command == 's' then
 		lockstyle()

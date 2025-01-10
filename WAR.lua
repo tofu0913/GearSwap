@@ -15,6 +15,8 @@ function get_sets()
     uncap = false
     acc = false
     th = false
+    blow = false
+    lowhate = false
     mode = ''
 	default_style = 1
     
@@ -125,6 +127,17 @@ function get_sets()
         -- left_ring="ジェリーリング",
         waist="プラチナモグベルト",
     }
+    sets.blow = {
+        -- head="サクパタヘルム",
+        -- body="デーゴンブレスト",
+        -- hands="サクパタガントレ",
+        -- legs="サクパタクウィス",
+		feet="サクパタレギンス",
+		neck="バーシチョーカー+1",
+    }
+	sets.lowhate = {
+		right_ear="シェレピアス",
+	}
     sets.uncap = {
         -- head="サクパタヘルム",
         body="サクパタブレスト",
@@ -226,6 +239,9 @@ function midcast(spell)
         else
             set_equip = sets.ws
         end
+		if lowhate then
+            set_equip = set_combine(set_equip, sets.lowhate)
+		end
         if uncap then
             set_equip = set_combine(set_equip, sets.uncap)
         end
@@ -296,6 +312,8 @@ function setIdle()
     end
     if pdt then
         set_equip = set_combine(tp_set, sets.pdt)
+	elseif blow then
+        set_equip = set_combine(sets.tp, sets.blow)
     else
         if acc then
             set_equip = sets.acc
@@ -348,6 +366,12 @@ function self_command(command)
     elseif command == 'uncap' then
         uncap = not uncap
         windower.add_to_chat('Uncapped is: '..tostring(uncap))
+    elseif command == 'blow' then
+        blow = not blow
+        windower.add_to_chat('Blow-: '..tostring(blow))
+    elseif command == 'lowhate' then
+        lowhate = not lowhate
+        windower.add_to_chat('Hate-: '..tostring(lowhate))
     elseif command == 'acc' then
         acc = not acc
         windower.add_to_chat('Accuracy is: '..tostring(acc))
