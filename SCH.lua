@@ -123,6 +123,10 @@ function get_sets()
     }
     
     sets.ma = {}
+	sets.ma.Impact = set_combine(sets.mb, {
+		head="",
+		body="トワイライトプリス",
+	})
     sets.ma.Stoneskin = set_combine(sets.buff,{
         waist="ジーゲルサッシュ",
         neck="ノデンズゴルゲット",
@@ -174,6 +178,10 @@ function get_sets()
         left_ear="ロケイシャスピアス",--"エンチャンピアス+1",
         back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
     }
+	sets.fc.Impact = set_combine(sets.fc, {
+		head="",
+		body="トワイライトプリス",
+	})
 
     sets.ws = {
         head="ニャメヘルム",
@@ -218,6 +226,9 @@ function precast(spell)
 			windower.ffxi.cancel_buff(71)
 		end
 		
+		if spell.english == 'Impact' then
+			set_equip = sets.fc.Impact
+		end
         -- if spell.english == 'Firestorm' then
             -- cancel_spell()
             -- send_command(windower.to_shift_jis('input /ma "熱波の陣II" <me>'))
