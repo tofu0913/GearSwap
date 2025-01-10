@@ -42,6 +42,10 @@ function get_sets()
         left_ear="ロケイシャスピアス",--"エンチャンピアス+1",
         -- back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
     }
+	sets.fc.Impact = set_combine(sets.fc, {
+		head="",
+		body="トワイライトプリス",
+	})
 	
 	sets.ja = {}
 	sets.ja.Bolster = {
@@ -49,6 +53,26 @@ function get_sets()
 	}
 	sets.ja.Entrust = {
 	}
+
+    sets.mb = {
+		-- sub="玄武盾",
+        head="ニャメヘルム",
+        hands="ニャメガントレ",
+        legs="ニャメフランチャ",
+        feet={ name="ニャメソルレット", augments={'Path: B',}},
+        
+        ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
+        body="ＡＺコート+2",--"+3"
+        neck="水影の首飾り",
+        waist="八輪の帯",
+        -- waist="オルペウスサッシュ",
+        right_ear="マリグナスピアス",
+		left_ear="王将の耳飾り",
+		-- right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
+        left_ring="フレキリング",
+        right_ring="メタモルリング+1",--{ name="メタモルリング+1", augments={'Path: A',}},
+		back={ name="ナントセルタケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+    }
 	
 	sets.ma = {}
 	sets.ma.indi = set_combine(sets.idle, {
@@ -69,6 +93,10 @@ function get_sets()
 		neck="バグアチャーム+2",
 		right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
 	})
+	sets.ma.Impact = set_combine(sets.mb, {
+		head="",
+		body="トワイライトプリス",
+	})
 	
     sets.buff = {
 		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
@@ -81,26 +109,6 @@ function get_sets()
         left_ear="ミミルピアス",
 		right_ear="アンドアーピアス",
 		-- right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
-    }
-
-    sets.mb = {
-		-- sub="玄武盾",
-        head="ニャメヘルム",
-        hands="ニャメガントレ",
-        legs="ニャメフランチャ",
-        feet={ name="ニャメソルレット", augments={'Path: B',}},
-        
-        ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
-        body="ＡＺコート+2",--"+3"
-        neck="水影の首飾り",
-        waist="八輪の帯",
-        -- waist="オルペウスサッシュ",
-        right_ear="マリグナスピアス",
-		left_ear="王将の耳飾り",
-		-- right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
-        left_ring="フレキリング",
-        right_ring="メタモルリング+1",--{ name="メタモルリング+1", augments={'Path: A',}},
-		back={ name="ナントセルタケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
     }
 	
 	sets.engage = {
@@ -130,6 +138,9 @@ function precast(spell)
 		
 		if spell.english == 'Sneak' and spell.target.name == player.name then
 			windower.ffxi.cancel_buff(71)
+
+		elseif spell.english == 'Impact' then
+			set_equip = sets.fc.Impact
 		end
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
