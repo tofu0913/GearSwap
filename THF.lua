@@ -175,6 +175,7 @@ function get_sets()
 
     send_command('input /macro book 15; ')
     send_command('wait 2;input /lockstyleset '..default_style)
+	send_command('input //lua r thtracker')
 end
 
 function pretarget(spell,action)
@@ -299,6 +300,10 @@ function lockstyle()
 	else
 		send_command('input /lockstyleset '..default_style)
 	end
+end
+
+function file_unload(file_name)
+	send_command('input //lua u thtracker')
 end
 
 function self_command(command)
