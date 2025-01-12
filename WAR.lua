@@ -181,6 +181,7 @@ function get_sets()
 
     -- Common equipments
     sets.fc = {
+		head="サクパタヘルム",
         neck="ボルトサージトルク",
         right_ear="ロケイシャスピアス",
         right_ring="プロリクスリング",

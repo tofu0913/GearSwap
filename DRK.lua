@@ -201,12 +201,15 @@ function get_sets()
     }
 
     sets.fc = {
-        head="ＦＬバーゴネット+1",
+		head="サクパタヘルム",
         neck="ボルトサージトルク",
         left_ear="マリグナスピアス",
         right_ear="ロケイシャスピアス",
         right_ring="プロリクスリング",
     }
+    sets.fc.drk = {
+        head="ＦＬバーゴネット+1",
+	}
     -- Common equipments
     sets.walk = {
         right_ring="シュネデックリング",
@@ -236,6 +239,9 @@ function precast(spell)
 
     if spell.type == 'Trust' or string.find(spell.type, 'Magic') then
         set_equip = sets.fc
+        if spell.skill=='暗黒魔法' then
+			set_equip = set_combine(set_equip, sets.fc.drk)
+		end
     elseif spell.english == 'Spectral Jig' and windower.ffxi.get_ability_recasts()[218] == 0 then
         windower.ffxi.cancel_buff(71)
     elseif spell.action_type == 'Ranged Attack' then
