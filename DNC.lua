@@ -251,7 +251,6 @@ function get_sets()
     -- Common equipments
     sets.fc = {
 		head="ヘルクリアヘルム",
-        hands={ name="ヘルクリアグローブ"},
         neck="ボルトサージトルク",
         right_ear="ロケイシャスピアス",
         right_ring="プロリクスリング",
