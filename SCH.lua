@@ -45,6 +45,11 @@ function updateText()
 	else
         flags = flags..' '
 	end
+	if rp then
+        flags = flags..'RP '
+	else
+        flags = flags..' '
+	end
     -- windower.add_to_chat('Low Haste: '..tostring(lowhaste))
     -- windower.add_to_chat('TH: '..tostring(th))
     text.flags = flags
@@ -57,6 +62,7 @@ function get_sets()
 	subling = false
 	mbmode = false
 	nobook = false
+	rp = false
 	default_style = 7
     
     sets.idle = {
@@ -372,6 +378,17 @@ function self_command(command)
     elseif command == 'low0' then
         lowsc = false
         windower.add_to_chat('LowSC is: '..tostring(lowsc))
+		updateText()
+		
+    elseif command == 'rp' then
+        rp = not rp
+        windower.add_to_chat('RP: '..tostring(rp))
+		if rp then
+			disable('main', 'neck')
+		else
+            enable('main', 'neck')
+		end
+		setIdle()
 		updateText()
 		
     elseif command == 'style' or command == 's' then
