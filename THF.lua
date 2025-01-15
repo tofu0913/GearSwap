@@ -50,8 +50,6 @@ function get_sets()
     }
 
     sets.tp={
-        neck="クロタリウストルク",--job neck
-		
         -- ammo="コイストボダー",
         ammo={ name="シーズボムレット+1", augments={'Path: A',}},
         -- ammo="銀銭",
@@ -63,6 +61,7 @@ function get_sets()
         -- legs="メガナダショウス+2",
         legs={ name="サムヌータイツ", augments={'STR+9','DEX+8','"Dbl.Atk."+2','"Triple Atk."+2',}},
         feet="マリグナスブーツ",
+		neck={ name="アサシンゴルゲ+2", augments={'Path: A',}},
         -- waist="ウィンバフベルト+1",
         waist="ケンタークベルト+1",
         right_ear="スカルカピアス+1",
@@ -72,7 +71,7 @@ function get_sets()
         -- right_ring="ペトロフリング",
         -- right_ring="ゲリリング",
 		right_ring="イフラマドリング",
-		-- back={ name="トゥタティスケープ", augments={'Phys. dmg. taken-10%',}},
+		back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
     }
     sets.ws={
         ammo="コイストボダー",
@@ -86,10 +85,13 @@ function get_sets()
         right_ear="オドルピアス",
         left_ring="イフラマドリング",
         right_ring="王将の指輪",
-		back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+		back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
     }
     sets.ws.fulltp={
     }
+    sets.ws['Savage Blade'] = set_combine(sets.ws, {
+        waist={ name="セールフィベルト+1", augments={'Path: A',}},
+	})
     sets.ws['Shark Bite'] = set_combine(sets.ws, {
         -- right_ear="オドルピアス",
         -- waist="グルンフェルロープ",
@@ -109,7 +111,7 @@ function get_sets()
         -- waist="グルンフェルロープ",
     })
     sets.ws['Rudra\'s Storm'] = set_combine(sets.ws, {
-        neck="フォシャゴルゲット",
+        -- neck="フォシャゴルゲット",
         -- waist="フォシャベルト",
     })
     sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {

@@ -101,7 +101,7 @@ function get_sets()
         legs="ニャメフランチャ",
         feet="ＦＬコテュルヌ+2",--"ＦＬコテュルヌ+3",
         neck="バーシチョーカー+1",
-        waist="プラチナモグベルト",
+        waist="無の腰当",
         left_ear="インフューズピアス",
         right_ear="エアバニピアス",
         left_ring="シーリチリング+1",

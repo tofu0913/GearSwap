@@ -60,16 +60,16 @@ function get_sets()
 	default_style = 7
     
     sets.idle = {
-        main="ムサ",
-        -- main="マリグナスポール",
-		ammo={ name="ガストリタスラム+1", augments={'Path: A',}},--'pdt',
+        main="マリグナスポール",
         sub="コーンスー",
+		ammo={ name="ガストリタスラム+1", augments={'Path: A',}},--'pdt',
         head="ニャメヘルム",
         body="ＡＢガウン+3",
         hands="ニャメガントレ",
-        legs="ニャメフランチャ",
+        legs="ＡＢパンツ+3",
+        -- legs="ニャメフランチャ",
         feet="ニャメソルレット",
-        waist="エンブラサッシュ",
+        waist="無の腰当",
         neck={ name="アギュトストール+2", augments={'Path: A',}},
         left_ear="ミミルピアス",
         right_ear="サバントピアス",
@@ -84,11 +84,13 @@ function get_sets()
 	})
     
     sets.mb = {
-		-- main="マクセンチアス",
+		main={ name="マランスタッフ+1", augments={'Path: A',}},
+		sub="エンキストラップ",
+
         head="ＡＢボネット+3",
         body="ＡＢガウン+3",--"アグゥローブ",
         hands="ＡＢブレーサー+3",--"アグゥゲージ",
-        legs="ＡＢパンツ+2",--"アグゥスロップス",
+        legs="ＡＢパンツ+3",--"アグゥスロップス",
         feet="ＡＢローファー+3",
         
         ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
@@ -110,6 +112,8 @@ function get_sets()
 	}
 
     sets.buff = {
+        main="ムサ",
+        sub="コーンスー",
 		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 		body="ＰＤガウン+3",
         hands="ＡＢブレーサー+3",
@@ -155,6 +159,7 @@ function get_sets()
     sets.lowsc = {
         -- main="ハーミットワンド",
         main="コブラスタッフ",
+        sub="コーンスー",
         head={ name="カイロンハット", augments={'Spell interruption rate down -10%','VIT+10',}},
         body="ロゼトジャズラン+1",
         hands={ name="カイロングローブ", augments={'Mag. Acc.+2','Spell interruption rate down -8%','CHR+4','"Mag.Atk.Bns."+4',}},
@@ -165,6 +170,8 @@ function get_sets()
     }
 
     sets.fc = {
+        main="ムサ",
+        sub="コーンスー",
         ammo="インカントストーン",
         head={ name="マーリンフード", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','"Fast Cast"+7',}},
         hands={ name="ＧＥゲージ+1", augments={'Phys. dmg. taken -4%','Magic dmg. taken -3%','Song spellcasting time -5%',}},
