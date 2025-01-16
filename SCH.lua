@@ -66,10 +66,11 @@ function get_sets()
 	default_style = 7
     
     sets.idle = {
-        main="マリグナスポール",
+        main="ムサ",
+        -- main="マリグナスポール",
         sub="コーンスー",
 		ammo={ name="ガストリタスラム+1", augments={'Path: A',}},--'pdt',
-        head="ニャメヘルム",
+        head="ＡＢボネット+3",
         body="ＡＢガウン+3",
         hands="ニャメガントレ",
         legs="ＡＢパンツ+3",
@@ -77,7 +78,7 @@ function get_sets()
         feet="ニャメソルレット",
         waist="無の腰当",
         neck={ name="アギュトストール+2", augments={'Path: A',}},
-        left_ear="ミミルピアス",
+        left_ear="ハーティーピアス",
         right_ear="サバントピアス",
         left_ring="シーリチリング+1",--守
         right_ring="シュネデックリング",
@@ -90,6 +91,7 @@ function get_sets()
 	})
     
     sets.mb = {
+		-- main={ name="ブンジロッド", augments={'Path: A',}},
 		main={ name="マランスタッフ+1", augments={'Path: A',}},
 		sub="エンキストラップ",
 
