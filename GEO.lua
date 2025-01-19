@@ -260,9 +260,9 @@ function self_command(command)
         rp = not rp
         windower.add_to_chat('RP: '..tostring(rp))
 		if rp then
-			disable('neck')
+			send_command('gs disable neck')
 		else
-            enable('neck')
+			send_command('gs enable neck')
 		end
 		setIdle()
         
