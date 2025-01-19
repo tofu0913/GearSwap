@@ -268,7 +268,7 @@ function midcast(spell)
         set_equip = sets.ja[spell.english]
     
     elseif spell.action_type == 'Magic' then
-        if string.find(spell.english,'Cur') and spell.name ~= 'Cursna' then
+        if string.find(spell.name,'ケアル') then
             set_equip = sets.ma.Cure
         elseif string.find(spell.english,'Regen') then
             set_equip = sets.ma.Regen
