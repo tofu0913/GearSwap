@@ -66,9 +66,11 @@ function get_sets()
 	default_style = 7
     
     sets.idle = {
-        main="ムサ",
+		main={ name="ブンジロッド", augments={'Path: A',}},
+		sub="カルミナス",
+        -- main="ムサ",
         -- main="マリグナスポール",
-        sub="コーンスー",
+        -- sub="コーンスー",
 		ammo={ name="ガストリタスラム+1", augments={'Path: A',}},--'pdt',
         head="ＡＢボネット+3",
         body="ＡＢガウン+3",
@@ -85,15 +87,18 @@ function get_sets()
         back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}}
     }
 	sets.idle.Sublimation = set_combine(sets.idle, {
-        head="ＡＣボード+2",
+        main="シリティ",
+		head="ＡＣボード+2",
         body="ＰＤガウン+3",
+		waist="エンブラサッシュ",
         right_ear="サバントピアス",
 	})
     
     sets.mb = {
-		-- main={ name="ブンジロッド", augments={'Path: A',}},
-		main={ name="マランスタッフ+1", augments={'Path: A',}},
-		sub="エンキストラップ",
+		main={ name="ブンジロッド", augments={'Path: A',}},
+		sub="カルミナス",
+		-- main={ name="マランスタッフ+1", augments={'Path: A',}},
+		-- sub="エンキストラップ",
 
         head="ＡＢボネット+3",
         body="ＡＢガウン+3",--"アグゥローブ",
@@ -165,9 +170,10 @@ function get_sets()
 	})
     
     sets.lowsc = {
-        -- main="ハーミットワンド",
-        main="コブラスタッフ",
-        sub="コーンスー",
+        main="ハーミットワンド",
+		sub="玄武盾",
+        -- main="コブラスタッフ",
+        -- sub="コーンスー",
         head={ name="カイロンハット", augments={'Spell interruption rate down -10%','VIT+10',}},
         body="ロゼトジャズラン+1",
         hands={ name="カイロングローブ", augments={'Mag. Acc.+2','Spell interruption rate down -8%','CHR+4','"Mag.Atk.Bns."+4',}},
@@ -178,8 +184,8 @@ function get_sets()
     }
 
     sets.fc = {
-        main="ムサ",
-        sub="コーンスー",
+        -- main="ムサ",
+        -- sub="コーンスー",
         ammo="インカントストーン",
         head={ name="マーリンフード", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','"Fast Cast"+7',}},
         hands={ name="ＧＥゲージ+1", augments={'Phys. dmg. taken -4%','Magic dmg. taken -3%','Song spellcasting time -5%',}},
@@ -334,7 +340,7 @@ function buff_change(buff,gain,buff_details)
 		local books = getBookCount()
 		-- windower.add_to_chat('book: '..books)
 		if books <= 1 then
-			send_command(windower.to_shift_jis('input /p ====== 戦術魔道書残量：'..books..' ======'))
+			send_command(windower.to_shift_jis('input /p ==== 戦術魔道書残量：'..books..' ===='))
 		end
 	end
 	
