@@ -169,6 +169,23 @@ function get_sets()
 	sets.ma.Klimaform = set_combine(sets.buff, {
 		feet="ＡＢローファー+3",
 	})
+	
+	sets.debuff = {
+		main={ name="ブンジロッド", augments={'Path: A',}},
+		sub="カルミナス",
+		head="ＡＣボード+2",
+        body="ＡＢガウン+3",--ＡＣガウン+3
+        hands="ＡＢブレーサー+3",
+        legs="ＡＢパンツ+3",
+        feet="ＡＢローファー+3",--ＡＣローファー+3
+		waist="無の腰当",
+        neck={ name="アギュトストール+2", augments={'Path: A',}},
+		left_ear="王将の耳飾り",
+		right_ear="マリグナスピアス",
+        right_ring={ name="メタモルリング+1", augments={'Path: A',}},
+        left_ring="キシャールリング",
+        back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+	}
     
     sets.lowsc = {
         main="ハーミットワンド",
@@ -294,6 +311,9 @@ function midcast(spell)
             
         elseif spell.skill=='精霊魔法' then
             set_equip = sets.mb
+            
+        elseif spell.skill=='弱体魔法' then
+            set_equip = sets.debuff
         end
             
     elseif spell.type == 'WeaponSkill' then
