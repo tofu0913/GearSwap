@@ -36,6 +36,11 @@ function get_sets()
         sub="ブラーシールド+1",
 		style=21,
     }
+    sets.mode['Great Axe'] = {
+        main="ライカーゴス",
+        sub="ウトゥグリップ",
+		style=25,
+    }
     sets.tp={
         -- ammo="銀銭",
         -- ammo={ name="シーズボムレット+1", augments={'Path: A',}},
@@ -416,6 +421,10 @@ function self_command(command)
         mode = 'Great Sword'
 		lockstyle()
         send_command('input //ws drk_gsw')
+    elseif command == 'gax' then
+        mode = 'Great Axe'
+		lockstyle()
+        send_command('input //ws drk_gax')
     elseif command == 'sc' then
         mode = 'Scythe'
 		lockstyle()
