@@ -178,28 +178,38 @@ function get_sets()
         hands="ＩＧガントレ+2",--+3
     }
     
-    sets.drk_magic = {
+    sets.ma = {}
+    sets.ma.drk_magic = {
         -- head="ＦＬバーゴネット+1",
         -- legs="ＨＴフランチャ+1",
-        neck="エーラペンダント",
-        right_ring="エバネセンスリング",
-        left_ring="アルコンリング",
-        left_ear="マニピアス",
-        right_ear="マリグナスピアス",
         
         head="ニャメヘルム",
         body="ニャメメイル",
         hands="ニャメガントレ",
         legs="ニャメフランチャ",
-        feet="ニャメソルレット",
-        
+        feet="ＨＴソルレット+3",
+        neck="エーラペンダント",
+		waist="無の腰当",
+        right_ear="マニピアス",
+		left_ear="マリグナスピアス",
+        right_ring="エバネセンスリング",
+        left_ring="アルコンリング",
+		back="無の外装",
     }
-    sets.drain = {
+    sets.ma.drain = set_combine(sets.ma.drk_magic, {
         right_ear="ヒルディネアピアス",
         waist="オステリベルト+1",
         hands="ＦＬガントレット+1",
         back={ name="デオルクネスマント", augments={'Attack+7','"Drain" and "Aspir" potency +25',}},
-    }
+    })
+	sets.ma.Impact = set_combine(sets.ma.drk_magic, {
+		head="",
+		body="トワイライトプリス",
+		neck="無の喉輪",
+		waist="無の腰当",
+		right_ear={ name="ヒーズンピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Weapon skill damage +2%',}},
+		right_ring={ name="メタモルリング+1", augments={'Path: A',}},
+	})
     
     sets.ra = {
         range="ラミアベーン",
@@ -216,9 +226,14 @@ function get_sets()
         left_ring="キシャールリング",
         right_ring="プロリクスリング",
     }
-    sets.fc.drk = {
+    sets.fc.drk = set_combine(sets.fc, {
         head="ＦＬバーゴネット+1",
-	}
+	})
+	sets.fc.Impact = set_combine(sets.fc, {
+		head="",
+		body="トワイライトプリス",
+	})
+	
     -- Common equipments
     sets.walk = {
         right_ring="シュネデックリング",
@@ -249,7 +264,10 @@ function precast(spell)
     if spell.type == 'Trust' or string.find(spell.type, 'Magic') then
         set_equip = sets.fc
         if spell.skill=='暗黒魔法' then
-			set_equip = set_combine(set_equip, sets.fc.drk)
+			set_equip = sets.fc.drk
+		end
+		if spell.english == 'Impact' then
+			set_equip = sets.fc.Impact
 		end
     elseif spell.english == 'Spectral Jig' and windower.ffxi.get_ability_recasts()[218] == 0 then
         windower.ffxi.cancel_buff(71)
@@ -280,11 +298,13 @@ function midcast(spell)
             set_equip = set_combine(set_equip, sets.uncap)
         end
     elseif string.find(spell.name, 'ドレイン') or string.find(spell.name, 'アスピル') then
-        set_equip = set_combine(sets.drk_magic, sets.drain)
+        set_equip = sets.ma.drain
     elseif string.find(spell.name, 'アブゾ') or string.find(spell.name, 'エンダーク') then
-        set_equip = sets.drk_magic
+        set_equip = sets.ma.drk_magic
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
+    elseif sets.ma[spell.english] then
+        set_equip = sets.ma[spell.english]
     elseif sets.buff[spell.english] then
         set_equip = sets.buff[spell.english]
     end
