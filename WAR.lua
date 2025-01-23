@@ -146,7 +146,8 @@ function get_sets()
     }
     sets.th = {
         ammo="完璧な幸運の卵",
-        legs={ name="オディシアクウィス", augments={'"Dbl.Atk."+3','Pet: Haste+3','"Treasure Hunter"+1','Accuracy+9 Attack+9',}},
+		waist="チャークベルト",
+        -- legs={ name="オディシアクウィス", augments={'"Dbl.Atk."+3','Pet: Haste+3','"Treasure Hunter"+1','Accuracy+9 Attack+9',}},
     }
     
     sets.ja = {}
@@ -181,9 +182,13 @@ function get_sets()
 
     -- Common equipments
     sets.fc = {
+		ammo="サピエンスオーブ",
 		head="サクパタヘルム",
+		legs={ name="オディシアクウィス", augments={'Attack+15','"Fast Cast"+5','Accuracy+11',}},
+		feet={ name="オディシアグリーヴ", augments={'Attack+12','"Fast Cast"+5','Accuracy+5',}},
         neck="ボルトサージトルク",
         right_ear="ロケイシャスピアス",
+        left_ring="キシャールリング",
         right_ring="プロリクスリング",
     }
     sets.walk = {

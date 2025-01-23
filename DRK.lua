@@ -94,8 +94,8 @@ function get_sets()
         left_ring="イフラマドリング",
         right_ring="王将の指輪",
         left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-        right_ear="スラッドピアス",
-        -- right_ear="ヒーズンピアス",
+        -- right_ear="スラッドピアス",
+        right_ear="ヒーズンピアス+1",
         back={ name="アンコウマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%'}},
     }
     sets.ws.Catastrophe = set_combine(sets.ws, {
@@ -118,7 +118,11 @@ function get_sets()
         back={ name="アンコウマント", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
     })
     sets.ws['Savage Blade'] = set_combine(sets.ws, {
-        hands={ name="オディシアガントレ", augments={'Accuracy+13 Attack+13','Weapon skill damage +4%','Accuracy+15','Attack+14',}},
+        -- hands={ name="オディシアガントレ", augments={'Accuracy+13 Attack+13','Weapon skill damage +4%','Accuracy+15','Attack+14',}},
+    })
+    sets.ws.Judgment = set_combine(sets.ws, {
+        -- hands={ name="オディシアガントレ", augments={'Accuracy+13 Attack+13','Weapon skill damage +4%','Accuracy+15','Attack+14',}},
+        back={ name="アンコウマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%'}},
     })
     
 	sets.buff = {}
@@ -156,7 +160,8 @@ function get_sets()
     }
     sets.th = {
         ammo="完璧な幸運の卵",
-        legs={ name="オディシアクウィス", augments={'"Dbl.Atk."+3','Pet: Haste+3','"Treasure Hunter"+1','Accuracy+9 Attack+9',}},
+		waist="チャークベルト",
+        -- legs={ name="オディシアクウィス", augments={'"Dbl.Atk."+3','Pet: Haste+3','"Treasure Hunter"+1','Accuracy+9 Attack+9',}},
     }
 
     sets.ja = {}
@@ -201,10 +206,14 @@ function get_sets()
     }
 
     sets.fc = {
+		ammo="サピエンスオーブ",
 		head="サクパタヘルム",
+		legs={ name="オディシアクウィス", augments={'Attack+15','"Fast Cast"+5','Accuracy+11',}},
+		feet={ name="オディシアグリーヴ", augments={'Attack+12','"Fast Cast"+5','Accuracy+5',}},
         neck="ボルトサージトルク",
         left_ear="マリグナスピアス",
         right_ear="ロケイシャスピアス",
+        left_ring="キシャールリング",
         right_ring="プロリクスリング",
     }
     sets.fc.drk = {

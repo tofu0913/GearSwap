@@ -185,6 +185,7 @@ function get_sets()
         body="ＨＯカザク+3",
     }
     sets.ja.Waltz = {
+		ammo="ヤメラング",
         left_ring="ヴァルスールリング",
         head="ＨＯティアラ+1",
     }

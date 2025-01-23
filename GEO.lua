@@ -29,6 +29,7 @@ function get_sets()
 	}
 	sets.idle.geo = {
 		feet="ＢＡサンダル+1",
+		left_ear="ハンドラーピアス+1",
 	}
 	
     sets.fc = {
@@ -56,14 +57,17 @@ function get_sets()
 	}
 
     sets.mb = {
-		-- sub="玄武盾",
+		main={ name="ブンジロッド", augments={'Path: A',}},
+		sub="カルミナス",
+		
         head="ニャメヘルム",
+        body="ニャメメイル",
         hands="ニャメガントレ",
         legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
         
         ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
-        body="ＡＺコート+2",--"+3"
+        -- body="ＡＺコート+2",--"+3"
         neck="水影の首飾り",
         waist="八輪の帯",
         -- waist="オルペウスサッシュ",
