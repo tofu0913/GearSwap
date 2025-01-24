@@ -575,7 +575,7 @@ function self_command(command)
     elseif command == 'sw' then
         mode = 'SW'
 		lockstyle()
-    else
+    elseif command == 'help' then
         windower.add_to_chat('Mode: '..tostring(mode))
         windower.add_to_chat('Available modes: [aby, amb, acc, p]')
         windower.add_to_chat('PDT: '..tostring(pdt))

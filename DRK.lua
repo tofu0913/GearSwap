@@ -428,7 +428,7 @@ function self_command(command)
     elseif command == 'sc' then
         mode = 'Scythe'
 		lockstyle()
-    else
+    elseif command == 'help' then
         windower.add_to_chat('==============================')
         windower.add_to_chat('Mode: '..tostring(mode))
         windower.add_to_chat('Available modes: [sw, gsw, cb, sc]')

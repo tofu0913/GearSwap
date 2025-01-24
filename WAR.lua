@@ -420,9 +420,9 @@ function self_command(command)
         send_command('input //ws war_po')
 		lockstyle()
         
-    -- else
-        -- windower.add_to_chat('==============================')
-        -- windower.add_to_chat('Mode: '..tostring(mode))
+    elseif command == 'help' then
+        windower.add_to_chat('==============================')
+        windower.add_to_chat('Mode: '..tostring(mode))
         -- windower.add_to_chat('Available modes: [sw, gax, cb, po]')
         -- windower.add_to_chat('PDT: '..tostring(pdt))
         -- windower.add_to_chat('Accuracy: '..tostring(acc))
