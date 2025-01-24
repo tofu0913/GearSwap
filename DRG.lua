@@ -19,7 +19,7 @@ function get_sets()
     
     sets.mode['Sword'] = {
         main="ネイグリング",
-        sub="ブラーシールド+1",
+        sub="ターニオンダガー+1",
 		style=15,
     }
     sets.mode['Club'] = {
@@ -27,10 +27,15 @@ function get_sets()
         sub="クラーケンクラブ",
 		style=15,
     }
-    sets.mode['Polearm'] = {
+    sets.mode['Shine'] = {
         main="シャイニングワン",
         sub="ウトゥグリップ",
 		style=22,
+    }
+    sets.mode['po'] = {
+        main="コッパーヘッド",
+        sub="ウトゥグリップ",
+		style=15,
     }
     
     sets.tp={
@@ -337,9 +342,13 @@ function self_command(command)
         mode = 'Club'
         send_command('input //ws war_sw')
 		lockstyle()
+    elseif command == 'shine' then
+        mode = 'Shine'
+        send_command('input //ws war_po')
+		lockstyle()
     elseif command == 'po' then
         mode = 'Polearm'
-        send_command('input //ws war_po')
+        send_command('input //ws drg')
 		lockstyle()
         
     elseif command == 'help' then

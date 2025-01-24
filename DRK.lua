@@ -80,7 +80,8 @@ function get_sets()
         right_ring="ニックマドゥリング",
         -- right_ring="王将の指輪",
         -- right_ring="フラマリング",
-        back={ name="アンコウマント", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+        -- back={ name="アンコウマント", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		back="無の外装",
     }
     sets.tp['Great Sword']=set_combine(sets.tp, {
     })
@@ -170,6 +171,9 @@ function get_sets()
     }
 
     sets.ja = {}
+    sets.ja['Last Resort'] = {
+        back={ name="アンコウマント", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	}
     sets.ja['Dark Seal'] = {
         head="ＦＬバーゴネット+1",
     }
@@ -201,6 +205,11 @@ function get_sets()
         left_ring="アルコンリング",
 		back="無の外装",
     }
+    sets.ma.endark = set_combine(sets.ma.drk_magic, {
+		neck="インカンタートルク",
+        hands="ＦＬガントレット+1",
+        legs="ＨＴフランチャ+1",
+    })
     sets.ma.drain = set_combine(sets.ma.drk_magic, {
         right_ear="ヒルディネアピアス",
         waist="オステリベルト+1",
@@ -304,8 +313,10 @@ function midcast(spell)
         end
     elseif string.find(spell.name, 'ドレイン') or string.find(spell.name, 'アスピル') then
         set_equip = sets.ma.drain
-    elseif string.find(spell.name, 'アブゾ') or string.find(spell.name, 'エンダーク') then
+    elseif string.find(spell.name, 'アブゾ') then
         set_equip = sets.ma.drk_magic
+    elseif string.find(spell.name, 'エンダーク') then
+        set_equip = sets.ma.endark
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
     elseif sets.ma[spell.english] then
