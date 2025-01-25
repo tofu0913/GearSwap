@@ -140,6 +140,9 @@ function get_sets()
 		right_ear="アンドアーピアス",
 		-- back="フィフォレケープ+1",
     }
+	sets.buff.Perpetuance = set_combine(sets.buff, {
+        hands="ＡＢブレーサー+3",
+	})
     
     sets.ma = {}
 	sets.ma.Impact = set_combine(sets.mb, {
@@ -161,9 +164,9 @@ function get_sets()
         right_ear="カラミタスピアス",
         left_ring="ナジの包帯",
     }
-    sets.ma.Regen = set_combine(sets.buff, {
+    sets.ma.Regen = {
 		head="ＡＢボネット+3",
-	})
+	}
 	sets.ma.storm = set_combine(sets.buff, {
 		feet="ペダゴギローファー",
 	})
@@ -296,8 +299,6 @@ function midcast(spell)
     elseif spell.action_type == 'Magic' then
         if string.find(spell.name,'ケアル') then
             set_equip = sets.ma.Cure
-        elseif string.find(spell.english,'Regen') then
-            set_equip = sets.ma.Regen
 			
 		elseif string.find(spell.english,'storm') then
 			set_equip = sets.ma.storm
@@ -309,7 +310,14 @@ function midcast(spell)
             set_equip = sets.ma[spell.english]
             
         elseif spell.skill=='強化魔法' then
-            set_equip = sets.buff
+			set_equip = sets.buff
+			
+			if string.find(spell.english,'Regen') then
+				set_equip = set_combine(set_equip, sets.ma.Regen)
+			end
+			if buffactive['令狸執鼠の章'] then
+				set_equip = set_combine(set_equip, sets.buff.Perpetuance)
+			end
             
         elseif spell.skill=='精霊魔法' then
             set_equip = sets.mb
