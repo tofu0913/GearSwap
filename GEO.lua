@@ -35,7 +35,7 @@ function get_sets()
     sets.fc = {
         head={ name="マーリンフード", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','"Fast Cast"+7',}},
         legs="ＧＯパンツ+1",
-        feet={ name="マーリンクラッコー", augments={'"Fast Cast"+4','INT+4','Mag. Acc.+8','"Mag.Atk.Bns."+12',}},
+		feet={ name="マーリンクラッコー", augments={'"Mag.Atk.Bns."+2','"Fast Cast"+6','INT+6',}},
         waist="エンブラサッシュ",
         neck="ボルトサージトルク",
         left_ring="キシャールリング",
