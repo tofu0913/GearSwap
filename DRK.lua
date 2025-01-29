@@ -80,7 +80,6 @@ function get_sets()
         right_ring="ニックマドゥリング",
         -- right_ring="王将の指輪",
         -- right_ring="フラマリング",
-        -- back={ name="アンコウマント", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 		back="無の外装",
     }
     sets.tp['Great Sword']=set_combine(sets.tp, {
@@ -158,6 +157,7 @@ function get_sets()
         legs="サクパタクウィス",
 		feet="サクパタレギンス",
         -- feet={ name="ニャメソルレット", augments={'Path: B',}},
+        back={ name="アンコウマント", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
     sets.uncap = {
         body="サクパタブレスト",

@@ -82,7 +82,7 @@ function get_sets()
         waist="無の腰当",
         neck={ name="アギュトストール+2", augments={'Path: A',}},
         left_ear="ハーティーピアス",
-        right_ear="サバントピアス",
+        right_ear="インフューズピアス",
         left_ring="シーリチリング+1",
         right_ring="シュネデックリング",
         back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}}
@@ -102,8 +102,8 @@ function get_sets()
 		-- sub="エンキストラップ",
 
         head="ＡＢボネット+3",
-        body="ＡＢガウン+3",--"アグゥローブ",
-        hands="ＡＢブレーサー+3",--"アグゥゲージ",
+        body={ name="アグゥローブ", augments={'Path: A',}},
+        hands={ name="アグゥゲージ", augments={'Path: A',}},
         legs="ＡＢパンツ+3",--"アグゥスロップス",
         feet="ＡＢローファー+3",
         
