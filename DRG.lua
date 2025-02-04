@@ -32,10 +32,10 @@ function get_sets()
         sub="ウトゥグリップ",
 		style=22,
     }
-    sets.mode['po'] = {
-        main="コッパーヘッド",
+    sets.mode['Stuff'] = {
+		main="マリグナスポール",
         sub="ウトゥグリップ",
-		style=15,
+		style=22,
     }
     
     sets.tp={
@@ -356,6 +356,10 @@ function self_command(command)
     elseif command == 'po' then
         mode = 'Polearm'
         send_command('input //ws drg')
+		lockstyle()
+    elseif command == 'st' then
+        mode = 'Stuff'
+        send_command('input //ws drg_st')
 		lockstyle()
         
     elseif command == 'help' then
