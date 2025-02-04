@@ -91,6 +91,9 @@ function get_sets()
         right_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
 		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     }
+    sets.ws.fulltp={
+		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+    }
     sets.ws["Savage Blade"]=set_combine(sets.ws, {
 		neck="共和プラチナ章",
     })
@@ -205,8 +208,8 @@ function midcast(spell)
         else
             set_equip = sets.ws
         end
-        if uncap then
-            set_equip = set_combine(set_equip, sets.uncap)
+        if windower.ffxi.get_player().vitals.tp == 3000 then
+            set_equip = set_combine(set_equip, sets.ws.fulltp)
         end
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
