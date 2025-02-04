@@ -139,6 +139,12 @@ function get_sets()
 		hands="ＰＥバンブレス+1",
 		left_ear="プラティクピアス",
 	}
+	sets.ja.Jump = {
+		head="フラマツッケット+2",
+		feet="オストログリーヴ",
+		neck="アヌートルク",
+		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	}
     
     sets.ra = {
         range="ラミアベーン",
@@ -182,10 +188,12 @@ function precast(spell)
         set_equip = sets.fc
     elseif spell.english == 'Spectral Jig' and windower.ffxi.get_ability_recasts()[218] == 0 then
         windower.ffxi.cancel_buff(71)
-    elseif spell.english == "Tomahawk" then
-        set_equip = sets.ja.Tomahawk
+    elseif spell.english == "Angon" then
+        set_equip = sets.ja.Angon
     elseif spell.action_type == 'Ranged Attack' then
          set_equip = sets.ra
+	elseif string.find(spell.name,'ジャンプ') then
+		set_equip = sets.ja.Jump
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
     end
@@ -211,6 +219,8 @@ function midcast(spell)
         if windower.ffxi.get_player().vitals.tp == 3000 then
             set_equip = set_combine(set_equip, sets.ws.fulltp)
         end
+	elseif string.find(spell.name,'ジャンプ') then
+		set_equip = sets.ja.Jump
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
     elseif sets.buff[spell.english] then
