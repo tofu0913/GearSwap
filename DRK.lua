@@ -255,6 +255,11 @@ function get_sets()
     sets.walk.adoulin = set_combine(sets.walk, {
         body="カウンセラーガーブ",
     })
+    
+    sets.HolyWater = {
+        neck="ニカンダネックレス",
+        -- left_ring="Purity Ring",
+    }
 
     send_command('input /macro book 3; wait 2;input /lockstyleset '..default_style)
 end

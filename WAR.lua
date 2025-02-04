@@ -1,6 +1,5 @@
 
 mylib = require('mylib')
-packets = require('packets')
 res = require('resources')
 
 function get_sets()
@@ -290,23 +289,6 @@ function buff_change(buff,gain,buff_details)
         end
     end
 end
-
-windower.register_event('outgoing chunk',function(id,data)
-	if id == 0x037 then
-		local packet = packets.parse('outgoing', data)
-        item_used = res.items[windower.ffxi.get_items(packet.Bag, packet.Slot).id].en
-        if item_used == 'Holy Water' then  
-          if player.equipment.left_ring == "Purity Ring" and player.equipment.neck == "Nicander's Necklace" then
-            -- nothing
-          else
-            -- windower.add_to_chat(2,"Equipping gear and adding delay")
-            windower.send_command("gs equip sets.HolyWater")
-            send_command(windower.to_shift_jis('@wait 0.5; input /item "聖水" <me>'))
-            return true
-          end
-        end
-	end
-end)
 
 function setIdle()
     set_equip = nil
