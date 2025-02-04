@@ -27,7 +27,7 @@ function get_sets()
         sub="クラーケンクラブ",
 		style=15,
     }
-    sets.mode['Shine'] = {
+    sets.mode['Polearm'] = {
         main="シャイニングワン",
         sub="ウトゥグリップ",
 		style=22,
@@ -37,6 +37,11 @@ function get_sets()
         sub="ウトゥグリップ",
 		style=22,
     }
+    -- sets.mode['po'] = {
+        -- main="コッパーヘッド",
+        -- sub="ウトゥグリップ",
+		-- style=15,
+    -- }
     
     sets.tp={
         ammo={ name="コイストボダー", augments={'Path: A',}},
