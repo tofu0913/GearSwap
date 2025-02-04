@@ -89,7 +89,7 @@ function get_sets()
     }
 	sets.idle.Sublimation = set_combine(sets.idle, {
         main="シリティ",
-		head="ＡＣボード+2",
+		head="ＡＣボード+3",
         body="ＰＤガウン+3",
 		waist="エンブラサッシュ",
         right_ear="サバントピアス",
@@ -104,6 +104,8 @@ function get_sets()
         head="ＡＢボネット+3",
         body={ name="アグゥローブ", augments={'Path: A',}},
         hands={ name="アグゥゲージ", augments={'Path: A',}},
+        -- body="ＡＢガウン+3",
+        -- hands="ＡＢブレーサー+3",
         legs="ＡＢパンツ+3",--"アグゥスロップス",
         feet="ＡＢローファー+3",
         
@@ -145,6 +147,15 @@ function get_sets()
 	})
     
     sets.ma = {}
+    sets.ma.matk = set_combine(sets.mb, {
+        head="ＡＢボネット+3",
+        body="ＡＢガウン+3",
+        hands="ＡＢブレーサー+3",
+        legs="ＡＢパンツ+3",
+        feet="ＡＢローファー+3",
+        waist="八輪の帯",
+        -- waist="オルペウスサッシュ",
+    })
 	sets.ma.Impact = set_combine(sets.mb, {
 		head="",
 		body="トワイライトプリス",
@@ -177,7 +188,7 @@ function get_sets()
 	sets.debuff = {
 		main={ name="ブンジロッド", augments={'Path: A',}},
 		sub="カルミナス",
-		head="ＡＣボード+2",
+		head="ＡＣボード+3",
         body="ＡＢガウン+3",--ＡＣガウン+3
         hands="ＡＢブレーサー+3",
         legs="ＡＢパンツ+3",

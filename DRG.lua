@@ -40,8 +40,9 @@ function get_sets()
     
     sets.tp={
         ammo={ name="コイストボダー", augments={'Path: A',}},
-		head="ニャメヘルム",
-		body={ name="グレティキュイラス", augments={'Path: A',}},
+		head="フラマツッケット+2",
+		-- body={ name="グレティキュイラス", augments={'Path: A',}},
+        body="デーゴンブレスト",
 		hands={ name="ニャメガントレ", augments={'Path: B',}},
 		legs="ニャメフランチャ",
 		feet="フラマガンビエラ+2",
@@ -55,7 +56,7 @@ function get_sets()
     }
     sets.tp['Club']={
 		ammo={ name="コイストボダー", augments={'Path: A',}},
-		head="ニャメヘルム",
+		head="ＰＥメザイユ+2",
 		body="フロプトブレスト",
 		hands={ name="ニャメガントレ", augments={'Path: B',}},
 		legs="ニャメフランチャ",
@@ -67,27 +68,26 @@ function get_sets()
 		left_ring="シーリチリング+1",
 		right_ring="イフラマドリング",
 		back="無の外装",
-		-- back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+5','Weapon skill damage +10%',}},
+		-- back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 
     sets.ws={
         ammo="ノブキエリ",
-        -- head="ＡＧマスク+3",
-        -- body="ＰＭロリカ+3",
-        -- hands="ＢＩマフラ+3",
-        -- legs="ＢＩクウィス+3",
-        -- feet="スレビアレギンス+2",
+        head="ＰＥメザイユ+2",--"ＰＥメザイユ+3",
+        body="ＰＥプラカート+2",--"ＰＥプラカート+3",
+        hands={ name="ニャメガントレ", augments={'Path: B',}},
+        -- legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
-        -- neck="戦士の数珠+2",
+		neck="共和プラチナ章",--"士の数珠+2",
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
         left_ring="イフラマドリング",
         right_ring="王将の指輪",
-        left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-        right_ear="スラッドピアス",
-		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+5','Weapon skill damage +10%',}},
+        left_ear="スラッドピアス",
+        right_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
+		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     }
-    sets.ws["Ukko's Fury"]=set_combine(sets.ws, {
-        feet="ＢＩカリガ+2",
+    sets.ws["Savage Blade"]=set_combine(sets.ws, {
+		neck="共和プラチナ章",
     })
 	
 	sets.buff = {}
@@ -121,9 +121,16 @@ function get_sets()
     
     sets.ja = {}
     sets.ja.Angon = {
-        -- ammo="Ｔ．トマホーク",
+        ammo="アンゴン",
         hands="ＰＴフィンガー+1",--"ＰＴフィンガー+3",
     }
+	sets.ja['Spirit Surge'] = {
+		-- body="テロスレメイル",
+	}
+	sets.ja['Spirit Link'] = {
+		hands="ＰＥバンブレス+1",
+		left_ear="プラティクピアス",
+	}
     
     sets.ra = {
         range="ラミアベーン",
