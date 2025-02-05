@@ -400,13 +400,6 @@ function get_FM()
     return 0
 end
 
-function switchAuto(on)
-    send_command('dnc step '..tostring(on))
-    send_command('dnc bflo '..tostring(on))
-    cflo = on
-    windower.add_to_chat('C.Flour is: '..tostring(cflo))
-end
-
 function lockstyle()
 	if mode ~='' and sets.mode[mode] and sets.mode[mode].style then
 		send_command('input /lockstyleset '..sets.mode[mode].style)
@@ -431,24 +424,17 @@ function self_command(command)
     elseif command == 'cflo' then
         cflo = not cflo
         windower.add_to_chat('C.Flour is: '..tostring(cflo))
+    elseif command == 'cflo1' then
+        cflo = true
+        windower.add_to_chat('C.Flour is: '..tostring(cflo))
+    elseif command == 'cflo0' then
+        cflo = false
+        windower.add_to_chat('C.Flour is: '..tostring(cflo))
+		
     elseif command == 'lowhaste' then
         lowhaste = not lowhaste
         windower.add_to_chat('Low Haste is: '..tostring(lowhaste))
 		
-    elseif command == 'bflo' then
-        send_command('dnc bflo')
-    elseif command == 'rflo' then
-        send_command('dnc rflo')
-    elseif command == 'step' then
-        send_command('dnc step')
-        
-    elseif command == 'all' then
-        switchAuto(not step)
-    elseif command == 'all1' then
-        switchAuto(true)
-    elseif command == 'all0' then
-        switchAuto(false)
-        
     elseif command == 'pha1' then
         windower.add_to_chat('Phalanx ON')
         local spell = {}
