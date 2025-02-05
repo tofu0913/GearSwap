@@ -33,17 +33,8 @@ function updateText()
     if pdt then
         flags = flags..'PDT '
     end
-    if step then
-        flags = flags..'Step '
-    end
     if cflo then
         flags = flags..'C '
-    end
-    if bflo then
-        flags = flags..'B '
-    end
-    if rflo then
-        flags = flags..'R '
     end
     -- windower.add_to_chat('Low Haste: '..tostring(lowhaste))
     -- windower.add_to_chat('TH: '..tostring(th))
@@ -61,9 +52,6 @@ function get_sets()
     th = false
     lowhaste = false
     cflo = true
-    bflo = true
-    rflo = false
-    step = true
     mode = ''
     updateText()
 	default_style = 5
@@ -268,8 +256,9 @@ function get_sets()
         -- left_ring="Purity Ring",
     }
 
-    send_command('input /macro book 6; ')
-    send_command('wait 2;input /lockstyleset '..default_style)
+    send_command('input /macro book 6; wait 2;input /lockstyleset '..default_style)
+	updateText()
+	send_command('input //lua r autodnc')
 end
 
 function precast(spell)
@@ -287,11 +276,11 @@ function precast(spell)
             windower.ffxi.cancel_buff(410)
         end
         -- set_equip = sets.waltz.pre
-    elseif spell.type == 'Step' then
-        if windower.ffxi.get_ability_recasts()[236] < 1 then
-            cancel_spell()
-            send_command(windower.to_shift_jis('input /ja "プレスト" <me>; wait 1; input /ja "'..spell.name..'" <t>'))
-        end
+    -- elseif spell.type == 'Step' then
+        -- if windower.ffxi.get_ability_recasts()[236] < 1 then
+            -- cancel_spell()
+            -- send_command(windower.to_shift_jis('input /ja "プレスト" <me>; wait 1; input /ja "'..spell.name..'" <t>'))
+        -- end
     elseif spell.type == 'WeaponSkill' then
         if cflo and not buffactive['C.フラリッシュ'] and windower.ffxi.get_ability_recasts()[226] < 1 and get_FM() > 0 then
             cancel_spell()
@@ -394,15 +383,6 @@ function setIdle()
     end
 end
 
-local lastStepCheck = os.clock()
-local lastBfloCheck = os.clock()
-
-local steploop = 1
-STEPS = {
-    "ボックスステップ",
-    "フェザーステップ",
-}
-
 function get_FM()
     if buffactive['フィニシングムーブ1'] then
         return 1
@@ -420,54 +400,11 @@ function get_FM()
     return 0
 end
 
-windower.register_event('prerender',function ()
-    if not step and not bflo and not rflo then return end
-    
-    local player = windower.ffxi.get_player()
-    if player and player.status ~= 1 then
-        return
-    end
-    
-    if buffactive['睡眠'] or buffactive['石化'] or buffactive['スタン'] or buffactive['魅了'] or buffactive['アムネジア'] or buffactive['テラー'] or buffactive['ララバイ'] or buffactive['インペア'] then
-        return
-    end
-    
-    local recast = windower.ffxi.get_ability_recasts()
-    local mob = windower.ffxi.get_mob_by_target('t')
-    if os.clock() - lastStepCheck > 1.5 then
-        if step and recast[220] == 0 and recast[236] == 0 and player.vitals.tp >= 100 and mob and mob.distance<10 then
-            if steploop+1 > #STEPS then
-                steploop = 1
-            else
-                steploop = steploop + 1
-            end
-            send_command(windower.to_shift_jis('input /ja "'..STEPS[steploop]..'" <t>'))
-        end
-        lastStepCheck = os.clock()
-    end
-    if os.clock() - lastBfloCheck > 1 then
-        if bflo and recast[222] == 0 and get_FM() > 0 then
-            if not buffactive['B.フラリッシュ'] then
-                send_command(windower.to_shift_jis('input /ja "B.フラリッシュ" <me>'))
-            elseif player.vitals.tp < 499 then--Already have bflo, use rflo
-                send_command(windower.to_shift_jis('input /ja "R.フラリッシュ" <me>'))
-            end
-        elseif rflo and recast[222] == 0 and get_FM() > 0 and player.vitals.tp < 499 then
-            send_command(windower.to_shift_jis('input /ja "R.フラリッシュ" <me>'))
-        end
-        lastBfloCheck = os.clock()
-    end
-end)
-
 function switchAuto(on)
-    step = on
-    bflo = step
-    -- rflo = step
-    cflo = step
+    send_command('dnc step '..tostring(on))
+    send_command('dnc bflo '..tostring(on))
+    cflo = on
     windower.add_to_chat('C.Flour is: '..tostring(cflo))
-    windower.add_to_chat('B.Flour is: '..tostring(bflo))
-    -- windower.add_to_chat('R.Flour is: '..tostring(rflo))
-    windower.add_to_chat('Step is: '..tostring(step))
 end
 
 function lockstyle()
@@ -476,6 +413,10 @@ function lockstyle()
 	else
 		send_command('input /lockstyleset '..default_style)
 	end
+end
+
+function file_unload(file_name)
+	send_command('input //lua u autodnc')
 end
 
 function self_command(command)
@@ -490,21 +431,16 @@ function self_command(command)
     elseif command == 'cflo' then
         cflo = not cflo
         windower.add_to_chat('C.Flour is: '..tostring(cflo))
-    elseif command == 'bflo' then
-        bflo = not bflo
-        windower.add_to_chat('B.Flour is: '..tostring(bflo))
-    elseif command == 'rflo' then
-        rflo = not rflo
-        if rflo then
-            bflo = false
-        end
-        windower.add_to_chat('R.Flour is: '..tostring(rflo))
-    elseif command == 'step' then
-        step = not step
-        windower.add_to_chat('Step is: '..tostring(step))
     elseif command == 'lowhaste' then
         lowhaste = not lowhaste
         windower.add_to_chat('Low Haste is: '..tostring(lowhaste))
+		
+    elseif command == 'bflo' then
+        send_command('dnc bflo')
+    elseif command == 'rflo' then
+        send_command('dnc rflo')
+    elseif command == 'step' then
+        send_command('dnc step')
         
     elseif command == 'all' then
         switchAuto(not step)
@@ -557,13 +493,9 @@ function self_command(command)
         windower.add_to_chat('Mode: '..tostring(mode))
         windower.add_to_chat('Available modes: [aby, amb, acc, p]')
         windower.add_to_chat('PDT: '..tostring(pdt))
-        windower.add_to_chat('Step: '..tostring(step))
         windower.add_to_chat('C.Flour: '..tostring(cflo))
-        windower.add_to_chat('B.Flour: '..tostring(bflo))
-        windower.add_to_chat('R.Flour: '..tostring(rflo))
         windower.add_to_chat('Low Haste: '..tostring(lowhaste))
         windower.add_to_chat('TH: '..tostring(th))
-        -- windower.add_to_chat('Announce is: '..tostring(announce))
     end
     
     if command ~= 'pha1' then
