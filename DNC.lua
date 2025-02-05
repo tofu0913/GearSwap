@@ -51,6 +51,7 @@ function get_sets()
     pdt = false
     th = false
     lowhaste = false
+    regain = false
     cflo = true
     mode = ''
     updateText()
@@ -112,6 +113,17 @@ function get_sets()
         head="ＭＸティアラ+2",
         right_ring="王将の指輪",
     }
+	sets.tp.regain = set_combine(sets.tp, {
+		ammo="昏黄の礫",
+		-- head="トゥルムキャップ+1",
+		body={ name="グレティキュイラス", augments={'Path: A',}},
+		-- hands="グレティガントレ",
+		-- legs="グレティブリーチズ",
+		-- feet="グレティブーツ",
+		neck="共和プラチナ章",
+		waist="プラチナモグベルト",
+	})
+
     sets.ws={
         ammo="カリスフェザー",
         head="ＭＣティアラ+3",
@@ -357,11 +369,11 @@ function setIdle()
     if pdt then
         set_equip = set_combine(sets.tp, sets.pdt)
     else
-        -- if acc then
-            -- set_equip = sets.acc
-        -- else
+        if regain then
+            set_equip = sets.tp.regain
+        else
             set_equip = sets.tp
-        -- end
+        end
         if lowhaste then
             set_equip = set_combine(set_equip, sets.tp.lowhaste)
         end
@@ -434,6 +446,10 @@ function self_command(command)
     elseif command == 'lowhaste' then
         lowhaste = not lowhaste
         windower.add_to_chat('Low Haste is: '..tostring(lowhaste))
+		
+    elseif command == 'regain' then
+        regain = not regain
+        windower.add_to_chat('Regain: '..tostring(regain))
 		
     elseif command == 'pha1' then
         windower.add_to_chat('Phalanx ON')
