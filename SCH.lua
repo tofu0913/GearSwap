@@ -184,6 +184,9 @@ function get_sets()
 	sets.ma.Klimaform = set_combine(sets.buff, {
 		feet="ＡＢローファー+3",
 	})
+    sets.ma.helix = set_combine(sets.mb, {
+		back={ name="ブックワームケープ", augments={'INT+2','MND+2','Helix eff. dur. +20',}},
+	})
 	
 	sets.debuff = {
 		main={ name="ブンジロッド", augments={'Path: A',}},
@@ -313,6 +316,9 @@ function midcast(spell)
 			
 		elseif string.find(spell.english,'storm') then
 			set_equip = sets.ma.storm
+			
+		elseif string.find(spell.name,'の計II') then
+			set_equip = sets.ma.helix
             
         elseif lowsc then
             set_equip = sets.lowsc
