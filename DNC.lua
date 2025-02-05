@@ -203,7 +203,7 @@ function get_sets()
         neck={ name="エトワールゴルゲ+2", augments={'Path: A',}},
         waist={ name="ケンタークベルト+1", augments={'Path: A',}},
         left_ear="シェリダピアス",
-        right_ear="テロスピアス",
+        right_ear="デディションピアス",
         left_ring="シーリチリング+1",
         right_ring="イラブラットリング",
         back={ name="セヌーナマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Phys. dmg. taken-10%',}},
