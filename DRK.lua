@@ -143,6 +143,9 @@ function get_sets()
 		feet="サクパタレギンス",
 		neck="バーシチョーカー+1",
     }
+    sets.blow['Last Resort'] = {
+		feet="ＦＬソルレット+3",
+	}
 	sets.lowhate = {
 		right_ear="シェレピアス",
 	}
@@ -268,6 +271,13 @@ function buff_change(buff,gain,buff_details)
     if buff == 'ブラッドウェポン' and not gain then
         windower.ffxi.cancel_buff(63)--暗黒
     
+    elseif buff == 'ラストリゾート' then
+		if blow and gain then
+			equip(set_combine(sets.blow, sets.blow['Last Resort']))
+		elseif blow and not gain then
+			equip(sets.blow)
+		end
+	
     elseif buff == '死の宣告' then
         if gain then
             send_command(windower.to_shift_jis('input /p 死の宣告！！！Doom!!!!!!!!!!!!!<call>'))
@@ -355,6 +365,9 @@ function setIdle()
         set_equip = set_combine(sets.tp, sets.pdt)
 	elseif blow then
         set_equip = set_combine(sets.tp, sets.blow)
+		if buffactive['ラストリゾート'] then
+			set_equip = set_combine(set_equip, sets.blow['Last Resort'])
+		end
     else
         set_equip = sets.tp
     end
