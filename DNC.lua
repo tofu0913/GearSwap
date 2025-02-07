@@ -117,11 +117,12 @@ function get_sets()
 		ammo="昏黄の礫",
 		-- head="トゥルムキャップ+1",
 		body={ name="グレティキュイラス", augments={'Path: A',}},
-		-- hands="グレティガントレ",
-		-- legs="グレティブリーチズ",
-		-- feet="グレティブーツ",
+		hands="グレティガントレ",
+		legs="グレティブリーチズ",
+		feet="グレティブーツ",
 		neck="共和プラチナ章",
 		waist="プラチナモグベルト",
+		right_ring="ローラーリング",
 	})
 
     sets.ws={

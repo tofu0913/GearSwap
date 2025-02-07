@@ -60,10 +60,13 @@ function get_sets()
 		main={ name="ブンジロッド", augments={'Path: A',}},
 		sub="カルミナス",
 		
-        head="ニャメヘルム",
-        body="ニャメメイル",
+        body={ name="アグゥローブ", augments={'Path: A',}},
+        hands={ name="アグゥゲージ", augments={'Path: A',}},
+        -- head="ニャメヘルム",
+        -- body="ニャメメイル",
         hands="ニャメガントレ",
-        legs="ニャメフランチャ",
+        -- legs="ニャメフランチャ",
+        legs="アグゥスロップス",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
         
         ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
