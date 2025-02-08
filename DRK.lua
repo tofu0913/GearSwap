@@ -175,11 +175,9 @@ function get_sets()
 
     sets.ja = {}
     sets.ja['Last Resort'] = {
+		feet="ＦＬソルレット+3",
         back={ name="アンコウマント", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
-    sets.ja['Dark Seal'] = {
-        head="ＦＬバーゴネット+1",
-    }
     sets.ja['Diabolic Eye'] = {
         hands="ＦＬガントレット+1",
     }
@@ -207,6 +205,9 @@ function get_sets()
         right_ring="エバネセンスリング",
         left_ring="アルコンリング",
 		back="無の外装",
+    }
+    sets.ma.drk_magic['Dark Seal'] = {
+        head="ＦＬバーゴネット+1",
     }
     sets.ma.endark = set_combine(sets.ma.drk_magic, {
 		neck="インカンタートルク",
@@ -339,6 +340,9 @@ function midcast(spell)
     elseif sets.buff[spell.english] then
         set_equip = sets.buff[spell.english]
     end
+	if buffactive['ダークシール'] and spell.skill=='暗黒魔法' then
+		set_equip = set_combine(set_equip, sets.ma.drk_magic['Dark Seal'])
+	end
 
     if set_equip then
         equip(set_equip)
