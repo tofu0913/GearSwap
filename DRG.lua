@@ -355,7 +355,7 @@ function self_command(command)
 		lockstyle()
     elseif command == 'po' then
         mode = 'Polearm'
-        send_command('input //ws drg')
+        send_command('input //ws drg_po')
 		lockstyle()
     elseif command == 'st' then
         mode = 'Stuff'
