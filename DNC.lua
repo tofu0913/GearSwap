@@ -122,6 +122,7 @@ function get_sets()
 		feet="グレティブーツ",
 		neck="共和プラチナ章",
 		waist="プラチナモグベルト",
+		left_ring="守りの指輪",
 		right_ring="ローラーリング",
 	})
 
