@@ -157,6 +157,9 @@ function get_sets()
         body="ＰＭロリカ+3",
         feet="ＡＧカリガ+1",
     }
+    sets.ja.Berserk_weapon = {
+		main="フィランギ",
+	}
     sets.ja.Aggressor = {
         head="ＰＭマスク+1",
         body="ＡＧロリカ+1",
@@ -224,6 +227,9 @@ function precast(spell)
          set_equip = sets.ra
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
+		if mode ~= '' and spell.name == 'バーサク' and windower.ffxi.get_player().vitals.tp == 0 then
+			set_equip = set_combine(set_equip, sets.ja.Berserk_weapon)
+		end
     end
 
     if set_equip then
