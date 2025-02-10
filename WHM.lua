@@ -77,6 +77,40 @@ function get_sets()
 		left_ear="メンデカントピアス",
 		right_ear="ナーリシュピアス+1",
 	})
+    sets.buff = {
+		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		-- body="ＰＤガウン+3",
+        -- hands="ＡＢブレーサー+3",
+		hands={ name="テルキネグローブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		legs={ name="テルキネブラコーニ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		feet={ name="テルキネピガッシュ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+        neck="インカンタートルク",
+        waist="エンブラサッシュ",
+        left_ear="ミミルピアス",
+		right_ear="アンドアーピアス",
+		-- back="フィフォレケープ+1",
+    }
+	sets.debuff = {
+		main={ name="ブンジロッド", augments={'Path: A',}},
+		-- sub="カルミナス",
+        head="ニャメヘルム",
+        body="ニャメメイル",
+        hands="ニャメガントレ",
+        legs="ニャメフランチャ",
+        feet="ニャメソルレット",
+		-- head="ＡＣボード+3",
+        -- body="ＡＢガウン+3",--ＡＣガウン+3
+        -- hands="ＡＢブレーサー+3",
+        -- legs="ＡＢパンツ+3",
+        -- feet="ＡＢローファー+3",--ＡＣローファー+3
+		waist="無の腰当",
+        neck="無の喉輪",
+		left_ear="王将の耳飾り",
+		right_ear="マリグナスピアス",
+        right_ring={ name="メタモルリング+1", augments={'Path: A',}},
+        left_ring="キシャールリング",
+		back="無の外装",
+	}
     sets.walk = {}
     sets.walk.adoulin = set_combine(sets.walk, {
         body="カウンセラーガーブ",
@@ -102,8 +136,16 @@ end
 function midcast(spell)
     local set_equip = nil
 
-    if string.find(spell.name, 'ストンスキン') then
-        set_equip = sets.ma.Stoneskin
+	
+    if spell.skill=='強化魔法' then
+		set_equip = sets.buff
+		if string.find(spell.name, 'ストンスキン') then
+			set_equip = set_combine(set_equip, sets.ma.Stoneskin)
+        end
+	
+	elseif spell.skill=='弱体魔法' then
+		set_equip = sets.debuff
+
 	elseif string.find(spell.english,'Cur') and spell.name ~= 'Cursna' then
 		set_equip = sets.ma.Cure
     end
