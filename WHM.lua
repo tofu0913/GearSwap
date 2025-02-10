@@ -23,7 +23,7 @@ function get_sets()
         waist="プラチナモグベルト",
         left_ear="インフューズピアス",
 		right_ear={ name="エーベルピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Damage taken-4%',}},
-        left_ring="ナジの包帯",
+        left_ring="守りの指輪",
         right_ring="シュネデックリング",
         back={ name="アラウナスケープ", augments={'"Fast Cast"+10','Phys. dmg. taken-10%',}},
     }
@@ -52,6 +52,7 @@ function get_sets()
         left_ear="メンデカントピアス",
 		right_ear="ナーリシュピアス+1",
         left_ring="ナジの包帯",
+        right_ring="レベッチェリング",
     })
 
     -- Common equipments
