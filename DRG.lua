@@ -14,7 +14,7 @@ function get_sets()
     th = false
     blow = false
     mode = ''
-	default_style = 15
+	default_style = 24
     
     sets.mode['Sword'] = {
         main="ネイグリング",
@@ -29,7 +29,7 @@ function get_sets()
     sets.mode['Polearm'] = {
         main="シャイニングワン",
         sub="ウトゥグリップ",
-		style=22,
+		style=24,
     }
     sets.mode['Stuff'] = {
 		main="マリグナスポール",
