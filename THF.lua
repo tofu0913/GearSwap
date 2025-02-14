@@ -55,7 +55,6 @@ function get_sets()
         -- ammo="銀銭",
         head={ name="アデマボンネット+1", augments={'STR+12','DEX+12','Attack+20',}},
         -- body="ムンムジャケット+2",
-        -- body="ＨＯカザク+3",
         body="マリグナスタバード",
         hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
         -- legs="メガナダショウス+2",
@@ -117,6 +116,17 @@ function get_sets()
     sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {
         -- neck="フォシャゴルゲット",
         -- waist="フォシャベルト",
+    })
+    sets.ws['Aeolian Edge'] = set_combine(sets.ws, {
+        ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
+        head="ニャメヘルム",
+        body="ニャメメイル",
+        hands={ name="ニャメガントレ", augments={'Path: B',}},
+        legs="ニャメフランチャ",
+        feet="ニャメソルレット",
+        neck="シビルスカーフ",
+        waist="オルペウスサッシュ",
+		-- back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
     })
     sets.th = {
         ammo="完璧な幸運の卵",

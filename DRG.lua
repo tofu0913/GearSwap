@@ -47,15 +47,17 @@ function get_sets()
 		-- head="フラマツッケット+2",
 		head="フロプトヘルム",
 		-- body={ name="グレティキュイラス", augments={'Path: A',}},
-        body="PEプラカード+2",
+        body="ＰＥプラカート+2",
         -- body="デーゴンブレスト",
-		hands={ name="ニャメガントレ", augments={'Path: B',}},
-		legs="ニャメフランチャ",
+		hands="ＰＥバンブレス+2",
+		-- hands={ name="ニャメガントレ", augments={'Path: B',}},
+		legs="グレティブリーチズ",
+		-- legs="ニャメフランチャ",
 		feet="フラマガンビエラ+2",
 		neck="無の喉輪",
 		-- waist="ウィンバフベルト+1",
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
-		left_ear="セサンスピアス",
+		left_ear="スローダピアス",
 		right_ear="シェリダピアス",
 		left_ring="シーリチリング+1",
 		right_ring="ニックマドゥリング",
@@ -83,7 +85,7 @@ function get_sets()
         head="ＰＥメザイユ+2",--"ＰＥメザイユ+3",
         body="ＰＥプラカート+2",--"ＰＥプラカート+3",
         hands={ name="ニャメガントレ", augments={'Path: B',}},
-        -- legs="ニャメフランチャ",
+        legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
 		neck="共和プラチナ章",--"士の数珠+2",
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
@@ -98,6 +100,14 @@ function get_sets()
     }
     sets.ws["Savage Blade"]=set_combine(sets.ws, {
 		neck="共和プラチナ章",
+    })
+    sets.ws["Drakesbane"]=set_combine(sets.ws, {
+		body="グレティキュイラス",
+		hands="グレティガントレ",
+		legs="グレティブリーチズ",
+		feet="グレティブーツ",
+        left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
     })
 	
 	sets.buff = {}
@@ -138,11 +148,11 @@ function get_sets()
 		-- body="テロスレメイル",
 	}
 	sets.ja['Spirit Link'] = {
-		hands="ＰＥバンブレス+1",
+		hands="ＰＥバンブレス+2",
 		left_ear="プラティクピアス",
 	}
 	sets.ja.Jump = {
-		head="フラマツッケット+2",
+		head="フロプトヘルム",
 		feet="オストログリーヴ",
 		neck="アヌートルク",
 		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -156,6 +166,7 @@ function get_sets()
     sets.fc = {
 		ammo="サピエンスオーブ",
 		-- head="サクパタヘルム",
+		body="サクロブレスト",
 		-- feet={ name="オディシアグリーヴ", augments={'Attack+12','"Fast Cast"+5','Accuracy+5',}},
         neck="ボルトサージトルク",
         right_ear="ロケイシャスピアス",
