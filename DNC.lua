@@ -118,7 +118,7 @@ function get_sets()
     }
 	sets.tp.regain = set_combine(sets.tp, {
 		ammo="昏黄の礫",
-		-- head="トゥルムキャップ+1",
+		head="トゥルムキャップ+1",
 		body={ name="グレティキュイラス", augments={'Path: A',}},
 		hands="グレティガントレ",
 		legs="グレティブリーチズ",
@@ -132,8 +132,9 @@ function get_sets()
     sets.ws={
         ammo="カリスフェザー",
         head="ＭＣティアラ+3",
+		body={ name="グレティキュイラス", augments={'Path: A',}},
+        -- body="メガナダクウィリ+2",
         hands="ＭＸバングル+3",
-        body="メガナダクウィリ+2",
         -- body={ name="ヘルクリアベスト", augments={'Attack+20','Weapon skill damage +5%','Accuracy+6',}},
         legs="ＨＯタイツ+3",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
@@ -167,6 +168,10 @@ function get_sets()
     })
     sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {
         -- neck="フォシャゴルゲット",
+        -- waist="フォシャベルト",
+    })
+    sets.ws['Rudra\'s Storm'] = set_combine(sets.ws, {
+        ammo="パルーグストーン",
         -- waist="フォシャベルト",
     })
     sets.th = {

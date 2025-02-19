@@ -102,10 +102,10 @@ function get_sets()
 		-- sub="エンキストラップ",
 
         head="ＡＢボネット+3",
-        body={ name="アグゥローブ", augments={'Path: A',}},
-        hands={ name="アグゥゲージ", augments={'Path: A',}},
-        -- body="ＡＢガウン+3",
-        -- hands="ＡＢブレーサー+3",
+        -- body={ name="アグゥローブ", augments={'Path: A',}},
+        -- hands={ name="アグゥゲージ", augments={'Path: A',}},
+        body="ＡＢガウン+3",
+        hands="ＡＢブレーサー+3",
         legs="ＡＢパンツ+3",--"アグゥスロップス",
         feet="ＡＢローファー+3",
         
@@ -212,14 +212,19 @@ function get_sets()
         -- sub="コーンスー",
         head={ name="カイロンハット", augments={'Spell interruption rate down -10%','VIT+10',}},
         body="ロゼトジャズラン+1",
-        hands={ name="カイロングローブ", augments={'Mag. Acc.+2','Spell interruption rate down -8%','CHR+4','"Mag.Atk.Bns."+4',}},
+        -- hands={ name="カイロングローブ", augments={'Mag. Acc.+2','Spell interruption rate down -8%','CHR+4','"Mag.Atk.Bns."+4',}},
+		hands={ name="テルキネグローブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
         legs="クァーケンブレー",
+		feet={ name="ヴァニヤクロッグ", augments={'MND+10','Spell interruption rate down +15%','"Conserve MP"+6',}},
+        neck="ボルトサージトルク",
         waist="エンパチコスロープ",
+		left_ring="守りの指輪",
 		right_ear="カラミタスピアス",
         back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
     }
 
     sets.fc = {
+		main={ name="ニビルカジェル", augments={'Accuracy+15','Mag. Acc.+15','"Fast Cast"+3',}},
         -- main="ムサ",
         -- sub="コーンスー",
         ammo="インカントストーン",
