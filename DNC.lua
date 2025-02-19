@@ -60,7 +60,6 @@ function get_sets()
     sets.mode['ABY'] = {
         main={ name="トゥワシュトラ", augments={'Path: A',}},
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
-		style=11,
     }
     sets.mode['AMB'] = {
         main="トーレット",
@@ -69,15 +68,16 @@ function get_sets()
     sets.mode['ABYP'] = {
         main={ name="トゥワシュトラ", augments={'Path: A',}},
         sub="ンプガンドリング",
-		style=11,
     }
     sets.mode['P'] = {
         main="ンプガンドリング",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
+		style=11,
     }
     sets.mode['PABY'] = {
         main="ンプガンドリング",
         sub={ name="トゥワシュトラ", augments={'Path: A',}},
+		style=11,
     }
     sets.mode['SW'] = {
         main="デマサルデーゲン+1",
