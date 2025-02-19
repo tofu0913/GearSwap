@@ -30,6 +30,9 @@ function updateText()
     if mode then
         flags = flags..mode..' '
     end
+    if regain then
+        flags = flags..'Rg '
+    end
     if pdt then
         flags = flags..'PDT '
     end
@@ -454,6 +457,12 @@ function self_command(command)
 		
     elseif command == 'regain' then
         regain = not regain
+        windower.add_to_chat('Regain: '..tostring(regain))
+    elseif command == 'regain1' then
+        regain = true
+        windower.add_to_chat('Regain: '..tostring(regain))
+    elseif command == 'regain0' then
+        regain = false
         windower.add_to_chat('Regain: '..tostring(regain))
 		
     elseif command == 'pha1' then
