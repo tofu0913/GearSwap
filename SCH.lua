@@ -297,14 +297,10 @@ function precast(spell)
 		if spell.english == 'Impact' then
 			set_equip = sets.fc.Impact
 		end
-        -- if spell.english == 'Firestorm' then
-            -- cancel_spell()
-            -- send_command(windower.to_shift_jis('input /ma "熱波の陣II" <me>'))
-        -- end
-        -- if spell.english == 'Adloquium' and (buffactive['白のグリモア']) then
-            -- cancel_spell()
-            -- send_command(windower.to_shift_jis('input /ja 女神降臨の章 <me>; wait 1; input /ma "'..spell.name..'" <me>'))
-        -- end
+
+		if player.sub_job == '赤' and player.sub_job_level > 55 then
+			set_equip = set_combine(set_equip, sets.fc.grimoire)
+		end
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
     end
