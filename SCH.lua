@@ -247,7 +247,7 @@ function get_sets()
 		body="トワイライトプリス",
 	})
 	sets.fc.grimoire = {
-		head="ＰＤボード+1	",--"+3",
+		head="ＰＤボード+1",--"+3",
 		feet="ＡＣローファー+2",--"+3",
 	}
 
