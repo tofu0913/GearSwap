@@ -33,6 +33,8 @@ function get_sets()
 	}
 	
     sets.fc = {
+		main={ name="ニビルカジェル", augments={'Accuracy+15','Mag. Acc.+15','"Fast Cast"+3',}},
+        sub="チャンターシールド",
         head={ name="マーリンフード", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','"Fast Cast"+7',}},
 		body="アグゥローブ",
         hands={ name="アグゥゲージ", augments={'Path: A',}},

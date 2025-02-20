@@ -225,6 +225,7 @@ function get_sets()
 
     sets.fc = {
 		main={ name="ニビルカジェル", augments={'Accuracy+15','Mag. Acc.+15','"Fast Cast"+3',}},
+        sub="チャンターシールド",
         -- main="ムサ",
         -- sub="コーンスー",
         ammo="インカントストーン",
@@ -238,13 +239,17 @@ function get_sets()
         left_ring="キシャールリング",
         right_ring="プロリクスリング",
         right_ear="マリグナスピアス",
-        left_ear="ロケイシャスピアス",--"エンチャンピアス+1",
+        left_ear="ロケイシャスピアス",
         back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
     }
 	sets.fc.Impact = set_combine(sets.fc, {
 		head="",
 		body="トワイライトプリス",
 	})
+	sets.fc.grimoire = {
+		head="ＰＤボード+1	",--"+3",
+		feet="ＡＣローファー+2",--"+3",
+	}
 
     sets.ws = {
         head="ニャメヘルム",
