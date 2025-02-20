@@ -34,6 +34,8 @@ function get_sets()
 	
     sets.fc = {
         head={ name="マーリンフード", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','"Fast Cast"+7',}},
+		body="アグゥローブ",
+        hands={ name="アグゥゲージ", augments={'Path: A',}},
         legs="ＧＯパンツ+1",
 		feet={ name="マーリンクラッコー", augments={'"Mag.Atk.Bns."+2','"Fast Cast"+6','INT+6',}},
         waist="エンブラサッシュ",
@@ -42,6 +44,7 @@ function get_sets()
         right_ring="プロリクスリング",
         right_ear="マリグナスピアス",
         left_ear="ロケイシャスピアス",--"エンチャンピアス+1",
+		back="龍脈の外套",
         -- back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
     }
 	sets.fc.Impact = set_combine(sets.fc, {
@@ -64,7 +67,7 @@ function get_sets()
         hands={ name="アグゥゲージ", augments={'Path: A',}},
         -- head="ニャメヘルム",
         -- body="ニャメメイル",
-        hands="ニャメガントレ",
+        -- hands="ニャメガントレ",
         -- legs="ニャメフランチャ",
         legs="アグゥスロップス",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
@@ -105,6 +108,23 @@ function get_sets()
 		head="",
 		body="トワイライトプリス",
 	})
+	sets.ma.Cure = {
+		main={ name="ブンジロッド", augments={'Path: A',}},
+		-- sub="玄武盾",
+		-- range={ name="デュンナ", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		body={ name="テルキネシャジュブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		hands={ name="テルキネグローブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+		legs="ギーヴトラウザ",
+		feet={ name="ヴァニヤクロッグ", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
+		-- neck={ name="バグアチャーム+2", augments={'Path: A',}},
+		-- waist="プラチナモグベルト",
+		left_ear="メンデカントピアス",
+		right_ear="カラミタスピアス",
+		left_ring="レベッチェリング",
+		right_ring="ナジの包帯",
+		-- back={ name="ナントセルタケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Acc.+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
+	}
 	
     sets.buff = {
 		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
