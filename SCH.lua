@@ -385,17 +385,25 @@ function setIdle()
     end
 end
 
+function book_seconds()
+	a = windower.ffxi.get_ability_recasts()[231]
+	b = 33
+	return math.floor((a - math.floor(a/b)*b)+0.5)
+end
+
 function buff_change(buff,gain,buff_details)
 	-- windower.add_to_chat(buff)
 	if buff == '机上演習:蓄積中' then
 		subling = gain
 		updateText()
 		setIdle()
-	elseif nobook and gain and string.find(buff, 'の章') then
+	end
+
+	if nobook and gain and string.find(buff, 'の章') then
 		local books = getBookCount()
 		-- windower.add_to_chat('book: '..books)
 		if books <= 1 then
-			send_command(windower.to_shift_jis('input /p ==== 戦術魔道書残量：'..books..' ===='))
+			send_command(windower.to_shift_jis('input /p !!!! 戦術魔道書残量：'..books..'本 (あと'..book_seconds()..'秒) !!!!'))
 		end
 	end
 	
@@ -457,7 +465,7 @@ function self_command(command)
     elseif command == 'style' or command == 's' then
 		lockstyle()
 		
-    elseif command == 'nobook' then
+    elseif T{'nobook','bk','nobk'}:contains(command) then
         nobook = not nobook
         windower.add_to_chat('No book notify: '..tostring(nobook))
     
