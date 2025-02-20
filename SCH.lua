@@ -220,7 +220,7 @@ function get_sets()
         waist="エンパチコスロープ",
 		left_ring="守りの指輪",
 		right_ear="カラミタスピアス",
-        back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
+		back="無の外装",
     }
 
     sets.fc = {
@@ -326,7 +326,8 @@ function midcast(spell)
 		elseif string.find(spell.name,'の計II') then
 			set_equip = sets.ma.helix
             
-        elseif lowsc then
+        elseif buffactive['震天動地の章'] or string.find(spell.name,'の計') then
+			-- windower.add_to_chat('弱')
             set_equip = sets.lowsc
             
         elseif sets.ma[spell.english] then
