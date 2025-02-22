@@ -231,7 +231,7 @@ function get_sets()
         ammo="インカントストーン",
         head={ name="マーリンフード", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','"Fast Cast"+7',}},
 		body="アグゥローブ",
-        hands={ name="ＧＥゲージ+1", augments={'Phys. dmg. taken -4%','Magic dmg. taken -3%','Song spellcasting time -5%',}},
+        hands="ＡＣブレーサー+2",--"+3"
         legs="アグゥスロップス",
 		feet={ name="マーリンクラッコー", augments={'"Mag.Atk.Bns."+2','"Fast Cast"+6','INT+6',}},
         waist="エンブラサッシュ",
@@ -247,7 +247,7 @@ function get_sets()
 		body="トワイライトプリス",
 	})
 	sets.fc.grimoire = {
-		head="ＰＤボード+1",--"+3",
+		head="ＰＤボード+2",--"+3",
 		feet="ＡＣローファー+2",--"+3",
 	}
 
