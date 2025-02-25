@@ -174,6 +174,20 @@ function get_sets()
         ammo="パルーグストーン",
         -- waist="フォシャベルト",
     })
+    sets.ws['Aeolian Edge'] = set_combine(sets.ws, {
+        ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
+        head="ニャメヘルム",
+        body="ニャメメイル",
+        hands={ name="ニャメガントレ", augments={'Path: B',}},
+        legs="ニャメフランチャ",
+        feet="ニャメソルレット",
+        neck="シビルスカーフ",
+        waist="オルペウスサッシュ",
+		right_ear="フリオミシピアス",
+        left_ear="胡蝶のイヤリング",
+		-- right_ring="ディンジルリング",
+		-- back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
+    })
     sets.th = {
         ammo="完璧な幸運の卵",
         -- legs={ name="オディシアクウィス", augments={'"Dbl.Atk."+3','Pet: Haste+3','"Treasure Hunter"+1','Accuracy+9 Attack+9',}},

@@ -126,6 +126,9 @@ function get_sets()
         feet="ニャメソルレット",
         neck="シビルスカーフ",
         waist="オルペウスサッシュ",
+		right_ear="フリオミシピアス",
+        left_ear="胡蝶のイヤリング",
+		-- right_ring="ディンジルリング",
 		-- back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
     })
     sets.th = {
