@@ -26,7 +26,12 @@ function get_sets()
         sub="クラーケンクラブ",
 		style=15,
     }
-    sets.mode['Polearm'] = {
+    sets.mode['Gungnir'] = {
+        main="グングニル",
+        sub="ウトゥグリップ",
+		style=24,
+    }
+    sets.mode['Shine'] = {
         main="シャイニングワン",
         sub="ウトゥグリップ",
 		style=24,
@@ -36,11 +41,6 @@ function get_sets()
         sub="ウトゥグリップ",
 		style=22,
     }
-    -- sets.mode['po'] = {
-        -- main="コッパーヘッド",
-        -- sub="ウトゥグリップ",
-		-- style=15,
-    -- }
     
     sets.tp={
         ammo={ name="コイストボダー", augments={'Path: A',}},
@@ -363,13 +363,13 @@ function self_command(command)
         mode = 'Club'
         send_command('input //ws war_sw')
 		lockstyle()
-    elseif command == 'shine' then
+    elseif command == 'sh' then
         mode = 'Shine'
         send_command('input //ws war_po')
 		lockstyle()
-    elseif command == 'po' then
-        mode = 'Polearm'
-        send_command('input //ws drg_po')
+    elseif command == 'gg' then
+        mode = 'Gungnir'
+        send_command('input //ws gg')
 		lockstyle()
     elseif command == 'st' then
         mode = 'Stuff'
@@ -379,7 +379,7 @@ function self_command(command)
     elseif command == 'help' then
         windower.add_to_chat('==============================')
         windower.add_to_chat('Mode: '..tostring(mode))
-        -- windower.add_to_chat('Available modes: [sw, gax, cb, po]')
+        windower.add_to_chat('Available modes: [sw, cb, sh, gg, st]')
         -- windower.add_to_chat('PDT: '..tostring(pdt))
         -- windower.add_to_chat('Accuracy: '..tostring(acc))
         -- windower.add_to_chat('Uncapped: '..tostring(uncap))
