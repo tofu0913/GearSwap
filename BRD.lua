@@ -109,7 +109,7 @@ function get_sets()
         right_ring="シュネデックリング",
     }
     sets.engage = {
-        range={ name="リノス", augments={'Accuracy+20','"Dbl.Atk."+2','Quadruple Attack +3',}},
+        range={ name="リノス", augments={'Accuracy+20','"Dbl.Atk."+3','Quadruple Attack +3',}},
         head="ニャメヘルム",
 		body="アヤモコラッツァ+2",
         hands="ニャメガントレ",

@@ -87,7 +87,7 @@ function get_sets()
         hands={ name="ニャメガントレ", augments={'Path: B',}},
         legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
-		neck="共和プラチナ章",--"士の数珠+2",
+		neck="共和プラチナ章",--"竜騎士の首輪+2",
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
         left_ring="イフラマドリング",
         right_ring="王将の指輪",
@@ -109,6 +109,12 @@ function get_sets()
         left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
     })
+	sets.ws["Geirskogul"]=set_combine(sets.ws, {
+		body="グレティキュイラス",
+        waist="フォシャベルト",
+        left_ear="スラッドピアス",
+		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+	})
 	
 	sets.buff = {}
     sets.buff.Phalanx = {
@@ -136,7 +142,7 @@ function get_sets()
     }
     sets.th = {
         ammo="完璧な幸運の卵",
-        -- legs={ name="オディシアクウィス", augments={'"Dbl.Atk."+3','Pet: Haste+3','"Treasure Hunter"+1','Accuracy+9 Attack+9',}},
+		waist="チャークベルト",
     }
     
     sets.ja = {}
@@ -154,7 +160,8 @@ function get_sets()
 	sets.ja.Jump = {
 		head="フロプトヘルム",
 		feet="オストログリーヴ",
-		neck="アヌートルク",
+		neck={ name="ヴィムトルク+1", augments={'Path: A',}},
+		left_ear="デディションピアス",
 		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
     
