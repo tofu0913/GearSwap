@@ -17,7 +17,7 @@ function get_sets()
         body="ＡＺコート+2",
         -- body="ニャメメイル",
 		hands="ＧＯミテーヌ+3",
-		legs="ＢＡパンツ+2",--"ＢＡパンツ+3",
+		legs="ＢＡパンツ+3",
 		feet="ＡＺゲートル+1",
 		neck="バグアチャーム+2",
 		waist="プラチナモグベルト",
@@ -28,7 +28,7 @@ function get_sets()
 		back={ name="ナントセルタケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Acc.+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
 	}
 	sets.idle.geo = {
-		feet="ＢＡサンダル+1",
+		feet="ＢＡサンダル+2",
 		left_ear="ハンドラーピアス+1",
 	}
 	
@@ -92,7 +92,7 @@ function get_sets()
 		main="イドリス",
 		sub="玄武盾",
 		range={ name="デュンナ", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		legs="ＢＡパンツ+2",--"ＢＡパンツ+3",
+		legs="ＢＡパンツ+3",
 		feet="ＡＺゲートル+1",
 		neck="インカンタートルク",
 		right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},

@@ -190,10 +190,9 @@ function get_sets()
     
     sets.ma = {}
     sets.ma.drk_magic = {
-        -- head="ＦＬバーゴネット+2",
+        head="ＦＬバーゴネット+3",
         -- legs="ＨＴフランチャ+1",
         
-        head="ニャメヘルム",
         body="ニャメメイル",
         hands="ニャメガントレ",
         legs="ニャメフランチャ",
@@ -207,7 +206,7 @@ function get_sets()
 		back="無の外装",
     }
     sets.ma.drk_magic['Dark Seal'] = {
-        head="ＦＬバーゴネット+2",
+        head="ＦＬバーゴネット+3",
     }
     sets.ma.endark = set_combine(sets.ma.drk_magic, {
 		neck="インカンタートルク",
@@ -246,7 +245,7 @@ function get_sets()
         right_ring="プロリクスリング",
     }
     sets.fc.drk = set_combine(sets.fc, {
-        head="ＦＬバーゴネット+2",
+        head="ＦＬバーゴネット+3",
 	})
 	sets.fc.Impact = set_combine(sets.fc, {
 		head="",

@@ -84,6 +84,7 @@ function get_sets()
         ammo="ノブキエリ",
         head="ＰＥメザイユ+2",--"ＰＥメザイユ+3",
         body="ＰＥプラカート+2",--"ＰＥプラカート+3",
+		-- body="グレティキュイラス",
         hands={ name="ニャメガントレ", augments={'Path: B',}},
         legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
@@ -102,7 +103,6 @@ function get_sets()
 		neck="共和プラチナ章",
     })
     sets.ws["Drakesbane"]=set_combine(sets.ws, {
-		body="グレティキュイラス",
 		hands="グレティガントレ",
 		legs="グレティブリーチズ",
 		feet="グレティブーツ",
@@ -110,10 +110,13 @@ function get_sets()
 		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
     })
 	sets.ws["Geirskogul"]=set_combine(sets.ws, {
-		body="グレティキュイラス",
-        waist="フォシャベルト",
-        left_ear="スラッドピアス",
+		legs="グレティブリーチズ",
+        -- waist="フォシャベルト",
+		neck="フォシャゴルゲット",
+        waist="ケンタークベルト+1",
+        left_ear="シェリダピアス",
 		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+		back={ name="ブリガンチアマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
 	})
 	
 	sets.buff = {}
