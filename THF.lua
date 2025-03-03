@@ -9,7 +9,8 @@ function get_sets()
     sets.tp = {}
     
     pdt = false
-    th = false
+    th = true
+    flee = false
     autoSA = false
 	default_style = 12
         
@@ -51,7 +52,8 @@ function get_sets()
 
     sets.tp={
         -- ammo="コイストボダー",
-        ammo={ name="シーズボムレット+1", augments={'Path: A',}},
+		ammo="ヤメラング",
+        -- ammo={ name="シーズボムレット+1", augments={'Path: A',}},
         -- ammo="銀銭",
         head={ name="アデマボンネット+1", augments={'STR+12','DEX+12','Attack+20',}},
         -- body="ムンムジャケット+2",
@@ -72,6 +74,21 @@ function get_sets()
 		right_ring="イフラマドリング",
 		back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
     }
+	sets.flee={
+		ammo="ヤメラング",
+		head="マリグナスシャポー",
+		body="マリグナスタバード",
+		hands="ＰＤアムレット+1",--"+3"
+		legs="マリグナスタイツ",
+		feet="マリグナスブーツ",
+		neck="バーシチョーカー+1",
+		waist="チャークベルト",
+		left_ear="テロスピアス",
+		right_ear="エアバニピアス",
+		left_ring="イラブラットリング",
+		right_ring="守りの指輪",
+		back="無の外装",
+	}
     sets.ws={
         ammo="コイストボダー",
         -- head="ニャメヘルム",
@@ -299,7 +316,9 @@ function setIdle()
             set_equip = set_combine(set_equip, sets.walk.adoulin)
         end
     end
-    if th then
+	if flee then
+		set_equip = sets.flee
+    elseif th then
         set_equip = set_combine(set_equip, sets.th)
     end
 
@@ -324,7 +343,10 @@ function self_command(command)
     command = command:lower()
     if command == 'pdt' then
         pdt = not pdt
-        windower.add_to_chat('PDT- is: '..tostring(pdt))
+        windower.add_to_chat('PDT: '..tostring(pdt))
+    elseif command == 'flee' then
+        flee = not flee
+        windower.add_to_chat('Flee: '..tostring(flee))
 		
     elseif command == 'style' or command == 's' then
 		lockstyle()
@@ -380,6 +402,7 @@ function self_command(command)
         windower.add_to_chat('Mode: '..tostring(mode))
         windower.add_to_chat('Available modes: [aby, amb, acc, p]')
         windower.add_to_chat('PDT: '..tostring(pdt))
+        windower.add_to_chat('Flee: '..tostring(flee))
         windower.add_to_chat('TH: '..tostring(th))
         -- windower.add_to_chat('Announce is: '..tostring(announce))
     end
