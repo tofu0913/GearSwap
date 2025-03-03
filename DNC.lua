@@ -116,7 +116,7 @@ function get_sets()
         head="ＭＸティアラ+2",
         right_ring="王将の指輪",
     }
-	sets.tp.regain = set_combine(sets.tp, {
+	sets.idle = set_combine(sets.tp, {
 		ammo="昏黄の礫",
 		head="トゥルムキャップ+1",
 		body={ name="グレティキュイラス", augments={'Path: A',}},
@@ -391,27 +391,26 @@ function buff_change(buff,gain,buff_details)
 end
 
 function setIdle()
-    set_equip = nil
+    set_equip = sets.idle
     
     if pdt then
         set_equip = set_combine(sets.tp, sets.pdt)
-    else
-        if regain then
-            set_equip = sets.tp.regain
-        else
-            set_equip = sets.tp
-        end
-        if lowhaste then
-            set_equip = set_combine(set_equip, sets.tp.lowhaste)
-        end
-    end
+    elseif lowhaste then
+		set_equip = set_combine(set_equip, sets.tp.lowhaste)
+	end
     if windower.ffxi.get_player().status == 0 then
         -- windower.add_to_chat((world.area))
-        set_equip = set_combine(set_equip, sets.walk)
+		if not regain then
+			set_equip = set_combine(set_equip, sets.walk)
+		end
         
         if  mylib.is_in_adoulin(world.area) then
             set_equip = set_combine(set_equip, sets.walk.adoulin)
         end
+    elseif windower.ffxi.get_player().status == 1 then
+		if not regain then
+			set_equip = sets.tp
+		end
     end
     if th then
         set_equip = set_combine(set_equip, sets.th)
