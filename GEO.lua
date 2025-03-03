@@ -28,7 +28,7 @@ function get_sets()
 		back={ name="ナントセルタケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Acc.+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
 	}
 	sets.idle.geo = {
-		feet="ＢＡサンダル+2",
+		feet="ＢＡサンダル+3",
 		left_ear="ハンドラーピアス+1",
 	}
 	
@@ -59,6 +59,12 @@ function get_sets()
 		body="バグアチュニック",--"ＢＡチュニック+1",
 	}
 	sets.ja.Entrust = {
+	}
+	sets.ja['Mending Halation'] = {
+		legs="ＢＡパンツ+3",
+	}
+	sets.ja['Radial Arcana'] = {
+		feet="ＢＡサンダル+3",
 	}
 
     sets.mb = {
