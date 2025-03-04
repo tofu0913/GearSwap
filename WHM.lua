@@ -57,6 +57,7 @@ function get_sets()
 
     -- Common equipments
     sets.fc = {
+		-- main={ name="ガーダ", augments={'"Fast Cast"+6','Mag. Acc.+13','DMG:+5',}},
         ammo="インカントストーン",
         body="インヤガジュバ+2",
 		hands={ name="ＧＥゲージ+1", augments={'Phys. dmg. taken -4%','Magic dmg. taken -3%','Song spellcasting time -5%',}},
