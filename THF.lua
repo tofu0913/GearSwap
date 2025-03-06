@@ -12,6 +12,7 @@ function get_sets()
     th = true
     flee = false
     autoSA = false
+	rp = false
 	default_style = 12
         
     sets.mode['ABY'] = {
@@ -344,6 +345,16 @@ function self_command(command)
     if command == 'pdt' then
         pdt = not pdt
         windower.add_to_chat('PDT: '..tostring(pdt))
+		
+    elseif command == 'rp' then
+        rp = not rp
+        windower.add_to_chat('RP: '..tostring(rp))
+		if rp then
+			send_command('gs disable main sub neck')
+		else
+			send_command('gs enable main sub neck')
+		end
+		setIdle()
     elseif command == 'flee' then
         flee = not flee
         windower.add_to_chat('Flee: '..tostring(flee))

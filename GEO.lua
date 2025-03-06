@@ -6,7 +6,6 @@ function get_sets()
     set_language('japanese')
     
 	skillup = false
-	rp = false
 	default_style = 10
 	
 	sets.idle = {
@@ -290,16 +289,6 @@ function self_command(command)
     if command == 'pdt' then
         -- mode = 'pdt'
         -- windower.add_to_chat('Mode is: '..mode)
-		
-    elseif command == 'rp' then
-        rp = not rp
-        windower.add_to_chat('RP: '..tostring(rp))
-		if rp then
-			send_command('gs disable neck')
-		else
-			send_command('gs enable neck')
-		end
-		setIdle()
         
     elseif command == 'skillup' then
         skillup = not skillup
