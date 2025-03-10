@@ -6,7 +6,7 @@ function get_sets()
     
     dummy = false
     mode = nil
-    weapon = nil--nil, engage, flee
+    weapon = nil--nil, sw, aby, flee
 	default_style = 4
     
     sets.instrument = {}
@@ -28,8 +28,12 @@ function get_sets()
         main="カルンウェナン",
 		sub="カーリ",
 	}
-	sets.weapon.engage = {
+	sets.weapon.sw = {
         main="ネイグリング",
+        sub={ name="フセット+2", augments={'TP Bonus +1000',}},
+	}
+	sets.weapon.aby = {
+        main={ name="トゥワシュトラ", augments={'Path: A',}},
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
 	}
 	sets.weapon.flee = {
@@ -39,6 +43,7 @@ function get_sets()
 	}
     
     sets.fc = {
+		-- main="カーリ",
         body="インヤガジュバ+2",
         hands={ name="ＧＥゲージ+1", augments={'Phys. dmg. taken -4%','Magic dmg. taken -3%','Song spellcasting time -5%',}},
         legs="アヤモコッシャレ+2",
@@ -263,17 +268,16 @@ function setIdle()
 
     if windower.ffxi.get_player().status == 1 then
         set_equip = set_combine(sets.idle, sets.engage)
-		if weapon == 'engage' then
-			set_equip = set_combine(set_equip, sets.weapon.engage)
+		if weapon and sets.weapon[weapon] then
+			set_equip = set_combine(set_equip, sets.weapon[weapon])
 		end
-        
-        if  mylib.is_in_adoulin(world.area) then
-            set_equip = set_combine(set_equip, sets.walk.adoulin)
-        end
 	else
 		if weapon == 'flee' then
 			set_equip = set_combine(set_equip, sets.weapon.flee)
 		end
+        if  mylib.is_in_adoulin(world.area) then
+            set_equip = set_combine(set_equip, sets.walk.adoulin)
+        end
     end
 
     if set_equip then
@@ -297,7 +301,9 @@ function self_command(command)
     command = command:lower()
     if command == 'free' then
         mode = nil
-        windower.add_to_chat('Mode is: '..mode)
+        weapon = nil
+        windower.add_to_chat('Weapon: Non')
+        windower.add_to_chat('Mode: '..tostring(mode))
         setIdle()
     elseif command == 'ho' then
         mode = 'HORN'
@@ -314,19 +320,19 @@ function self_command(command)
     elseif command == 'style' or command == 's' then
 		lockstyle()
         
-    elseif command == 'engage' then
-        weapon = 'engage'
-        windower.add_to_chat('Weapon mode: '..tostring(weapon))
+    elseif command == 'sw' then
+        weapon = 'sw'
+        windower.add_to_chat('Weapon: '..tostring(weapon))
+    elseif command == 'aby' then
+        weapon = 'aby'
+        windower.add_to_chat('Weapon: '..tostring(weapon))
     elseif command == 'flee' then
         weapon = 'flee'
-        windower.add_to_chat('Weapon mode: '..tostring(weapon))
-    elseif command == 'weapon' then
-        weapon = nil
-        windower.add_to_chat('Weapon mode: Non')
+        windower.add_to_chat('Weapon: '..tostring(weapon))
 
     elseif command == 'dummy' then
         dummy = true
-        -- windower.add_to_chat('Dummy mode is ON')
+        -- windower.add_to_chat('Dummy: ON')
         
 		
     elseif string.find(command, "sc ") then
