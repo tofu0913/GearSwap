@@ -79,7 +79,7 @@ function get_sets()
 		ammo="ヤメラング",
 		head="マリグナスシャポー",
 		body="マリグナスタバード",
-		hands="ＰＤアムレット+2",--"+3"
+		hands="ＰＤアムレット+3",
 		legs="マリグナスタイツ",
 		feet="マリグナスブーツ",
 		neck="バーシチョーカー+1",
@@ -152,7 +152,7 @@ function get_sets()
     sets.th = {
         ammo="完璧な幸運の卵",
 		head="ヘルクリアヘルム",
-		hands="ＰＤアムレット+2",
+		hands="ＰＤアムレット+3",
 		feet="ＳＫプーレーヌ+2",
 		waist="チャークベルト",
     }
