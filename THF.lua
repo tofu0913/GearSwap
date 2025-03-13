@@ -29,9 +29,9 @@ function get_sets()
         sub="ンプガンドリング",
 		style=12,
     } 
-    sets.mode['ABYTH'] = {
-        main={ name="トゥワシュトラ", augments={'Path: A',}},
-        sub="ガンドリング",
+    sets.mode['SU5'] = {
+		main={ name="ガンドリング", augments={'Path: C',}},
+		sub={ name="マレヴォレンス", augments={'INT+7','Mag. Acc.+3','"Mag.Atk.Bns."+5','"Fast Cast"+2',}},
 		style=12,
     }
     sets.mode['P'] = {
@@ -377,9 +377,9 @@ function self_command(command)
     elseif command == 'abyp' then
         mode = 'ABYP'
 		lockstyle()
-    elseif command == 'abyth' then
-        mode = 'ABYTH'
-        send_command('input //ws dnc_aby')
+    elseif command == 'su5' then
+        mode = 'SU5'
+        send_command('input //ws s')
 		lockstyle()
     elseif command == 'amb' then
         mode = 'AMB'
@@ -397,7 +397,7 @@ function self_command(command)
 		lockstyle()
     else
         windower.add_to_chat('Mode: '..tostring(mode))
-        windower.add_to_chat('Available modes: [aby, amb, acc, p]')
+        windower.add_to_chat('Available modes: [aby, abyp, p, paby, amb, sw, su5]')
         windower.add_to_chat('PDT: '..tostring(pdt))
         windower.add_to_chat('Flee: '..tostring(flee))
         windower.add_to_chat('TH: '..tostring(th))
