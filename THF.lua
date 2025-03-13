@@ -8,7 +8,6 @@ function get_sets()
     sets.mode = {}
     sets.tp = {}
     
-    pdt = false
     th = true
     flee = false
     autoSA = false
@@ -298,17 +297,8 @@ function buff_change(buff,gain,buff_details)
 end
 
 function setIdle()
-    set_equip = nil
+    set_equip = sets.tp
     
-    if pdt then
-        set_equip = set_combine(sets.tp, sets.pdt)
-    else
-        -- if acc then
-            -- set_equip = sets.acc
-        -- else
-            set_equip = sets.tp
-        -- end
-    end
     if windower.ffxi.get_player().status == 0 then
         -- windower.add_to_chat((world.area))
         set_equip = set_combine(set_equip, sets.walk)
@@ -342,11 +332,7 @@ end
 
 function self_command(command)
     command = command:lower()
-    if command == 'pdt' then
-        pdt = not pdt
-        windower.add_to_chat('PDT: '..tostring(pdt))
-		
-    elseif command == 'rp' then
+    if command == 'rp' then
         rp = not rp
         windower.add_to_chat('RP: '..tostring(rp))
 		if rp then
