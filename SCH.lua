@@ -195,7 +195,7 @@ function get_sets()
         body="ＡＢガウン+3",--ＡＣガウン+3
         hands="ＡＢブレーサー+3",
         legs="ＡＢパンツ+3",
-        feet="ＡＢローファー+3",--ＡＣローファー+3
+        feet="ＡＣローファー+3",
 		waist="無の腰当",
         neck={ name="アギュトストール+2", augments={'Path: A',}},
 		left_ear="王将の耳飾り",
@@ -233,7 +233,8 @@ function get_sets()
 		body="アグゥローブ",
         hands="ＡＣブレーサー+2",--"+3"
         legs="アグゥスロップス",
-		feet={ name="マーリンクラッコー", augments={'"Mag.Atk.Bns."+2','"Fast Cast"+6','INT+6',}},
+		-- feet={ name="マーリンクラッコー", augments={'"Mag.Atk.Bns."+2','"Fast Cast"+6','INT+6',}},
+		feet="ＡＣローファー+3",
         waist="エンブラサッシュ",
         neck="ボルトサージトルク",
         left_ring="キシャールリング",
@@ -248,7 +249,6 @@ function get_sets()
 	})
 	sets.fc.grimoire = {
 		head="ＰＤボード+3",
-		feet="ＡＣローファー+2",--"+3",
 	}
 
     sets.ws = {

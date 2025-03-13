@@ -65,6 +65,7 @@ function get_sets()
         body="ニャメメイル",
         hands="ニャメガントレ",
         legs="カイロンホーズ",
+		waist="オブシテナサッシュ",
         right_ear={ name="レサジーピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
         right_ring="メタモルリング+1",--{ name="メタモルリング+1", augments={'Path: A',}},
         
