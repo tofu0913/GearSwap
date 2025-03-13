@@ -183,6 +183,23 @@ function get_sets()
         feet="マリグナスブーツ",
         
     }
+	sets.macc = {
+		-- main={ name="ガンドリング", augments={'Path: C',}},
+		-- sub="トーレット",
+		ammo="完璧な幸運の卵",
+		head={ name="ヘルクリアヘルム", augments={'AGI+14','Accuracy+30','"Treasure Hunter"+1','Accuracy+20 Attack+20',}},
+		body="マリグナスタバード",
+		hands={ name="ＰＤアムレット+3", augments={'Enhances "Perfect Dodge" effect',}},
+		legs="マリグナスタイツ",
+		feet="ＳＫプーレーヌ+2",
+		neck={ name="アサシンゴルゲ+2", augments={'Path: A',}},
+		waist="チャークベルト",
+		left_ear="カラミタスピアス",
+		right_ear={ name="スカルカピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','"Store TP"+5',}},
+		left_ring={ name="メタモルリング+1", augments={'Path: A',}},
+		right_ring="プロリクスリング",
+		back="無の外装",
+	}
 
     -- Common equipments
     sets.fc = {
@@ -190,6 +207,7 @@ function get_sets()
         neck="ボルトサージトルク",
         right_ear="ロケイシャスピアス",
         right_ring="プロリクスリング",
+		left_ring="ナジの包帯",
     }
     sets.walk = {
         right_ring="シュネデックリング",
@@ -267,6 +285,8 @@ function midcast(spell)
         end
     elseif sets.buff[spell.english] then
         set_equip = sets.buff[spell.english]
+	elseif spell.skill=='精霊魔法' then
+		set_equip = sets.macc
     end
     
     if set_equip then
