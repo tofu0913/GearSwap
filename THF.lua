@@ -74,7 +74,10 @@ function get_sets()
 		right_ring="イフラマドリング",
 		back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
     }
-	sets.flee={
+	sets.tp.flee={
+		right_ring="イラブラットリング",
+	}
+	sets.idle={
 		ammo="ヤメラング",
 		head="マリグナスシャポー",
 		body="マリグナスタバード",
@@ -85,8 +88,8 @@ function get_sets()
 		waist="チャークベルト",
 		left_ear="テロスピアス",
 		right_ear="エアバニピアス",
-		left_ring="イラブラットリング",
-		right_ring="守りの指輪",
+		left_ring="守りの指輪",
+        right_ring="シュネデックリング",
 		back="無の外装",
 	}
     sets.ws={
@@ -317,20 +320,21 @@ function buff_change(buff,gain,buff_details)
 end
 
 function setIdle()
-    set_equip = sets.tp
+    set_equip = sets.idle
     
-    if windower.ffxi.get_player().status == 0 then
-        -- windower.add_to_chat((world.area))
-        set_equip = set_combine(set_equip, sets.walk)
-        
+	if windower.ffxi.get_player().status == 1 then
+		if flee then
+			set_equip = set_combine(set_equip, sets.tp.flee)
+		elseif th then
+			set_equip = set_combine(sets.tp, sets.th)
+		else
+			set_equip = sets.tp
+		end
+	
+	else
         if  mylib.is_in_adoulin(world.area) then
             set_equip = set_combine(set_equip, sets.walk.adoulin)
         end
-    end
-	if flee then
-		set_equip = sets.flee
-    elseif th then
-        set_equip = set_combine(set_equip, sets.th)
     end
 
     if set_equip then
