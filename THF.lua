@@ -143,7 +143,7 @@ function get_sets()
         body="ニャメメイル",
         hands={ name="ニャメガントレ", augments={'Path: B',}},
         legs="ニャメフランチャ",
-        feet="ニャメソルレット",
+        feet={ name="ニャメソルレット", augments={'Path: B',}},
         neck="シビルスカーフ",
         waist="オルペウスサッシュ",
 		right_ear="フリオミシピアス",

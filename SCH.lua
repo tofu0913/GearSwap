@@ -78,7 +78,7 @@ function get_sets()
         hands="ニャメガントレ",
         legs="ＡＢパンツ+3",
         -- legs="ニャメフランチャ",
-        feet="ニャメソルレット",
+        feet={ name="ニャメソルレット", augments={'Path: B',}},
         waist="無の腰当",
         neck={ name="アギュトストール+2", augments={'Path: A',}},
         left_ear="ハーティーピアス",
