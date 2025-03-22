@@ -120,14 +120,16 @@ function get_sets()
         hands="ニャメガントレ",
         legs="ニャメフランチャ",
 		feet={ name="ニャメソルレット", augments={'Path: B',}},
-        neck="クロタリウストルク",
+        -- neck="クロタリウストルク",
+        neck="無の喉輪",
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
         left_ear="テロスピアス",
         right_ear="セサンスピアス",
         -- right_ear="素破の耳",
         left_ring="シーリチリング+1",
         right_ring="イフラマドリング",
-        back={ name="インタラアスケープ", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+        -- back={ name="インタラアスケープ", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+		back="無の外装",
     }
 
     sets.ja = {}
@@ -147,6 +149,7 @@ function get_sets()
         body={ name="ＢＩジュストコル+3", augments={'Enhances "Troubadour" effect',}},
         hands={ name="ニャメガントレ", augments={'Path: B',}},
         feet={ name="ニャメソルレット", augments={'Path: B',}},
+		neck="共和プラチナ章",
         right_ear="胡蝶のイヤリング",
         left_ring="イラブラットリング",
         back={ name="インタラアスケープ", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
