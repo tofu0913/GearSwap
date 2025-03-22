@@ -187,6 +187,15 @@ function get_sets()
     sets.ja['Weapon Bash'] = {
         hands="ＩＧガントレ+2",--+3
     }
+	sets.ja.Jump = {
+		head="フロプトヘルム",
+		legs={ name="オディシアクウィス", augments={'Attack+15','"Fast Cast"+5','Accuracy+11',}},
+		feet="オストログリーヴ",
+		neck={ name="ヴィムトルク+1", augments={'Path: A',}},
+		left_ear="デディションピアス",
+        right_ear="セサンスピアス",
+		back="無の外装",
+	}
     
     sets.ma = {}
     sets.ma.drk_magic = {
