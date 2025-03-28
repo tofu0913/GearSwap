@@ -94,6 +94,7 @@ function get_sets()
         range="ダウルダヴラ",
         -- range="ギャッラルホルン",
         hands="ＢＲカフス+2",--"ＢＲカフス+3",
+		left_ear="王将の耳飾り",
     }
     sets.macc = {
         main="ンプガンドリング",

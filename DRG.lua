@@ -88,7 +88,8 @@ function get_sets()
         hands={ name="ニャメガントレ", augments={'Path: B',}},
         legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
-		neck="共和プラチナ章",--"竜騎士の首輪+2",
+		-- neck="共和プラチナ章",
+		neck={ name="竜騎士の首輪+2", augments={'Path: A',}},
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
         left_ring="イフラマドリング",
         right_ring="王将の指輪",
@@ -157,16 +158,29 @@ function get_sets()
 		-- body="テロスレメイル",
 	}
 	sets.ja['Spirit Link'] = {
+		head="ＶＳアーメット+1",
 		hands="ＰＥバンブレス+2",
 		left_ear="プラティクピアス",
 	}
+	sets.ja['Call Wyvern'] = {
+		neck={ name="竜騎士の首輪+2", augments={'Path: A',}},
+		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+	}
+	sets.ja['Ancient Circle'] = {
+		legs="ＶＳブレー+1",
+	}
 	sets.ja.Jump = {
 		head="フロプトヘルム",
+		body="ＶＳメイル+1",
+		hands="ＶＳフィンガー+1",
 		feet="オストログリーヴ",
 		neck={ name="ヴィムトルク+1", augments={'Path: A',}},
 		left_ear="デディションピアス",
 		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
+	sets.ja['High Jump'] = set_combine(sets.ja.Jump, {
+		legs="ＶＳブレー+1",
+	})
     
     sets.ra = {
         range="ラミアベーン",
