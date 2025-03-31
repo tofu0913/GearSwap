@@ -75,7 +75,7 @@ function get_sets()
         left_ear="セサンスピアス",
         -- right_ear="ブルタルピアス",
         right_ear="テロスピアス",
-        -- right_ear="ヒーズンピアス",
+        -- right_ear="ヒーズンピアス+2",
         left_ring="シーリチリング+1",
         right_ring="ニックマドゥリング",
         -- right_ring="王将の指輪",
@@ -100,7 +100,7 @@ function get_sets()
         right_ring="王将の指輪",
         left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
         -- right_ear="スラッドピアス",
-        right_ear="ヒーズンピアス+1",
+        right_ear="ヒーズンピアス+2",
         back={ name="アンコウマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%'}},
     }
     sets.ws.Catastrophe = set_combine(sets.ws, {
@@ -233,7 +233,7 @@ function get_sets()
 		body="トワイライトプリス",
 		neck="無の喉輪",
 		waist="無の腰当",
-		right_ear={ name="ヒーズンピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Weapon skill damage +2%',}},
+		right_ear="ヒーズンピアス+2",
 		right_ring={ name="メタモルリング+1", augments={'Path: A',}},
 	})
     
