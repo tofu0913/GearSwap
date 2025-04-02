@@ -252,6 +252,7 @@ function get_sets()
         right_ear="ロケイシャスピアス",
         left_ring="キシャールリング",
         right_ring="プロリクスリング",
+        back={ name="アンコウマント", augments={'"Fast Cast"+10',}},
     }
     sets.fc.drk = set_combine(sets.fc, {
         head="ＦＬバーゴネット+3",
