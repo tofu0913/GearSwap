@@ -109,6 +109,7 @@ function get_sets()
 		feet="グレティブーツ",
         left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10',}},
     })
 	sets.ws["Geirskogul"]=set_combine(sets.ws, {
 		legs="グレティブリーチズ",
@@ -158,7 +159,7 @@ function get_sets()
 		-- body="テロスレメイル",
 	}
 	sets.ja['Spirit Link'] = {
-		head="ＶＳアーメット+1",
+		head="ＶＳアーメット+2",
 		hands="ＰＥバンブレス+2",
 		left_ear="プラティクピアス",
 	}
@@ -167,19 +168,19 @@ function get_sets()
 		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
 	}
 	sets.ja['Ancient Circle'] = {
-		legs="ＶＳブレー+1",
+		legs="ＶＳブレー+2",
 	}
 	sets.ja.Jump = {
 		head="フロプトヘルム",
 		body="ＶＳメイル+1",
-		hands="ＶＳフィンガー+1",
+		hands="ＶＳフィンガー+2",
 		feet="オストログリーヴ",
 		neck={ name="ヴィムトルク+1", augments={'Path: A',}},
 		left_ear="デディションピアス",
 		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 	sets.ja['High Jump'] = set_combine(sets.ja.Jump, {
-		legs="ＶＳブレー+1",
+		legs="ＶＳブレー+2",
 	})
     
     sets.ra = {
