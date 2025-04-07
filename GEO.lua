@@ -167,7 +167,7 @@ end
 function precast(spell)
     local set_equip = nil
 
-    if spell.type == 'Trust' or string.find(spell.type, 'Magic') then
+    if spell.type == 'Trust' or spell.type == 'Geomancy' or string.find(spell.type, 'Magic') then
         set_equip = sets.fc
 		
 		if spell.english == 'Sneak' and spell.target.name == player.name then
