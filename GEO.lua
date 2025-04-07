@@ -46,7 +46,6 @@ function get_sets()
         right_ear="マリグナスピアス",
         left_ear="ロケイシャスピアス",--"エンチャンピアス+1",
 		back="龍脈の外套",
-        -- back={ name="ルッフケープ", augments={'"Fast Cast"+10',}},
     }
 	sets.fc.Impact = set_combine(sets.fc, {
 		head="",
