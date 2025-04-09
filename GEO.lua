@@ -68,21 +68,16 @@ function get_sets()
     sets.mb = {
 		main={ name="ブンジロッド", augments={'Path: A',}},
 		sub="カルミナス",
-		
+        ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
+		head="アグゥキャップ",
         body={ name="アグゥローブ", augments={'Path: A',}},
+        -- body="ＡＺコート+2",--"+3"
         hands={ name="アグゥゲージ", augments={'Path: A',}},
-        -- head="ニャメヘルム",
-        -- body="ニャメメイル",
-        -- hands="ニャメガントレ",
-        -- legs="ニャメフランチャ",
         legs="アグゥスロップス",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
-        
-        ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
-        -- body="ＡＺコート+2",--"+3"
         neck="水影の首飾り",
-        waist="八輪の帯",
-        -- waist="オルペウスサッシュ",
+        -- waist="八輪の帯",
+        waist="オルペウスサッシュ",
 		left_ear="王将の耳飾り",
         right_ear="マリグナスピアス",
 		-- right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
