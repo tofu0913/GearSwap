@@ -172,7 +172,7 @@ function get_sets()
 	}
 	sets.ja.Jump = {
 		head="フロプトヘルム",
-		body="ＶＳメイル+1",
+		body="ＶＳメイル+2",
 		hands="ＶＳフィンガー+2",
 		feet="オストログリーヴ",
 		neck={ name="ヴィムトルク+1", augments={'Path: A',}},
