@@ -58,11 +58,12 @@ function get_sets()
     cflo = true
     mode = ''
     updateText()
-	default_style = 5
+	default_style = 31
         
     sets.mode['ABY'] = {
         main={ name="トゥワシュトラ", augments={'Path: A',}},
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
+		style=5,
     }
     sets.mode['AMB'] = {
         main="トーレット",
@@ -71,16 +72,17 @@ function get_sets()
     sets.mode['ABYP'] = {
         main={ name="トゥワシュトラ", augments={'Path: A',}},
         sub="ンプガンドリング",
+		style=5,
     }
     sets.mode['P'] = {
         main="ンプガンドリング",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
-		style=11,
+		style=31,
     }
     sets.mode['PABY'] = {
         main="ンプガンドリング",
         sub={ name="トゥワシュトラ", augments={'Path: A',}},
-		style=11,
+		style=31,
     }
     sets.mode['SW'] = {
         main="デマサルデーゲン+1",
