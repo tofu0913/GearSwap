@@ -132,6 +132,23 @@ function get_sets()
 		-- back={ name="ナントセルタケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Acc.+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
 	}
 	
+	sets.macc = {
+		main="イドリス",
+		sub="カルミナス",
+		head="アグゥキャップ",--"ＡＺフード+1",
+        body="アグゥローブ",--"ＡＺコート+2"
+        hands="ＧＯミテーヌ+3",
+        legs="アグゥスロップス",
+        feet="ＢＡサンダル+3",
+		waist="無の腰当",
+        neck="エーラペンダント",
+		left_ear="マリグナスピアス",
+		right_ear="アジムスピアス+1",
+        right_ring={ name="メタモルリング+1", augments={'Path: A',}},
+        left_ring="キシャールリング",
+        back="無の外装",
+	}
+	
     sets.buff = {
 		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 		body={ name="テルキネシャジュブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
@@ -212,6 +229,9 @@ function midcast(spell)
 				
 		elseif spell.skill=='精霊魔法' then
 			set_equip = sets.mb
+				
+		elseif spell.skill=='暗黒魔法' then
+			set_equip = sets.macc
 		end
 	end
 	
