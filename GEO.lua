@@ -64,6 +64,9 @@ function get_sets()
 	sets.ja['Radial Arcana'] = {
 		feet="ＢＡサンダル+3",
 	}
+	sets.ja['Life Cycle'] = {
+		feet="ＧＯチュニック+1",
+	}
 
     sets.mb = {
 		main={ name="ブンジロッド", augments={'Path: A',}},
