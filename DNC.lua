@@ -142,10 +142,10 @@ function get_sets()
     sets.ws={
         ammo="カリスフェザー",
         head="ＭＣティアラ+3",
-		body={ name="グレティキュイラス", augments={'Path: A',}},
-        -- body="メガナダクウィリ+2",
-        hands="ＭＸバングル+3",
-        -- body={ name="ヘルクリアベスト", augments={'Attack+20','Weapon skill damage +5%','Accuracy+6',}},
+		-- body={ name="グレティキュイラス", augments={'Path: A',}},
+        body="メガナダクウィリ+2",
+        -- hands="ＭＸバングル+3",
+        hands={ name="ニャメガントレ", augments={'Path: B',}},
         legs="ＨＯタイツ+3",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
 		neck={ name="エトワールゴルゲ+2", augments={'Path: A',}},
@@ -178,12 +178,16 @@ function get_sets()
         -- waist="グルンフェルロープ",
     })
     sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {
-        -- neck="フォシャゴルゲット",
-        -- waist="フォシャベルト",
+        neck="フォシャゴルゲット",
+        waist="フォシャベルト",
+		right_ear="イシュヴァラピアス",
+		left_ring="エパミノダスリング",
     })
     sets.ws['Rudra\'s Storm'] = set_combine(sets.ws, {
         ammo="パルーグストーン",
-        -- waist="フォシャベルト",
+        waist="フォシャベルト",
+		right_ear="イシュヴァラピアス",
+		left_ring="エパミノダスリング",
     })
     sets.ws['Aeolian Edge'] = set_combine(sets.ws, {
         ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
