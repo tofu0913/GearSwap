@@ -217,7 +217,7 @@ function get_sets()
         back={ name="トータッパーマント", augments={'"Store TP"+4','"Dual Wield"+3','"Rev. Flourish"+30',}},
     }
     sets.ja['Climactic Flourish'] = {
-        hands="ＭＣティアラ+3",
+        head="ＭＣティアラ+3",
     }
     sets.ja['Violent Flourish'] = {
         body="ＨＯカザク+3",
