@@ -118,12 +118,13 @@ function get_sets()
         right_ring="王将の指輪",
     }
     sets.tp.pdt = {
-        -- head="マリグナスシャポー",
+        head="マリグナスシャポー",
         body="グレティキュイラス",
         -- body="マリグナスタバード",
         hands="マリグナスグローブ",
         legs="マリグナスタイツ",
         feet="ＭＣトーシュー+3",
+		left_ring="守りの指輪",
     }
 	sets.idle = set_combine(sets.tp, {
 		ammo="昏黄の礫",
