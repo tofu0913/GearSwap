@@ -18,6 +18,10 @@ function get_sets()
         range="マルシュアス",
         ammo=empty,
     }
+    sets.instrument.Loughnashade = {
+        range="ラックナシェード",
+        ammo=empty,
+    }
     sets.instrument.dummy = {
         range="ダウルダヴラ",
         ammo=empty,
@@ -191,6 +195,8 @@ function precast(spell)
             dummy = false
         elseif spell.english == 'Honor March' then
             set_equip = sets.instrument.HonorMarch
+        elseif spell.english == 'Aria of Passion' then
+            set_equip = sets.instrument.Loughnashade
         else
             if string.find(spell.english, 'Paeon') or mode == 'HARP' then
                 set_equip = sets.instrument.dummy
