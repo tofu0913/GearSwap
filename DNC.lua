@@ -98,7 +98,6 @@ function get_sets()
         -- body="ＨＯカザク+3",
         body="マリグナスタバード",
         hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-        -- legs="メガナダショウス+2",
         legs={ name="サムヌータイツ", augments={'STR+9','DEX+8','"Dbl.Atk."+2','"Triple Atk."+2',}},
         -- feet="ムンムゲマッシュ+2",
         -- feet={ name="ＨＯトーシュー+3", augments={'Enhances "Closed Position" effect',}},
@@ -117,6 +116,14 @@ function get_sets()
     sets.tp.lowhaste={
         head="ＭＸティアラ+2",
         right_ring="王将の指輪",
+    }
+    sets.tp.pdt = {
+        -- head="マリグナスシャポー",
+        body="グレティキュイラス",
+        -- body="マリグナスタバード",
+        hands="マリグナスグローブ",
+        legs="マリグナスタイツ",
+        feet="ＭＣトーシュー+3",
     }
 	sets.idle = set_combine(sets.tp, {
 		ammo="昏黄の礫",
@@ -261,22 +268,6 @@ function get_sets()
         range="アルビンベーン",
     }
     
-    sets.pdt = {
-        -- head="ニャメヘルム",
-        -- body="ニャメメイル",
-        -- hands="ニャメガントレ",
-        -- legs="ニャメフランチャ",
-        -- feet="ニャメソルレット",
-        
-        head="マリグナスシャポー",
-        body="マリグナスタバード",
-        hands="マリグナスグローブ",
-        legs="マリグナスタイツ",
-        -- feet="マリグナスブーツ",
-        
-        feet="ＭＣトーシュー+3",
-    }
-
     -- Common equipments
     sets.fc = {
 		head="ヘルクリアヘルム",
@@ -395,11 +386,6 @@ end
 function setIdle()
     set_equip = sets.idle
     
-    if pdt then
-        set_equip = set_combine(sets.tp, sets.pdt)
-    elseif lowhaste then
-		set_equip = set_combine(set_equip, sets.tp.lowhaste)
-	end
     if windower.ffxi.get_player().status == 0 then
         -- windower.add_to_chat((world.area))
 		if not regain then
@@ -412,6 +398,11 @@ function setIdle()
     elseif windower.ffxi.get_player().status == 1 then
 		if not regain then
 			set_equip = sets.tp
+			if pdt then
+				set_equip = set_combine(set_equip, sets.tp.pdt)
+			elseif lowhaste then
+				set_equip = set_combine(set_equip, sets.tp.lowhaste)
+			end
 		end
     end
     if th then
