@@ -144,8 +144,9 @@ function get_sets()
         head="ＭＣティアラ+3",
 		-- body={ name="グレティキュイラス", augments={'Path: A',}},
         body="メガナダクウィリ+2",
-        -- hands="ＭＸバングル+3",
-        hands={ name="ニャメガントレ", augments={'Path: B',}},
+		-- body={ name="ヘルクリアベスト"},
+        hands="ＭＸバングル+3",
+        -- hands={ name="ニャメガントレ", augments={'Path: B',}},
         legs="ＨＯタイツ+3",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
 		neck={ name="エトワールゴルゲ+2", augments={'Path: A',}},
@@ -178,14 +179,14 @@ function get_sets()
         -- waist="グルンフェルロープ",
     })
     sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {
-        neck="フォシャゴルゲット",
-        waist="フォシャベルト",
+        -- neck="フォシャゴルゲット",
+        -- waist="フォシャベルト",
 		right_ear="イシュヴァラピアス",
 		left_ring="エパミノダスリング",
     })
     sets.ws['Rudra\'s Storm'] = set_combine(sets.ws, {
         ammo="パルーグストーン",
-        waist="フォシャベルト",
+        -- waist="フォシャベルト",
 		right_ear="イシュヴァラピアス",
 		left_ring="エパミノダスリング",
     })
@@ -264,7 +265,7 @@ function get_sets()
     }
     sets.buff = {}
     sets.buff.Phalanx = {
-        body={ name="ヘルクリアベスト"},
+        -- body={ name="ヘルクリアベスト"},
         hands={ name="ヘルクリアグローブ"},
         legs={ name="ヘルクリアトラウザ"},
         feet={ name="ヘルクリアブーツ", augments={'"Dbl.Atk."+1','"Mag.Atk.Bns."+17','Phalanx +5','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
