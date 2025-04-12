@@ -6,8 +6,25 @@ function get_sets()
     set_language('japanese')
     
     pdt = false
-    zergling = false
+	default_style = 9
     
+    sets.mode = {}
+    sets.mode['P'] = {
+        main="ンプガンドリング",
+        sub="ターニオンダガー+1",
+		-- style=31,
+    }
+    sets.mode['SW'] = {
+        main="ネイグリング",
+        sub="ターニオンダガー+1",
+		-- style=31,
+    }
+    sets.mode['D1'] = {
+        main="クトゥルブナイフ",
+        sub="エソテリックアサメ",
+        -- main="クラーケンクラブ",
+        -- sub="トーレット",
+    }
     sets.idle = {
         -- head="ＡＢボネット+1",
         body="ＶＩタバード+1",--"ＶＩタバード+3",
@@ -52,7 +69,7 @@ function get_sets()
         waist="オリンポスサッシュ",
         left_ear="ミミルピアス",
 		right_ear="アンドアーピアス",
-        back={ name="ゴストファイケープ", augments={'Enfb.mag. skill +8','Enha.mag. skill +9','Enh. Mag. eff. dur. +17',}},
+        back={ name="ゴストファイケープ", augments={'Enfb.mag. skill +4','Enha.mag. skill +2','Enh. Mag. eff. dur. +18',}},
     }
     sets.buff.weapon = {
         main="プクラトムージュ+1",
@@ -108,47 +125,56 @@ function get_sets()
     }
 
     sets.ws = {
+        ammo="コイストボダー",
         head="ニャメヘルム",
         body="ニャメメイル",
         hands="ニャメガントレ",
         legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
+		neck="共和プラチナ章",
+        waist={ name="セールフィベルト+1", augments={'Path: A',}},
         left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-        right_ear="シェリダピアス",
-        left_ring="イラブラットリング",
+        -- right_ear="シェリダピアス",
+		right_ear="イシュヴァラピアス",
+		left_ring="エパミノダスリング",
+        -- left_ring="イラブラットリング",
         right_ring="イフラマドリング",
+		-- back="サクロマント",
     }
+    sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {
+        -- neck="フォシャゴルゲット",
+        -- waist="フォシャベルト",
+        waist={ name="ケンタークベルト+1", augments={'Path: A',}},
+		right_ear="イシュヴァラピアス",
+		left_ring="エパミノダスリング",
+    })
     
     sets.engage = {
         -- sub="ンプガンドリング",
         ammo="銀銭",
         head="マリグナスシャポー",
         -- body="マリグナスタバード",
-        -- hands="マリグナスグローブ",
         -- legs="マリグナスタイツ",
         body="アヤモコラッツァ+2",
-        hands="アヤモマノポラ+2",
+        -- hands="アヤモマノポラ+2",
+        hands="マリグナスグローブ",
         legs="ゾアサブリガ+1",
         feet="マリグナスブーツ",
-        neck="クロタリウストルク",
+        -- neck="クロタリウストルク",
+		neck="無の喉輪",
         -- waist={ name="セールフィベルト+1", augments={'Path: A',}},
         waist={ name="ケンタークベルト+1", augments={'Path: A',}},
         left_ring="シーリチリング+1",
         right_ring="イフラマドリング",
         left_ear="エアバニピアス",
         right_ear={ name="レサジーピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
-        back={ name="スセロスケープ", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+        -- back={ name="スセロスケープ", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+		back="無の外装",
     }
     sets.engage.enspell = set_combine(sets.engage, {
         waist="オルペウスサッシュ",
         left_ear="素破の耳",
     })
-    sets.engage.zergling = {
-        main="クトゥルブナイフ",
-        sub="エソテリックアサメ",
-        -- main="クラーケンクラブ",
-        -- sub="トーレット",
-    }
 
     -- Common equipments
     sets.walk = {
@@ -158,7 +184,8 @@ function get_sets()
         body="カウンセラーガーブ",
     })
 
-    send_command('input /macro book 13; wait 2;input /lockstyleset 9')
+    send_command('input /macro book 13; ')
+    send_command('wait 2;input /lockstyleset '..default_style)
 end
 
 function precast(spell)
@@ -185,7 +212,8 @@ function midcast(spell)
             
         elseif spell.skill=='強化魔法' then
             set_equip = sets.buff
-            if windower.ffxi.get_player().status == 0 or zergling then
+            -- if windower.ffxi.get_player().status == 0 or mode == 'd1' then
+            if mode == 'd1' then
                 set_equip = set_combine(set_equip, sets.buff.weapon)
             end
             
@@ -236,18 +264,22 @@ function setIdle()
             set_equip = set_combine(sets.idle, sets.engage)
         end
         
-        if zergling then
-            set_equip = set_combine(set_equip, sets.engage.zergling)
-        end
-        
         if  mylib.is_in_adoulin(world.area) then
             set_equip = set_combine(set_equip, sets.walk.adoulin)
         end
     end
 
     if set_equip then
-        equip(set_equip)
+        equip(set_combine(sets.mode[mode], set_equip))
     end
+end
+
+function lockstyle()
+	if mode ~='' and sets.mode[mode] and sets.mode[mode].style then
+		send_command('input /lockstyleset '..sets.mode[mode].style)
+	else
+		send_command('input /lockstyleset '..default_style)
+	end
 end
 
 function self_command(command)
@@ -255,14 +287,23 @@ function self_command(command)
     if command == 'pdt' then
         pdt = not pdt
         windower.add_to_chat('PDT- is: '..tostring(pdt))
-    elseif command == 'zerg' then
-        zergling = not zergling
-        windower.add_to_chat('Zergling is: '..tostring(zergling))
         
-    elseif command == 's' then
-        windower.add_to_chat('==============================')
-        windower.add_to_chat('PDT- is: '..tostring(pdt))
-        windower.add_to_chat('Zergling is: '..tostring(zergling))
+    elseif command == 'style' or command == 's' then
+		lockstyle()
+
+    elseif command == 'p' then
+        mode = 'P'
+		lockstyle()
+        -- send_command('input //ws dnc_p')
+    elseif command == 'sw' then
+        mode = 'SW'
+		lockstyle()
+    elseif command == 'd1' then
+        mode = 'd1'
+		lockstyle()
+    elseif command == 'help' then
+        windower.add_to_chat('Mode: '..tostring(mode))
+        windower.add_to_chat('Available modes: [p, sw, d1]')
     end
     
     setIdle()
