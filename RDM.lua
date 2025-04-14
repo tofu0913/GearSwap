@@ -29,7 +29,7 @@ function get_sets()
         -- head="ＡＢボネット+1",
         body="ＶＩタバード+1",--"ＶＩタバード+3",
         hands="ＶＩグローブ+3",
-        legs="ＡＴタイツ+2",--"ＡＴタイツ+3",
+        legs="ＡＴタイツ+3",
         feet="ＬＴウゾー+1",--"ＬＴウゾー+3",
         -- neck={ name="アギュトストール+2", augments={'Path: A',}},
         right_ring="シュネデックリング",
@@ -66,7 +66,7 @@ function get_sets()
     sets.buff = {
         body="ＶＩタバード+1",--"ＶＩタバード+3",
         hands="ＶＩグローブ+3",
-        legs="ＡＴタイツ+2",--"ＡＴタイツ+3",
+        legs="ＡＴタイツ+3",
         feet="ＬＴウゾー+1",--"ＬＴウゾー+3",
         neck="インカンタートルク",
         waist="オリンポスサッシュ",
@@ -82,7 +82,7 @@ function get_sets()
     sets.debuff = {
 		ammo="王将の玉",
         head="ニャメヘルム",
-        body="ニャメメイル",
+        body="ＡＴタバード+2",
         hands="ニャメガントレ",
         legs="カイロンホーズ",
 		waist="オブシテナサッシュ",

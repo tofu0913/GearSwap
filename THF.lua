@@ -79,7 +79,8 @@ function get_sets()
 	}
 	sets.idle={
 		ammo="ヤメラング",
-		head="マリグナスシャポー",
+		head="トゥルムキャップ+1",
+		-- head="マリグナスシャポー",
 		body="マリグナスタバード",
 		hands="ＰＤアムレット+3",
 		legs="マリグナスタイツ",
@@ -95,12 +96,12 @@ function get_sets()
 	}
     sets.ws={
         ammo="コイストボダー",
-        -- head="ニャメヘルム",
-        body="メガナダクウィリ+2",
+        body="ＳＫベスト+2",
         hands="ニャメガントレ",
-        -- legs="ニャメフランチャ",
+        legs="グレティブリーチズ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
         waist="ケンタークベルト+1",
+		neck={ name="アサシンゴルゲ+2", augments={'Path: A',}},
         left_ear="胡蝶のイヤリング",
         right_ear="オドルピアス",
         left_ring="イフラマドリング",
@@ -110,6 +111,11 @@ function get_sets()
     sets.ws.fulltp={
     }
     sets.ws['Savage Blade'] = set_combine(sets.ws, {
+        head="ニャメヘルム",
+		neck="共和プラチナ章",
+        left_ear="胡蝶のイヤリング",
+		right_ear="イシュヴァラピアス",
+		left_ring="エパミノダスリング",
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
 	})
     sets.ws['Shark Bite'] = set_combine(sets.ws, {
