@@ -59,6 +59,9 @@ function get_sets()
         right_ear="カラミタスピアス",
         left_ring="ナジの包帯",
     }
+    sets.ma.Refresh = {
+		body="ＡＴタバード+1",
+	}
 
     sets.buff = {
         body="ＶＩタバード+1",--"ＶＩタバード+3",
@@ -209,6 +212,9 @@ function midcast(spell)
     elseif spell.action_type == 'Magic' then
         if string.find(spell.english,'Cur') and spell.name ~= 'Cursna' then
             set_equip = sets.ma.Cure
+			
+        elseif string.find(spell.english,'Refresh') then
+            set_equip = sets.ma.Refresh
             
         elseif spell.skill=='強化魔法' then
             set_equip = sets.buff
