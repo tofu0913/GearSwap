@@ -112,6 +112,10 @@ function get_sets()
 		left_ear="イシュヴァラピアス",
         right_ear="オドルピアス",
     }
+	sets.ws.sa = {
+	}
+	sets.ws.ta = {
+	}
     sets.ws['Savage Blade'] = set_combine(sets.ws, {
         head="ニャメヘルム",
 		neck="共和プラチナ章",
@@ -169,6 +173,26 @@ function get_sets()
     }
     
     sets.ja = {}
+	sets.ja['絶対回避'] = {
+		hands="ＰＤアムレット+3	"
+	}
+    -- sets.JA.Steal = {
+		-- ammo="Barathrum",
+		-- neck="Pentagalus Charm",
+		-- hands="Thief's Kote",
+        -- waist="Key Ring Belt",
+		-- legs="Pillager's Culottes +1",
+		-- feet="Pillager's Poulaines +1"
+	-- }
+    -- sets.JA.Flee = {
+		-- feet="Pillager's Poulaines +1"
+	-- }
+    -- sets.JA.Despoil = {
+		-- ammo="Barathrum",
+		-- legs="Raider's Culottes +2",
+		-- feet="Skulker's Poulaines"
+	-- }
+	
     sets.buff = {}
     sets.buff.Phalanx = {
         body={ name="ヘルクリアベスト"},
@@ -295,6 +319,12 @@ function midcast(spell)
         if windower.ffxi.get_player().vitals.tp == 2700 then
             set_equip = set_combine(set_equip, sets.ws.fulltp)
         end
+		if buffactive['sneak attack'] then
+			set_equip = set_combine(set_equip, sets.ws.sa)
+		end
+		if buffactive['trick attack'] then
+			set_equip = set_combine(set_equip, sets.ws.ta)
+		end
     elseif sets.buff[spell.english] then
         set_equip = sets.buff[spell.english]
 	elseif spell.skill=='精霊魔法' then
