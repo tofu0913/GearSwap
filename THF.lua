@@ -260,6 +260,7 @@ function get_sets()
 
     send_command('input /macro book 15; ')
     send_command('wait 2;input /lockstyleset '..default_style)
+	send_command('input //lua r autothf')
 	send_command('input //lua r thtracker')
 end
 
@@ -285,13 +286,8 @@ function precast(spell)
 			if windower.ffxi.get_ability_recasts()[64] < 1 then
 				locked = true
 				cancel_spell()
-				if windower.ffxi.get_ability_recasts()[240] < 1 then
-					send_command(windower.to_shift_jis('input /ja "不意打ち" <me>; wait 1; input /ja "まどわす" <t>; wait 2; input /ws "'..spell.name..'" <t>'))
-				elseif windower.ffxi.get_ability_recasts()[63] < 1 then
-					send_command(windower.to_shift_jis('input /ja "不意打ち" <me>; wait 1; input /ja "かくれる" <me>; wait 2; input /ws "'..spell.name..'" <t>'))
-				else
-					send_command(windower.to_shift_jis('input /ws "'..spell.name..'" <t>'))
-				end
+				send_command(windower.to_shift_jis('input /ja "不意打ち" <me>; wait 1; input /ws "'..spell.name..'" <t>'))
+
 			elseif windower.ffxi.get_ability_recasts()[67] < 1 then
 				locked = true
 				cancel_spell()
@@ -391,6 +387,7 @@ end
 
 function file_unload(file_name)
 	send_command('input //lua u thtracker')
+	send_command('input //lua u autothf')
 end
 
 function self_command(command)
