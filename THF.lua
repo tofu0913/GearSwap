@@ -424,9 +424,23 @@ function self_command(command)
     elseif command == 'th' then
         th = not th
         windower.add_to_chat('TH is: '..tostring(th))
+    elseif command == 'th0' then
+        th = false
+        windower.add_to_chat('TH is: '..tostring(th))
+    elseif command == 'th1' then
+        th = true
+        windower.add_to_chat('TH is: '..tostring(th))
+		
     elseif command == 'sa' then
         autoSA = not autoSA
         windower.add_to_chat('SA is: '..tostring(autoSA))
+    elseif command == 'sa0' then
+        autoSA = false
+        windower.add_to_chat('SA is: '..tostring(autoSA))
+    elseif command == 'sa1' then
+        autoSA = true
+        windower.add_to_chat('SA is: '..tostring(autoSA))
+		
     elseif command == 'free' then
         mode = ''
 		lockstyle()
