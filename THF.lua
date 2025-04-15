@@ -312,7 +312,7 @@ function midcast(spell)
         else
             set_equip = sets.ws
         end
-        if windower.ffxi.get_player().vitals.tp == 2700 then
+        if windower.ffxi.get_player().vitals.tp >= 2700 then
             set_equip = set_combine(set_equip, sets.ws.fulltp)
         end
 		if buffactive['sneak attack'] then
