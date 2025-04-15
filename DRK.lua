@@ -103,6 +103,9 @@ function get_sets()
         right_ear="ヒーズンピアス+2",
         back={ name="アンコウマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%'}},
     }
+    sets.ws.fulltp={
+        left_ear="スラッドピアス",
+    }
     sets.ws.Catastrophe = set_combine(sets.ws, {
         -- head="ラトリサリット",
         -- body="ラトリブレスト",
@@ -336,6 +339,9 @@ function midcast(spell)
         end
         if uncap then
             set_equip = set_combine(set_equip, sets.uncap)
+        end
+        if windower.ffxi.get_player().vitals.tp >= 2700 then
+            set_equip = set_combine(set_equip, sets.ws.fulltp)
         end
     elseif string.find(spell.name, 'ドレイン') or string.find(spell.name, 'アスピル') then
         set_equip = sets.ma.drain

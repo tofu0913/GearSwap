@@ -86,6 +86,9 @@ function get_sets()
         right_ear="スラッドピアス",
         back={ name="シコルマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     }
+    sets.ws.fulltp={
+        left_ear="スラッドピアス",
+    }
     sets.ws["Ukko's Fury"]=set_combine(sets.ws, {
         feet="ＢＩカリガ+2",
     })
@@ -265,6 +268,9 @@ function midcast(spell)
 		end
         if uncap then
             set_equip = set_combine(set_equip, sets.uncap)
+        end
+        if windower.ffxi.get_player().vitals.tp >= 2700 then
+            set_equip = set_combine(set_equip, sets.ws.fulltp)
         end
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
