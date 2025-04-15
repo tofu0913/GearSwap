@@ -96,6 +96,7 @@ function get_sets()
 	}
     sets.ws={
         ammo="コイストボダー",
+        head="ＳＫボンネット+2",
         body="ＳＫベスト+2",
         hands="ニャメガントレ",
         legs="グレティブリーチズ",
@@ -117,7 +118,6 @@ function get_sets()
 	sets.ws.ta = {
 	}
     sets.ws['Savage Blade'] = set_combine(sets.ws, {
-        head="ニャメヘルム",
 		neck="共和プラチナ章",
         left_ear="胡蝶のイヤリング",
 		right_ear="イシュヴァラピアス",
