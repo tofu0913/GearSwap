@@ -179,14 +179,14 @@ function get_sets()
         -- waist="グルンフェルロープ",
     })
     sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {
-        -- neck="フォシャゴルゲット",
-        -- waist="フォシャベルト",
+        neck="フォシャゴルゲット",
+        waist="フォシャベルト",
 		right_ear="イシュヴァラピアス",
 		left_ring="エパミノダスリング",
     })
     sets.ws['Rudra\'s Storm'] = set_combine(sets.ws, {
         ammo="パルーグストーン",
-        -- waist="フォシャベルト",
+        waist="フォシャベルト",
 		right_ear="イシュヴァラピアス",
 		left_ring="エパミノダスリング",
     })
