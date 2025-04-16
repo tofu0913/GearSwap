@@ -206,7 +206,8 @@ function get_sets()
     })
     sets.th = {
         ammo="完璧な幸運の卵",
-        -- legs={ name="オディシアクウィス", augments={'"Dbl.Atk."+3','Pet: Haste+3','"Treasure Hunter"+1','Accuracy+9 Attack+9',}},
+		head="ヘルクリアヘルム",
+		waist="チャークベルト",
     }
     
     sets.ja = {}
@@ -351,6 +352,9 @@ function midcast(spell)
         set_equip = sets.ja.Samba
     elseif string.find(spell.english, 'Jump') then
         set_equip = sets.ja.Jump
+		if th then
+			set_equip = set_combine(set_equip, sets.th)
+		end
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
     elseif spell.type == 'WeaponSkill' and not buffactive['アムネジア'] then
@@ -412,9 +416,6 @@ function setIdle()
 			end
 		end
     end
-    if th then
-        set_equip = set_combine(set_equip, sets.th)
-    end
 
     if set_equip then
         equip(set_combine(sets.mode[mode], set_equip))
@@ -472,6 +473,10 @@ function self_command(command)
     elseif command == 'lowhaste' then
         lowhaste = not lowhaste
         windower.add_to_chat('Low Haste is: '..tostring(lowhaste))
+		
+    elseif command == 'th' then
+        th = not th
+        windower.add_to_chat('C.Flour is: '..tostring(th))
 		
     elseif command == 'regain' then
         regain = not regain
