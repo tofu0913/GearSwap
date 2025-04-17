@@ -174,7 +174,7 @@ function get_sets()
     
     sets.ja = {}
 	sets.ja['絶対回避'] = {
-		hands="ＰＤアムレット+3	"
+		hands="ＰＤアムレット+3",
 	}
     -- sets.JA.Steal = {
 		-- ammo="Barathrum",
@@ -184,9 +184,9 @@ function get_sets()
 		-- legs="Pillager's Culottes +1",
 		-- feet="Pillager's Poulaines +1"
 	-- }
-    -- sets.JA.Flee = {
-		-- feet="Pillager's Poulaines +1"
-	-- }
+    sets.ja.Flee = {
+		feet="ＰＬプーレーヌ+2",
+	}
     -- sets.JA.Despoil = {
 		-- ammo="Barathrum",
 		-- legs="Raider's Culottes +2",

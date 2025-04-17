@@ -231,7 +231,7 @@ function get_sets()
         ammo="インカントストーン",
         head={ name="マーリンフード", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','"Fast Cast"+7',}},
 		body="アグゥローブ",
-        hands="ＡＣブレーサー+3"
+        hands="ＡＣブレーサー+3",
         legs="アグゥスロップス",
 		-- feet={ name="マーリンクラッコー", augments={'"Mag.Atk.Bns."+2','"Fast Cast"+6','INT+6',}},
 		feet="ＡＣローファー+3",

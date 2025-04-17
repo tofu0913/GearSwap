@@ -27,7 +27,7 @@ function get_sets()
     }
     sets.idle = {
         -- head="ＡＢボネット+1",
-        body="ＶＩタバード+1",--"ＶＩタバード+3",
+        body="ＡＴタバード+2",--"ＶＩタバード+3",
         hands="ＶＩグローブ+3",
         legs="ＡＴタイツ+3",
         feet="ＬＴウゾー+1",--"ＬＴウゾー+3",
@@ -60,7 +60,7 @@ function get_sets()
         left_ring="ナジの包帯",
     }
     sets.ma.Refresh = {
-		body="ＡＴタバード+1",
+		body="ＡＴタバード+2",
 	}
 
     sets.buff = {
