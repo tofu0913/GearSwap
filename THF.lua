@@ -97,7 +97,7 @@ function get_sets()
     sets.ws={
         ammo="コイストボダー",
         head="ＳＫボンネット+2",
-        body="ＳＫベスト+2",
+        body="ＳＫベスト+3",
         hands="ニャメガントレ",
         legs="グレティブリーチズ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
