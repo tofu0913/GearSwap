@@ -301,12 +301,12 @@ function precast(spell)
 			if windower.ffxi.get_ability_recasts()[64] < 1 then
 				locked = true
 				cancel_spell()
-				send_command(windower.to_shift_jis('input /ja "不意打ち" <me>; wait 1; input /ws "'..spell.name..'" <t>'))
+				send_command(windower.to_shift_jis('input /ja "不意打ち" <me>; wait 0.8; input /ws "'..spell.name..'" <t>'))
 
 			elseif windower.ffxi.get_ability_recasts()[67] < 1 then
 				locked = true
 				cancel_spell()
-				send_command(windower.to_shift_jis('input /ja "アサシンチャージ" <me>; wait 1; input /ws "'..spell.name..'" <t>'))
+				send_command(windower.to_shift_jis('input /ja "アサシンチャージ" <me>; wait 0.8; input /ws "'..spell.name..'" <t>'))
 			end
 		end
     end
