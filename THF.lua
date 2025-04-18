@@ -121,7 +121,7 @@ function get_sets()
 		neck="共和プラチナ章",
         left_ear="胡蝶のイヤリング",
 		right_ear="イシュヴァラピアス",
-		left_ring="エパミノダスリング",
+		-- left_ring="エパミノダスリング",
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
 	})
     sets.ws['Shark Bite'] = set_combine(sets.ws, {
@@ -135,13 +135,13 @@ function get_sets()
         -- waist="フォシャベルト",
         -- right_ear="オドルピアス",
     })
-    sets.ws['Exenterator'] = set_combine(sets.ws, {
+    -- sets.ws['Exenterator'] = set_combine(sets.ws, {
         -- right_ear="オドルピアス",
         -- body="ムンムジャケット+2",
-        legs="メガナダショウス+2",
-        feet="ムンムゲマッシュ+2",
+        -- legs="メガナダショウス+2",
+        -- feet="ムンムゲマッシュ+2",
         -- waist="グルンフェルロープ",
-    })
+    -- })
     sets.ws['Rudra\'s Storm'] = set_combine(sets.ws, {
         -- neck="フォシャゴルゲット",
         -- waist="フォシャベルト",
@@ -187,11 +187,26 @@ function get_sets()
     sets.ja.Flee = {
 		feet="ＰＬプーレーヌ+2",
 	}
-    -- sets.JA.Despoil = {
-		-- ammo="Barathrum",
-		-- legs="Raider's Culottes +2",
-		-- feet="Skulker's Poulaines"
-	-- }
+    sets.ja.Despoil = {
+		-- ammo="バラスルーム",
+		-- legs="ＳＫキュロット+3",
+		feet="ＳＫプーレーヌ+2"--3
+	}
+    sets.ja.Jump = {
+        ammo="コイストボダー",
+        head="マリグナスシャポー",
+        body="マリグナスタバード",
+        hands="マリグナスグローブ",
+        legs="マリグナスタイツ",
+        feet="マリグナスブーツ",
+		neck="アヌートルク",
+        waist={ name="ケンタークベルト+1", augments={'Path: A',}},--"ゴウドベルト",
+        left_ear="シェリダピアス",
+        right_ear="デディションピアス",
+        left_ring="シーリチリング+1",
+        right_ring="イラブラットリング",
+		back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
 	
     sets.buff = {}
     sets.buff.Phalanx = {
