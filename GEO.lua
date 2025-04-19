@@ -12,7 +12,7 @@ function get_sets()
 		main="イドリス",
 		sub="玄武盾",
 		range={ name="デュンナ", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		head="ＡＺフード+1",--"ＡＺフード+3",
+		head="ＡＺフード+2",--"ＡＺフード+3",
         body="ＡＺコート+2",
         -- body="ニャメメイル",
 		hands="ＧＯミテーヌ+3",
@@ -134,7 +134,7 @@ function get_sets()
 	sets.macc = {
 		main="イドリス",
 		sub="カルミナス",
-		head="アグゥキャップ",--"ＡＺフード+1",
+		head="ＡＺフード+2",
         body="アグゥローブ",--"ＡＺコート+2"
         hands="ＧＯミテーヌ+3",
         legs="アグゥスロップス",
