@@ -19,6 +19,11 @@ function get_sets()
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
 		style=12,
     }
+    sets.mode['ABY5'] = {
+        main={ name="トゥワシュトラ", augments={'Path: A',}},
+		sub={ name="ガンドリング", augments={'Path: C',}},
+		style=12,
+    }
     sets.mode['AMB'] = {
         main="トーレット",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
@@ -37,6 +42,11 @@ function get_sets()
     sets.mode['P'] = {
         main="ンプガンドリング",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
+		style=11,
+    }
+    sets.mode['P5'] = {
+        main="ンプガンドリング",
+		sub={ name="ガンドリング", augments={'Path: C',}},
 		style=11,
     }
     sets.mode['PABY'] = {
@@ -479,6 +489,14 @@ function self_command(command)
         send_command('input //ws dnc_p')
     elseif command == 'paby' then
         mode = 'PABY'
+		lockstyle()
+        send_command('input //ws dnc_p')
+    elseif command == 'aby5' then
+        mode = 'ABY5'
+		lockstyle()
+        send_command('input //ws dnc_aby')
+    elseif command == 'p5' then
+        mode = 'P5'
 		lockstyle()
         send_command('input //ws dnc_p')
     elseif command == 'sw' then
