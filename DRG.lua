@@ -12,6 +12,7 @@ function get_sets()
     pdt = false
     announce = false
     th = false
+    rp = false
     blow = false
     mode = ''
 	default_style = 24
@@ -355,6 +356,16 @@ function self_command(command)
 		
     elseif command == 'style' or command == 's' then
 		lockstyle()
+		
+    elseif command == 'rp' then
+        rp = not rp
+        windower.add_to_chat('RP: '..tostring(rp))
+		if rp then
+			send_command('gs disable main neck')
+		else
+			send_command('gs enable main neck')
+		end
+		setIdle()
 		
     elseif command == 'blow' then
         blow = not blow
