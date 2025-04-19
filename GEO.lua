@@ -101,6 +101,9 @@ function get_sets()
 		right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
 		back="龍脈の外套",
 	})
+	sets.ma.indi_duo = {
+		sub={ name="ソールスティス", augments={'Mag. Acc.+20','Pet: Damage taken -4%','"Fast Cast"+5',}},
+	}
 	
 	sets.ma.geo = set_combine(sets.idle, {
 		main="イドリス",
@@ -218,6 +221,9 @@ function midcast(spell)
 				set_equip = set_combine(sets.ma.indi, sets.ja.Entrust)
 			else
 				set_equip = sets.ma.indi
+			end
+			if player.sub_job_id == 19 then
+				set_equip = set_combine(set_equip, sets.ma.indi_duo)
 			end
             
         elseif sets.ma[spell.english] then
