@@ -63,9 +63,9 @@ function get_sets()
     sets.tp={
         -- ammo="コイストボダー",
 		ammo="ヤメラング",
-        -- ammo={ name="シーズボムレット+1", augments={'Path: A',}},
         -- ammo="銀銭",
-        head={ name="アデマボンネット+1", augments={'STR+12','DEX+12','Attack+20',}},
+        head="ＳＫボンネット+2",
+        -- head={ name="アデマボンネット+1", augments={'STR+12','DEX+12','Attack+20',}},
         -- body="ムンムジャケット+2",
         body="マリグナスタバード",
         hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
@@ -128,6 +128,7 @@ function get_sets()
 	sets.ws.ta = {
 	}
     sets.ws['Savage Blade'] = set_combine(sets.ws, {
+        ammo={ name="シーズボムレット+1", augments={'Path: A',}},
 		neck="共和プラチナ章",
         left_ear="胡蝶のイヤリング",
 		right_ear="イシュヴァラピアス",
