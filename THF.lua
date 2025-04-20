@@ -498,7 +498,7 @@ function self_command(command)
     elseif command == 'p5' then
         mode = 'P5'
 		lockstyle()
-        send_command('input //ws dnc_p')
+        -- send_command('input //ws dnc_p')
     elseif command == 'sw' then
         mode = 'SW'
 		lockstyle()
