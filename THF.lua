@@ -87,6 +87,9 @@ function get_sets()
 	sets.tp.flee={
 		right_ring="イラブラットリング",
 	}
+	sets.tp.AssassinsCharge={
+		feet="ＰＤプーレーヌ+1",
+	}
 	sets.idle={
 		ammo="ヤメラング",
 		head="トゥルムキャップ+1",
@@ -378,6 +381,9 @@ function buff_change(buff,gain,buff_details)
             windower.add_to_chat("死の宣告から回復した、Doom gone....")
         end
     end
+	if buff == 'アサシンチャージ' then
+		setIdle()
+	end
 end
 
 function setIdle()
@@ -397,6 +403,9 @@ function setIdle()
             set_equip = set_combine(set_equip, sets.walk.adoulin)
         end
     end
+	if buffactive['アサシンチャージ'] then
+		set_equip = set_combine(set_equip, sets.tp.AssassinsCharge)
+	end
 
     if set_equip then
         equip(set_combine(sets.mode[mode], set_equip))
