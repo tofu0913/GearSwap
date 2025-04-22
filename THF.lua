@@ -190,14 +190,14 @@ function get_sets()
 	sets.ja['絶対回避'] = {
 		hands="ＰＤアムレット+3",
 	}
-    -- sets.JA.Steal = {
-		-- ammo="Barathrum",
-		-- neck="Pentagalus Charm",
-		-- hands="Thief's Kote",
-        -- waist="Key Ring Belt",
+    sets.ja.Steal = {
+		-- ammo="バラスルーム",
+		-- neck="ペンタラグチャーム",
+		-- hands="盗賊の篭手",
+        -- waist="キーリングベルト",
 		-- legs="Pillager's Culottes +1",
-		-- feet="Pillager's Poulaines +1"
-	-- }
+		feet="ＰＬプーレーヌ+2"
+	}
     sets.ja.Flee = {
 		feet="ＰＬプーレーヌ+2",
 	}

@@ -89,7 +89,6 @@ function get_sets()
         hands={ name="ニャメガントレ", augments={'Path: B',}},
         legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
-		-- neck="共和プラチナ章",
 		neck={ name="竜騎士の首輪+2", augments={'Path: A',}},
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
         left_ring="イフラマドリング",
@@ -102,7 +101,6 @@ function get_sets()
 		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
     }
     sets.ws["Savage Blade"]=set_combine(sets.ws, {
-		neck="共和プラチナ章",
     })
     sets.ws["Drakesbane"]=set_combine(sets.ws, {
 		hands="グレティガントレ",
