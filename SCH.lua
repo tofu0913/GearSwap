@@ -158,7 +158,7 @@ function get_sets()
     })
 	sets.ma.Impact = set_combine(sets.mb, {
 		head="",
-		body="トワイライトプリス",
+		body="クレパスクラプリス",
 	})
     sets.ma.Stoneskin = set_combine(sets.buff,{
         waist="ジーゲルサッシュ",

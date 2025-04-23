@@ -49,7 +49,7 @@ function get_sets()
     }
 	sets.fc.Impact = set_combine(sets.fc, {
 		head="",
-		body="トワイライトプリス",
+		body="クレパスクラプリス",
 	})
 	
 	sets.ja = {}

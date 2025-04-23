@@ -233,7 +233,7 @@ function get_sets()
     })
 	sets.ma.Impact = set_combine(sets.ma.drk_magic, {
 		head="",
-		body="トワイライトプリス",
+		body="クレパスクラプリス",
 		neck="無の喉輪",
 		waist="無の腰当",
 		right_ear="ヒーズンピアス+2",
