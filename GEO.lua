@@ -115,7 +115,7 @@ function get_sets()
 	})
 	sets.ma.Impact = set_combine(sets.mb, {
 		head="",
-		body="トワイライトプリス",
+		body="クレパスクラプリス",
 	})
 	sets.ma.Cure = {
 		main={ name="ブンジロッド", augments={'Path: A',}},
