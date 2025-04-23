@@ -26,6 +26,9 @@ function get_sets()
 		back={ name="ナントセルタケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Acc.+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
 	}
 	sets.idle.geo = {
+		body={ name="テルキネシャジュブ", augments={'Mag. Evasion+25','Pet: "Regen"+3','Pet: Damage taken -4%',}},
+		hands={ name="テルキネグローブ", augments={'Mag. Evasion+25','Pet: "Regen"+3','Pet: Damage taken -4%',}},
+		legs={ name="テルキネブラコーニ", augments={'Mag. Evasion+25','Pet: "Regen"+3','Pet: Damage taken -4%',}},
 		feet="ＢＡサンダル+3",
 		left_ear="ハンドラーピアス+1",
 	}
