@@ -192,7 +192,7 @@ function get_sets()
 	}
     sets.ja.Steal = {
 		-- ammo="バラスルーム",
-		-- neck="ペンタラグチャーム",
+		neck="ペンタラグチャーム",
 		-- hands="盗賊の篭手",
         -- waist="キーリングベルト",
 		-- legs="Pillager's Culottes +1",
