@@ -88,6 +88,10 @@ function get_sets()
         main="デマサルデーゲン+1",
         sub="トーレット",
     }
+    sets.mode['HH'] = {
+        main="カランビット",
+        sub="",
+    }
 
     sets.tp={
         ammo="コイストボダー",
@@ -528,6 +532,10 @@ function self_command(command)
     elseif command == 'sw' then
         mode = 'SW'
 		lockstyle()
+    elseif command == 'hh' then
+        mode = 'HH'
+		lockstyle()
+        send_command('input //ws hh')
     elseif command == 'help' then
         windower.add_to_chat('Mode: '..tostring(mode))
         windower.add_to_chat('Available modes: [aby, amb, acc, p]')
