@@ -201,6 +201,9 @@ function get_sets()
     sets.ja.Flee = {
 		feet="ＰＬプーレーヌ+2",
 	}
+    sets.ja.Feint = {
+		legs="ＰＤキュロット+1",
+	}
     sets.ja.Despoil = {
 		-- ammo="バラスルーム",
 		-- legs="ＳＫキュロット+3",
@@ -381,7 +384,7 @@ function buff_change(buff,gain,buff_details)
             windower.add_to_chat("死の宣告から回復した、Doom gone....")
         end
     end
-	if buff == 'アサシンチャージ' then
+	if T{"フェイント","アサシンチャージ"}:contains(buff) then
 		setIdle()
 	end
 end
@@ -392,7 +395,7 @@ function setIdle()
 	if windower.ffxi.get_player().status == 1 then
 		if flee then
 			set_equip = set_combine(set_equip, sets.tp.flee)
-		elseif th then
+		elseif th or buffactive['フェイント'] then
 			set_equip = set_combine(sets.tp, sets.th)
 		else
 			set_equip = sets.tp
