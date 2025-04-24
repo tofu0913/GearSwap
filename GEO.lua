@@ -74,7 +74,7 @@ function get_sets()
 		main={ name="ブンジロッド", augments={'Path: A',}},
 		sub="カルミナス",
         ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
-		head="ＡＺフード+2",
+		head="エアハット+1",
         body="ＡＺコート+2",
         hands={ name="アグゥゲージ", augments={'Path: A',}},
         legs="ＡＺタイツ+2",
