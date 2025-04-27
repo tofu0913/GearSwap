@@ -95,7 +95,8 @@ function get_sets()
 		head="トゥルムキャップ+1",
 		-- head="マリグナスシャポー",
 		body="マリグナスタバード",
-		hands="ＰＤアムレット+3",
+		-- hands="ＰＤアムレット+3",
+		hands="マリグナスグローブ",
 		legs="マリグナスタイツ",
 		feet="マリグナスブーツ",
 		neck="バーシチョーカー+1",
@@ -521,6 +522,7 @@ function self_command(command)
         windower.add_to_chat('PDT: '..tostring(pdt))
         windower.add_to_chat('Flee: '..tostring(flee))
         windower.add_to_chat('TH: '..tostring(th))
+        windower.add_to_chat('SA: '..tostring(autoSA))
         -- windower.add_to_chat('Announce is: '..tostring(announce))
     end
     
