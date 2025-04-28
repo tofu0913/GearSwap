@@ -193,21 +193,21 @@ function get_sets()
 		hands="ＰＤアムレット+3",
 	}
     sets.ja.Steal = {
-		-- ammo="バラスルーム",
+		ammo="バラスルーム",
 		neck="ペンタラグチャーム",
 		-- hands="盗賊の篭手",
         -- waist="キーリングベルト",
 		-- legs="Pillager's Culottes +1",
-		feet="ＰＬプーレーヌ+2"
+		feet="ＰＬプーレーヌ+3"
 	}
     sets.ja.Flee = {
-		feet="ＰＬプーレーヌ+2",
+		feet="ＰＬプーレーヌ+3",
 	}
     sets.ja.Feint = {
 		legs="ＰＤキュロット+1",
 	}
     sets.ja.Despoil = {
-		-- ammo="バラスルーム",
+		ammo="バラスルーム",
 		-- legs="ＳＫキュロット+3",
 		feet="ＳＫプーレーヌ+2"--3
 	}
