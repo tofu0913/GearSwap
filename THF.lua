@@ -9,7 +9,7 @@ function get_sets()
     sets.tp = {}
     
     th = true
-    flee = false
+    omen = false
     autoSA = false
 	rp = false
 	default_style = 12
@@ -84,7 +84,9 @@ function get_sets()
 		right_ring="イフラマドリング",
 		back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
     }
-	sets.tp.flee={
+	sets.tp.omen={
+		hands="ＰＤアムレット+3",
+		waist="チャークベルト",
 		right_ring="イラブラットリング",
 	}
 	sets.tp.AssassinsCharge={
@@ -95,7 +97,6 @@ function get_sets()
 		head="トゥルムキャップ+1",
 		-- head="マリグナスシャポー",
 		body="マリグナスタバード",
-		-- hands="ＰＤアムレット+3",
 		hands="マリグナスグローブ",
 		legs="マリグナスタイツ",
 		feet="マリグナスブーツ",
@@ -394,8 +395,8 @@ function setIdle()
     set_equip = sets.idle
     
 	if windower.ffxi.get_player().status == 1 then
-		if flee then
-			set_equip = set_combine(set_equip, sets.tp.flee)
+		if omen then
+			set_equip = set_combine(set_equip, sets.tp.omen)
 		elseif th or buffactive['フェイント'] then
 			set_equip = set_combine(sets.tp, sets.th)
 		else
@@ -440,9 +441,9 @@ function self_command(command)
 			send_command('gs enable main sub neck')
 		end
 		setIdle()
-    elseif command == 'flee' then
-        flee = not flee
-        windower.add_to_chat('Flee: '..tostring(flee))
+    elseif command == 'omen' then
+        omen = not omen
+        windower.add_to_chat('Omen: '..tostring(omen))
 		
     elseif command == 'style' or command == 's' then
 		lockstyle()
@@ -518,12 +519,11 @@ function self_command(command)
 		lockstyle()
     else
         windower.add_to_chat('Mode: '..tostring(mode))
-        windower.add_to_chat('Available modes: [aby, abyp, p, paby, amb, sw, su5]')
+        windower.add_to_chat('Available modes: [aby, abyp, p, paby, amb, sw, su5, p5, aby5]')
         windower.add_to_chat('PDT: '..tostring(pdt))
-        windower.add_to_chat('Flee: '..tostring(flee))
+        windower.add_to_chat('Omen: '..tostring(omen))
         windower.add_to_chat('TH: '..tostring(th))
         windower.add_to_chat('SA: '..tostring(autoSA))
-        -- windower.add_to_chat('Announce is: '..tostring(announce))
     end
     
     if command ~= 'pha1' then
