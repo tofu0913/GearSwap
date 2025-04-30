@@ -31,7 +31,7 @@ function get_sets()
         hands="ＶＩグローブ+3",
         legs="ＡＴタイツ+3",
         feet="ＬＴウゾー+1",--"ＬＴウゾー+3",
-        -- neck={ name="アギュトストール+2", augments={'Path: A',}},
+        neck={ name="デュエルトルク+2", augments={'Path: A',}},
         right_ring="シュネデックリング",
         -- back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}}
         back={ name="スセロスケープ", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -86,6 +86,7 @@ function get_sets()
         hands="ニャメガントレ",
         legs="カイロンホーズ",
 		waist="オブシテナサッシュ",
+        neck={ name="デュエルトルク+2", augments={'Path: A',}},
         right_ear={ name="レサジーピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
         right_ring="メタモルリング+1",--{ name="メタモルリング+1", augments={'Path: A',}},
         
