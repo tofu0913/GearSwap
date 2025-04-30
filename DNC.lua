@@ -464,7 +464,7 @@ function self_command(command)
     elseif command == 'style' or command == 's' then
 		lockstyle()
 
-    elseif command == 'cflo' then
+    elseif command == 'cflo' or command == 'cf' then
         cflo = not cflo
         windower.add_to_chat('C.Flour is: '..tostring(cflo))
     elseif command == 'cflo1' then
