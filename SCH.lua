@@ -6,7 +6,7 @@ local texts = require('texts')
 local text_setting = {
     pos = {
         x = 15,
-        y = 945
+        y = 943
     }
 }
 function setup_text(text)
