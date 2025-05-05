@@ -90,7 +90,7 @@ function get_sets()
 		right_ring="イラブラットリング",
 	}
 	sets.tp.AssassinsCharge={
-		feet="ＰＤプーレーヌ+1",
+		feet="ＰＤプーレーヌ+2",
 	}
 	sets.idle={
 		ammo="ヤメラング",
@@ -182,7 +182,8 @@ function get_sets()
     })
     sets.th = {
         ammo="完璧な幸運の卵",
-		head="ヘルクリアヘルム",
+		-- head="ヘルクリアヘルム",
+		body={ name="ヘルクリアベスト"},
 		hands="ＰＤアムレット+3",
 		feet="ＳＫプーレーヌ+2",
 		waist="チャークベルト",

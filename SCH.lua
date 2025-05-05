@@ -102,10 +102,10 @@ function get_sets()
 		-- sub="エンキストラップ",
 
         head="ＡＢボネット+3",
-        -- body={ name="アグゥローブ", augments={'Path: A',}},
-        -- hands={ name="アグゥゲージ", augments={'Path: A',}},
-        body="ＡＢガウン+3",
-        hands="ＡＢブレーサー+3",
+        body={ name="アグゥローブ", augments={'Path: A',}},
+        hands={ name="アグゥゲージ", augments={'Path: A',}},
+        -- body="ＡＢガウン+3",
+        -- hands="ＡＢブレーサー+3",
         legs="ＡＢパンツ+3",--"アグゥスロップス",
         feet="ＡＢローファー+3",
         
