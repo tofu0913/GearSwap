@@ -88,6 +88,7 @@ function get_sets()
 		hands="ＰＤアムレット+3",
 		waist="チャークベルト",
 		right_ring="イラブラットリング",
+		feet="ＳＫプーレーヌ+3",
 	}
 	sets.tp.AssassinsCharge={
 		feet="ＰＤプーレーヌ+2",
@@ -99,7 +100,8 @@ function get_sets()
 		body="マリグナスタバード",
 		hands="マリグナスグローブ",
 		legs="マリグナスタイツ",
-		feet="マリグナスブーツ",
+		-- feet="マリグナスブーツ",
+		feet="ＳＫプーレーヌ+3",
 		neck="バーシチョーカー+1",
 		-- waist="チャークベルト",
         waist="無の腰当",
@@ -185,7 +187,7 @@ function get_sets()
 		-- head="ヘルクリアヘルム",
 		body={ name="ヘルクリアベスト"},
 		hands="ＰＤアムレット+3",
-		feet="ＳＫプーレーヌ+2",
+		feet="ＳＫプーレーヌ+3",
 		waist="チャークベルト",
     }
     
@@ -210,7 +212,7 @@ function get_sets()
     sets.ja.Despoil = {
 		ammo="バラスルーム",
 		-- legs="ＳＫキュロット+3",
-		feet="ＳＫプーレーヌ+2"--3
+		feet="ＳＫプーレーヌ+3",
 	}
     sets.ja.Jump = {
         ammo="コイストボダー",
@@ -262,7 +264,7 @@ function get_sets()
 		body="マリグナスタバード",
 		hands={ name="ＰＤアムレット+3", augments={'Enhances "Perfect Dodge" effect',}},
 		legs="マリグナスタイツ",
-		feet="ＳＫプーレーヌ+2",
+		feet="ＳＫプーレーヌ+3",
 		neck={ name="アサシンゴルゲ+2", augments={'Path: A',}},
 		waist="チャークベルト",
 		left_ear="カラミタスピアス",
