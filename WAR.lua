@@ -410,10 +410,13 @@ function self_command(command)
         mode = 'Sword'
         send_command('input //ws war_sw')
 		lockstyle()
-    elseif command == 'gax' then
+    elseif T{"gax","gax2"}:contains(command) then
         mode = 'Great Axe'
-        send_command('input //ws s')
-        -- send_command('input //ws war_gax')
+		if command == 'gax2' then
+			send_command('input //ws war_gax')
+		else
+			send_command('input //ws s')
+		end
 		lockstyle()
     elseif command == 'cb' then
         mode = 'Club'
