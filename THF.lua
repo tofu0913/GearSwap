@@ -64,7 +64,7 @@ function get_sets()
         -- ammo="コイストボダー",
 		ammo="ヤメラング",
         -- ammo="銀銭",
-        head="ＳＫボンネット+2",
+        head="ＳＫボンネット+3",
         -- head={ name="アデマボンネット+1", augments={'STR+12','DEX+12','Attack+20',}},
         -- body="ムンムジャケット+2",
         body="マリグナスタバード",
@@ -113,7 +113,7 @@ function get_sets()
 	}
     sets.ws={
         ammo="コイストボダー",
-        head="ＳＫボンネット+2",
+        head="ＳＫボンネット+3",
         body="ＳＫベスト+3",
         hands="ニャメガントレ",
         legs="グレティブリーチズ",
@@ -161,10 +161,12 @@ function get_sets()
         -- waist="グルンフェルロープ",
     -- })
     sets.ws['Rudra\'s Storm'] = set_combine(sets.ws, {
+        ammo="パルーグストーン",
         -- neck="フォシャゴルゲット",
         -- waist="フォシャベルト",
     })
     sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {
+        ammo="パルーグストーン",
         -- neck="フォシャゴルゲット",
         -- waist="フォシャベルト",
     })
@@ -215,6 +217,10 @@ function get_sets()
 		-- legs="ＳＫキュロット+3",
 		feet="ＳＫプーレーヌ+3",
 	}
+    sets.ja.Accomplice = {
+		head="ＳＫボンネット+3",
+	}
+    sets.ja.Collaborator = sets.ja.Accomplice
     sets.ja.Jump = {
         ammo="コイストボダー",
         head="マリグナスシャポー",
