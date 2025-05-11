@@ -96,6 +96,18 @@ function get_sets()
         waist="フォシャベルト",
         back={ name="シコルマント", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}},
     })
+	sets.ws.breaks=set_combine(sets.ws, {
+		head="ＢＩマスク+3",
+		body="ＢＩロリカ+3",
+		hands="ＢＩマフラ+3",
+		legs="ＢＩクウィス+3",
+		feet="ＢＩカリガ+2",
+		neck="無の喉輪",
+		waist="無の腰当",
+        right_ear={ name="ボイイピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
+        right_ring="メタモルリング+1",
+		back="無の外装",
+	})
     
     sets.acc={
         ammo={ name="シーズボムレット+1", augments={'Path: A',}},
@@ -259,7 +271,9 @@ function midcast(spell)
 
     if spell.type == 'WeaponSkill' then
         if sets.ws[spell.english] then
-            set_equip = sets.ws[spell.english]
+			set_equip = sets.ws[spell.english]
+		elseif string.find(spell.english, 'Break') then
+			set_equip = sets.ws.breaks
         else
             set_equip = sets.ws
         end

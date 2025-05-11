@@ -132,6 +132,18 @@ function get_sets()
         -- hands={ name="オディシアガントレ", augments={'Accuracy+13 Attack+13','Weapon skill damage +4%','Accuracy+15','Attack+14',}},
         back={ name="アンコウマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%'}},
     })
+	sets.ws.breaks=set_combine(sets.ws, {
+		head="ＨＴバゴネット+3",
+		body="サクパタブレスト",
+		hands="サクパタガントレ",
+		legs="サクパタクウィス",
+		feet="ＨＴソルレット+3",
+		neck="無の喉輪",
+		waist="無の腰当",
+        right_ear=name="ヒーズンピアス+2",
+        right_ring="メタモルリング+1",
+		back="無の外装",
+	})
     
 	sets.buff = {}
     sets.buff.Phalanx = {
