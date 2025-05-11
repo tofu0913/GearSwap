@@ -74,7 +74,7 @@ function get_sets()
 		neck="無の喉輪",
 		waist={ name="ケンタークベルト+1", augments={'Path: A',}},
 		left_ear="素破の耳",
-		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+		right_ear={ name="ペルタスピアス+2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 VIT+7',}},
 		left_ring="シーリチリング+1",
 		right_ring="イフラマドリング",
 		back="無の外装",
@@ -98,7 +98,7 @@ function get_sets()
 		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     }
     sets.ws.fulltp={
-		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+		right_ear={ name="ペルタスピアス+2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 VIT+7',}},
     }
     sets.ws["Savage Blade"]=set_combine(sets.ws, {
     })
@@ -107,7 +107,7 @@ function get_sets()
 		legs="グレティブリーチズ",
 		feet="グレティブーツ",
         left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+		right_ear={ name="ペルタスピアス+2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 VIT+7',}},
 		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10',}},
     })
 	sets.ws["Geirskogul"]=set_combine(sets.ws, {
@@ -116,7 +116,7 @@ function get_sets()
 		neck="フォシャゴルゲット",
         waist="ケンタークベルト+1",
         left_ear="シェリダピアス",
-		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+		right_ear={ name="ペルタスピアス+2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 VIT+7',}},
 		back={ name="ブリガンチアマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
 	})
 	
@@ -164,7 +164,7 @@ function get_sets()
 	}
 	sets.ja['Call Wyvern'] = {
 		neck={ name="竜騎士の首輪+2", augments={'Path: A',}},
-		right_ear={ name="ペルタスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
+		right_ear={ name="ペルタスピアス+2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 VIT+7',}},
 	}
 	sets.ja['Ancient Circle'] = {
 		legs="ＶＳブレー+2",
