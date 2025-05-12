@@ -140,7 +140,7 @@ function get_sets()
 		feet="ＨＴソルレット+3",
 		neck="無の喉輪",
 		waist="無の腰当",
-        right_ear=name="ヒーズンピアス+2",
+        right_ear="ヒーズンピアス+2",
         right_ring="メタモルリング+1",
 		back="無の外装",
 	})
