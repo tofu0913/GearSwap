@@ -401,9 +401,11 @@ function buff_change(buff,gain,buff_details)
 
 	if nobook and gain and string.find(buff, 'の章') then
 		local books = getBookCount()
-		-- windower.add_to_chat('book: '..books)
-		if books <= 1 then
-			send_command(windower.to_shift_jis('input /p !!!! 戦術魔道書残量：'..books..'本 (あと'..book_seconds()..'秒) !!!!'))
+		-- windower.add_to_chat('book: '..books..','..book_seconds())
+		if books == 0 and book_seconds() > 0 then
+			send_command(windower.to_shift_jis('input /p !!!! 戦術魔道書：'..books..'本 (あと'..book_seconds()..'秒) 交接！！！'))
+		elseif books <= 1 and book_seconds() < 20 then
+			send_command(windower.to_shift_jis('input /p !!!! 戦術魔道書：'..books..'本 (あと'..book_seconds()..'秒) 交接預備！'))
 		end
 	end
 	
