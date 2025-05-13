@@ -442,16 +442,7 @@ end
 
 function self_command(command)
     command = command:lower()
-    if command == 'rp' then
-        rp = not rp
-        windower.add_to_chat('RP: '..tostring(rp))
-		if rp then
-			send_command('gs disable main sub neck')
-		else
-			send_command('gs enable main sub neck')
-		end
-		setIdle()
-    elseif command == 'omen' then
+    if command == 'omen' then
         omen = not omen
         windower.add_to_chat('Omen: '..tostring(omen))
 		

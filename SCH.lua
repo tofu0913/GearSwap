@@ -453,17 +453,6 @@ function self_command(command)
         windower.add_to_chat('LowSC is: '..tostring(lowsc))
 		updateText()
 		
-    elseif command == 'rp' then
-        rp = not rp
-        windower.add_to_chat('RP: '..tostring(rp))
-		if rp then
-			send_command('gs disable main sub neck')
-		else
-			send_command('gs enable main sub neck')
-		end
-		setIdle()
-		updateText()
-		
     elseif command == 'style' or command == 's' then
 		lockstyle()
 		
