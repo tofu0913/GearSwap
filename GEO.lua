@@ -248,14 +248,6 @@ end
 
 function aftercast(spell)
     setIdle()
-	if skillup and spell.english == 'Indi-Poison' then
-		send_command(windower.to_shift_jis('wait 3; input /ma インデデック <me>;'..
-										   'wait 5; input /ma インデリジェネ <me>;'..
-										   'wait 5; input /ma インデフューリー <me>;'..
-										   'wait 5; input /ma インデバリア <me>;'..
-										   'wait 5; input /ma インデトーパー <me>;'..
-										   'wait 12; input /ma インデポイズン <me>;'))
-	end
 end
 
 function status_change(new,old)
@@ -314,10 +306,6 @@ function self_command(command)
     if command == 'pdt' then
         -- mode = 'pdt'
         -- windower.add_to_chat('Mode is: '..mode)
-        
-    elseif command == 'skillup' then
-        skillup = not skillup
-        windower.add_to_chat('Skillup: '..tostring(skillup))
 		
     elseif command == 'style' or command == 's' then
 		lockstyle()
