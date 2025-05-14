@@ -236,7 +236,12 @@ function get_sets()
         right_ring="イラブラットリング",
 		back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
-	
+	sets.ja.Waltz = {
+		ammo="ヤメラング",
+		body="パションジャケット",
+        left_ring="ヴァルスールリング",
+	}
+
     sets.buff = {}
     sets.buff.Phalanx = {
         body={ name="ヘルクリアベスト"},
@@ -348,7 +353,9 @@ end
 function midcast(spell)
     local set_equip = nil
 
-    if sets.ja[spell.english] then
+    if spell.type == 'Waltz' then
+        set_equip = sets.ja.Waltz
+    elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
     elseif spell.type == 'WeaponSkill' and not buffactive['アムネジア'] then
         if sets.ws[spell.english] then
