@@ -77,7 +77,7 @@ function get_sets()
 		head="エアハット+1",
         body="ＡＺコート+3",
         hands={ name="アグゥゲージ", augments={'Path: A',}},
-        legs="ＡＺタイツ+2",
+        legs="ＡＺタイツ+3",
         feet="ＡＺゲートル+3",
         neck="水影の首飾り",
         waist="八輪の帯",
