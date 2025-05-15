@@ -67,7 +67,7 @@ function get_sets()
         head="ＳＫボンネット+3",
         -- head={ name="アデマボンネット+1", augments={'STR+12','DEX+12','Attack+20',}},
         -- body="ムンムジャケット+2",
-        body="マリグナスタバード",
+        body="ＰＬベスト+3",
         hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
         -- legs="メガナダショウス+2",
         legs={ name="サムヌータイツ", augments={'STR+9','DEX+8','"Dbl.Atk."+2','"Triple Atk."+2',}},
