@@ -219,7 +219,7 @@ function get_sets()
         legs="ＨＯタイツ+3",
     }
     sets.ja['Reverse Flourish'] = {
-        hands="ＭＣバングル+1",
+        hands="ＭＣバングル+2",
         back={ name="トータッパーマント", augments={'"Store TP"+4','"Dual Wield"+3','"Rev. Flourish"+30',}},
     }
     sets.ja['Climactic Flourish'] = {
