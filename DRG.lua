@@ -66,7 +66,7 @@ function get_sets()
     }
     sets.tp['Club']={
 		ammo={ name="コイストボダー", augments={'Path: A',}},
-		head="ＰＥメザイユ+2",
+		head="ＰＥメザイユ+3",
 		body="フロプトブレスト",
 		hands={ name="ニャメガントレ", augments={'Path: B',}},
 		legs="ニャメフランチャ",
@@ -83,7 +83,7 @@ function get_sets()
 
     sets.ws={
         ammo="ノブキエリ",
-        head="ＰＥメザイユ+2",--"ＰＥメザイユ+3",
+        head="ＰＥメザイユ+3",
         body="ＰＥプラカート+2",--"ＰＥプラカート+3",
 		-- body="グレティキュイラス",
         hands={ name="ニャメガントレ", augments={'Path: B',}},
