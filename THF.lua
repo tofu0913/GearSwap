@@ -494,7 +494,7 @@ function self_command(command)
 		lockstyle()
     elseif command == 'aby' then
         mode = 'ABY'
-        send_command('input //ws dnc_aby')
+        send_command('input //ws dnc_aby on')
 		lockstyle()
     elseif command == 'abyp' then
         mode = 'ABYP'
@@ -509,15 +509,15 @@ function self_command(command)
     elseif command == 'p' then
         mode = 'P'
 		lockstyle()
-        send_command('input //ws dnc_p')
+        send_command('input //ws dnc_p on')
     elseif command == 'paby' then
         mode = 'PABY'
 		lockstyle()
-        send_command('input //ws dnc_p')
+        send_command('input //ws dnc_p on')
     elseif command == 'aby5' then
         mode = 'ABY5'
 		lockstyle()
-        send_command('input //ws dnc_aby')
+        send_command('input //ws dnc_aby on')
     elseif command == 'p5' then
         mode = 'P5'
 		lockstyle()

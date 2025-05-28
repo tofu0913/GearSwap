@@ -513,7 +513,7 @@ function self_command(command)
 		lockstyle()
     elseif command == 'aby' then
         mode = 'ABY'
-        send_command('input //ws dnc_aby')
+        send_command('input //ws dnc_aby on')
 		lockstyle()
     elseif command == 'abyp' then
         mode = 'ABYP'
@@ -524,18 +524,18 @@ function self_command(command)
     elseif command == 'p' then
         mode = 'P'
 		lockstyle()
-        send_command('input //ws dnc_p')
+        send_command('input //ws dnc_p on')
     elseif command == 'paby' then
         mode = 'PABY'
 		lockstyle()
-        send_command('input //ws dnc_p')
+        send_command('input //ws dnc_p on')
     elseif command == 'sw' then
         mode = 'SW'
 		lockstyle()
     elseif command == 'hh' then
         mode = 'HH'
 		lockstyle()
-        send_command('input //ws hh')
+        send_command('input //ws hh on')
     elseif command == 'help' then
         windower.add_to_chat('Mode: '..tostring(mode))
         windower.add_to_chat('Available modes: [aby, amb, acc, p]')

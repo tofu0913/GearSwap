@@ -391,23 +391,23 @@ function self_command(command)
 		lockstyle()
     elseif command == 'sw' then
         mode = 'Sword'
-        send_command('input //ws war_sw')
+        send_command('input //ws war_sw on')
 		lockstyle()
     elseif command == 'cb' then
         mode = 'Club'
-        send_command('input //ws war_sw')
+        send_command('input //ws war_sw on')
 		lockstyle()
     elseif command == 'sh' then
         mode = 'Shine'
-        send_command('input //ws war_po')
+        send_command('input //ws war_po on')
 		lockstyle()
     elseif command == 'gg' then
         mode = 'Gungnir'
-        send_command('input //ws gg')
+        send_command('input //ws gg on')
 		lockstyle()
     elseif command == 'st' then
         mode = 'Stuff'
-        send_command('input //ws drg_st')
+        send_command('input //ws drg_st on')
 		lockstyle()
         
     elseif command == 'help' then

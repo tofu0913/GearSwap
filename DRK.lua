@@ -473,19 +473,19 @@ function self_command(command)
     elseif command == 'sw' then
         mode = 'Sword'
 		lockstyle()
-        send_command('input //ws war_sw')
+        send_command('input //ws war_sw on')
     elseif command == 'cb' then
         mode = 'Club'
 		lockstyle()
-        send_command('input //ws war_cb')
+        send_command('input //ws war_cb on')
     elseif command == 'gsw' then
         mode = 'Great Sword'
 		lockstyle()
-        send_command('input //ws drk_gsw')
+        send_command('input //ws drk_gsw on')
     elseif command == 'gax' then
         mode = 'Great Axe'
 		lockstyle()
-        send_command('input //ws drk_gax')
+        send_command('input //ws drk_gax on')
     elseif command == 'sc' then
         mode = 'Scythe'
 		lockstyle()
