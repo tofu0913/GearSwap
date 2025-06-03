@@ -449,13 +449,19 @@ end
 
 function self_command(command)
     command = command:lower()
-    if command == 'omen' then
+    if command == 'style' or command == 's' then
+		lockstyle()
+     
+    elseif command == 'omen' then
         omen = not omen
         windower.add_to_chat('Omen: '..tostring(omen))
-		
-    elseif command == 'style' or command == 's' then
-		lockstyle()
-        
+    elseif command == 'omen1' then
+        omen = true
+        windower.add_to_chat('Omen: '..tostring(omen))
+    elseif command == 'omen0' then
+        omen = false
+        windower.add_to_chat('Omen: '..tostring(omen))
+		  
     elseif command == 'pha1' then
         windower.add_to_chat('Phalanx ON')
         local spell = {}
