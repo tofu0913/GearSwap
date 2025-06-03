@@ -478,10 +478,6 @@ function self_command(command)
         lowhaste = not lowhaste
         windower.add_to_chat('Low Haste is: '..tostring(lowhaste))
 		
-    elseif command == 'th' then
-        th = not th
-        windower.add_to_chat('C.Flour is: '..tostring(th))
-		
     elseif command == 'regain' then
         regain = not regain
         windower.add_to_chat('Regain: '..tostring(regain))
@@ -502,12 +498,10 @@ function self_command(command)
         windower.add_to_chat('Phalanx OFF')
         setIdle()
 
-    -- elseif command == 'ann' then
-        -- announce = not announce
-        -- windower.add_to_chat('Announce is: '..tostring(announce))
     elseif command == 'th' then
         th = not th
         windower.add_to_chat('TH is: '..tostring(th))
+
     elseif command == 'free' then
         mode = ''
 		lockstyle()
