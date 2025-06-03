@@ -370,8 +370,8 @@ function midcast(spell)
         if windower.ffxi.get_player().vitals.tp >= 1700 then
             set_equip = set_combine(set_equip, sets.ws.fulltp)
         end
-    elseif sets.buff[spell.english] then
-        set_equip = sets.buff[spell.english]
+	elseif string.find(spell.english,'Phalanx') then
+        set_equip = sets.buff.Phalanx
     end
     
     if set_equip then
@@ -492,7 +492,7 @@ function self_command(command)
         windower.add_to_chat('Phalanx ON')
         local spell = {}
         spell.english = 'Phalanx'
-        spell.type = '強化魔法'
+        spell.skill = '強化魔法'
         midcast(spell)
     elseif command == 'pha0' then
         windower.add_to_chat('Phalanx OFF')
