@@ -51,7 +51,7 @@ function get_sets()
     sets.mode = {}
     sets.tp = {}
     
-    pdt = false
+    pdt = true
     th = false
     lowhaste = false
     regain = false
