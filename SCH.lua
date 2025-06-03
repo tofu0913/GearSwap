@@ -126,6 +126,9 @@ function get_sets()
     sets.ja['Tabula Rasa'] = {
 		legs="ペダゴギパンツ",
 	}
+    sets.ja['Enlightenment'] = {
+		body="ＰＤガウン+3",
+	}
 
     sets.buff = {
         main="ムサ",
