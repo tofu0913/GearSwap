@@ -116,7 +116,7 @@ function get_sets()
         head="ＳＫボンネット+3",
         body="ＳＫベスト+3",
         hands="ニャメガントレ",
-        legs="グレティブリーチズ",
+        legs="ＰＤキュロット+2",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
         waist="ケンタークベルト+1",
 		neck={ name="アサシンゴルゲ+2", augments={'Path: A',}},
