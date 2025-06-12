@@ -216,7 +216,7 @@ function get_sets()
     
     sets.ja = {}
     sets.ja.Jig = {
-        legs="ＨＯタイツ+3",
+        legs="ＨＯタイツ+4",
     }
     sets.ja['Reverse Flourish'] = {
         hands="ＭＣバングル+2",
@@ -245,7 +245,7 @@ function get_sets()
         body="ＨＯカザク+3",
     }
     sets.ja['Saber Dance'] = {
-        legs="ＨＯタイツ+3",
+        legs="ＨＯタイツ+4",
     }
     sets.ja['Trance'] = {
         head="ＨＯティアラ+1",
