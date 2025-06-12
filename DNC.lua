@@ -151,7 +151,7 @@ function get_sets()
 		-- body={ name="ヘルクリアベスト"},
         hands="ＭＸバングル+3",
         -- hands={ name="ニャメガントレ", augments={'Path: B',}},
-        legs="ＨＯタイツ+3",
+        legs="ＨＯタイツ+4",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
 		neck={ name="エトワールゴルゲ+2", augments={'Path: A',}},
         waist="ケンタークベルト+1",
