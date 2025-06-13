@@ -73,7 +73,7 @@ function get_sets()
     sets.ws={
         -- ammo={ name="シーズボムレット+1", augments={'Path: A',}},
         ammo="ノブキエリ",
-        head="ＡＧマスク+3",
+        head="ＡＧマスク+4",
         body="ＰＭロリカ+3",
         hands="ＢＩマフラ+3",
         legs="ＢＩクウィス+3",
@@ -166,7 +166,7 @@ function get_sets()
     
     sets.ja = {}
     sets.ja.Warcry = {
-        head="ＡＧマスク+3",
+        head="ＡＧマスク+4",
     }
     sets.ja.Berserk = {
         body="ＰＭロリカ+3",
