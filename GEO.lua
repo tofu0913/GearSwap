@@ -68,6 +68,7 @@ function get_sets()
 	}
 	sets.ja['Life Cycle'] = {
 		feet="ＧＯチュニック+1",
+		back={ name="ナントセルタケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Acc.+10','Pet: "Regen"+10','Pet: "Regen"+5',}},
 	}
 
     sets.mb = {
