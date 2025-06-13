@@ -36,8 +36,16 @@ function get_sets()
         main="ネイグリング",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
 	}
+	sets.weapon.swryu = {
+        main="ネイグリング",
+        sub="クレパスクラナイフ",
+	}
 	sets.weapon.aby = {
         main={ name="トゥワシュトラ", augments={'Path: A',}},
+        sub={ name="フセット+2", augments={'TP Bonus +1000',}},
+	}
+	sets.weapon.p = {
+        main="ンプガンドリング",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
 	}
 	sets.weapon.flee = {
@@ -338,6 +346,12 @@ function self_command(command)
         windower.add_to_chat('Weapon: '..tostring(weapon))
     elseif command == 'flee' then
         weapon = 'flee'
+        windower.add_to_chat('Weapon: '..tostring(weapon))
+    elseif command == 'p' then
+        weapon = 'p'
+        windower.add_to_chat('Weapon: '..tostring(weapon))
+    elseif command == 'swryu' then
+        weapon = 'swryu'
         windower.add_to_chat('Weapon: '..tostring(weapon))
 
     elseif command == 'dummy' then
