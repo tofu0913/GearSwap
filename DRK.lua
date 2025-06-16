@@ -89,7 +89,7 @@ function get_sets()
         -- ammo={ name="シーズボムレット+1", augments={'Path: A',}},
         ammo="ノブキエリ",
         head="ＨＴバゴネット+3",
-        body="ＩＧキュイラス+3",
+        body="ＩＧキュイラス+4",
         hands={ name="ニャメガントレ", augments={'Path: B',}},
         -- hands="サクパタガントレ",
         legs={ name="ＦＬフランチャー+3", augments={'Enhances "Muted Soul" effect',}},

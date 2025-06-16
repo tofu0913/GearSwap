@@ -149,7 +149,7 @@ function get_sets()
 		-- body={ name="グレティキュイラス", augments={'Path: A',}},
         body="メガナダクウィリ+2",
 		-- body={ name="ヘルクリアベスト"},
-        hands="ＭＸバングル+3",
+        hands="ＭＸバングル+4",
         -- hands={ name="ニャメガントレ", augments={'Path: B',}},
         legs="ＨＯタイツ+4",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
@@ -238,7 +238,7 @@ function get_sets()
     }
     sets.ja.Step = {
         head="ＭＸティアラ+2",
-        hands="ＭＸバングル+3",
+        hands="ＭＸバングル+4",
         feet={ name="ＨＯトーシュー+3", augments={'Enhances "Closed Position" effect',}},
     }
     sets.ja['No Foot Rise'] = {
