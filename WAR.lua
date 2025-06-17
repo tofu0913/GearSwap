@@ -74,8 +74,8 @@ function get_sets()
         -- ammo={ name="シーズボムレット+1", augments={'Path: A',}},
         ammo="ノブキエリ",
         head="ＡＧマスク+4",
-        body="ニャメメイル",
-        -- body="ＰＭロリカ+3",
+        -- body="ニャメメイル",
+        body="ＰＭロリカ+3",
         hands="ＢＩマフラ+3",
         legs="ＢＩクウィス+3",
         -- feet="スレビアレギンス+2",
@@ -218,6 +218,7 @@ function get_sets()
         right_ear="ロケイシャスピアス",
         left_ring="キシャールリング",
         right_ring="プロリクスリング",
+		back={ name="シコルマント", augments={'"Fast Cast"+10','Spell interruption rate down-10%',}},
     }
     sets.walk = {
         right_ring="シュネデックリング",
