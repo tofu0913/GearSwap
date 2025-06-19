@@ -99,7 +99,7 @@ function get_sets()
         head="ＭＣティアラ+3",
         -- head={ name="アデマボンネット+1", augments={'STR+12','DEX+12','Attack+20',}},
         -- body="ムンムジャケット+2",
-        -- body="ＨＯカザク+3",
+        -- body="ＨＯカザク+4",
         body="マリグナスタバード",
         hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
         legs={ name="サムヌータイツ", augments={'STR+9','DEX+8','"Dbl.Atk."+2','"Triple Atk."+2',}},
@@ -148,7 +148,8 @@ function get_sets()
         head="ＭＣティアラ+3",
 		-- body={ name="グレティキュイラス", augments={'Path: A',}},
         -- body="メガナダクウィリ+2",
-        body="ニャメメイル",
+        -- body="ニャメメイル",
+        body="ＨＯカザク+4",
 		-- body={ name="ヘルクリアベスト"},
         hands="ＭＸバングル+4",
         -- hands={ name="ニャメガントレ", augments={'Path: B',}},
@@ -227,7 +228,7 @@ function get_sets()
         head="ＭＣティアラ+3",
     }
     sets.ja['Violent Flourish'] = {
-        body="ＨＯカザク+3",
+        body="ＨＯカザク+4",
     }
     sets.ja.Waltz = {
 		ammo="ヤメラング",
@@ -243,7 +244,7 @@ function get_sets()
         feet={ name="ＨＯトーシュー+3", augments={'Enhances "Closed Position" effect',}},
     }
     sets.ja['No Foot Rise'] = {
-        body="ＨＯカザク+3",
+        body="ＨＯカザク+4",
     }
     sets.ja['Saber Dance'] = {
         legs="ＨＯタイツ+4",
