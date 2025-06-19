@@ -212,6 +212,7 @@ function get_sets()
 		ammo="サピエンスオーブ",
 		head="サクパタヘルム",
 		body="サクロブレスト",
+		hands={ name="エスカイトガントレ", augments={'Mag. Evasion+15','Spell interruption rate down +15%','Enmity+7',}},
 		legs={ name="オディシアクウィス", augments={'Attack+15','"Fast Cast"+5','Accuracy+11',}},
 		feet={ name="オディシアグリーヴ", augments={'Accuracy+13 Attack+13','"Fast Cast"+5','Attack+8',}},
         neck="ボルトサージトルク",
