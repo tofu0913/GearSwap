@@ -212,7 +212,6 @@ function get_sets()
 		ammo="サピエンスオーブ",
 		head="サクパタヘルム",
 		body="サクロブレスト",
-		hands={ name="エスカイトガントレ", augments={'Mag. Evasion+15','Spell interruption rate down +15%','Enmity+7',}},
 		legs={ name="オディシアクウィス", augments={'Attack+15','"Fast Cast"+5','Accuracy+11',}},
 		feet={ name="オディシアグリーヴ", augments={'Accuracy+13 Attack+13','"Fast Cast"+5','Attack+8',}},
         neck="ボルトサージトルク",
@@ -221,6 +220,19 @@ function get_sets()
         right_ring="プロリクスリング",
 		back={ name="シコルマント", augments={'"Fast Cast"+10','Spell interruption rate down-10%',}},
     }
+	sets.ma = {}
+	sets.ma.Warp = {
+		sub="サクロバルワーク",
+		ammo="ストンチタスラム+1",
+		-- head
+		-- body
+		hands={ name="エスカイトガントレ", augments={'Mag. Evasion+15','Spell interruption rate down +15%','Enmity+7',}},
+		-- legs
+		feet="オディシアグリーヴ",
+        right_ear="ハラサズピアス",
+        left_ring="エバネセンスリング",
+		back={ name="シコルマント", augments={'"Fast Cast"+10','Spell interruption rate down-10%',}},
+	}
     sets.walk = {
         right_ring="シュネデックリング",
     }
@@ -289,6 +301,8 @@ function midcast(spell)
         if windower.ffxi.get_player().vitals.tp >= 2700 then
             set_equip = set_combine(set_equip, sets.ws.fulltp)
         end
+    elseif sets.ma[spell.english] then
+        set_equip = sets.ma[spell.english]
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
     elseif sets.buff[spell.english] then
