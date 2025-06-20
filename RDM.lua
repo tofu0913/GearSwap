@@ -90,7 +90,7 @@ function get_sets()
         right_ear={ name="レサジーピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
         right_ring="メタモルリング+1",--{ name="メタモルリング+1", augments={'Path: A',}},
         
-        feet="ＶＩブーツ+1",--"ＶＩブーツ+3",
+        feet="ＶＩブーツ+2",--"ＶＩブーツ+3",
         right_ear="スノトラピアス",
         left_ear="マリグナスピアス",
         left_ring="キシャールリング",
