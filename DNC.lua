@@ -233,7 +233,7 @@ function get_sets()
     sets.ja.Waltz = {
 		ammo="ヤメラング",
         head="ＨＯティアラ+1",
-		body="パションジャケット",
+		body="ＭＸカザク+2",
 		neck={ name="エトワールゴルゲ+2", augments={'Path: A',}},
         left_ring="ヴァルスールリング",
 		back={ name="トータッパーマント", augments={'"Store TP"+4','"Dual Wield"+3','"Rev. Flourish"+30',}},
