@@ -504,6 +504,12 @@ function self_command(command)
         th = not th
         windower.add_to_chat('TH is: '..tostring(th))
 
+    elseif command == 'ef' then
+		pdt = false
+		send_command('ws dnc-ef on')
+		send_command('dnc step')
+		send_command('dnc bf')
+
     elseif command == 'free' then
         mode = ''
 		lockstyle()
