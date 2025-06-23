@@ -6,6 +6,7 @@ function get_sets()
     set_language('japanese')
     
     pdt = false
+    en = false
 	default_style = 9
     
     sets.mode = {}
@@ -220,7 +221,7 @@ function midcast(spell)
         elseif spell.skill=='強化魔法' then
             set_equip = sets.buff
             -- if windower.ffxi.get_player().status == 0 or mode == 'd1' then
-            if mode == 'd1' then
+            if en then
                 set_equip = set_combine(set_equip, sets.buff.weapon)
             end
             
@@ -293,11 +294,14 @@ function self_command(command)
     command = command:lower()
     if command == 'pdt' then
         pdt = not pdt
-        windower.add_to_chat('PDT- is: '..tostring(pdt))
+        windower.add_to_chat('PDT: '..tostring(pdt))
         
     elseif command == 'style' or command == 's' then
 		lockstyle()
 
+    elseif T{'en'}:contains(command) then
+		en = not en
+        windower.add_to_chat('En: '..tostring(en))
     elseif command == 'p' then
         mode = 'P'
 		lockstyle()
@@ -307,6 +311,7 @@ function self_command(command)
 		lockstyle()
     elseif command == 'd1' then
         mode = 'd1'
+		en = true
 		lockstyle()
     elseif command == 'help' then
         windower.add_to_chat('Mode: '..tostring(mode))
