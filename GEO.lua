@@ -1,6 +1,5 @@
 
 mylib = require('mylib')
-require('mylibs/caster_lite')
 
 function get_sets()
     set_language('japanese')
