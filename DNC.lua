@@ -507,6 +507,7 @@ function self_command(command)
     elseif command == 'ef' then
 		pdt = false
 		send_command('ws dnc-ef on')
+		send_command('ws tp 1100')
 		send_command('dnc step')
 		send_command('dnc bf')
 
