@@ -111,8 +111,7 @@ function get_sets()
         
         ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
         neck={ name="アギュトストール+2", augments={'Path: A',}},
-        waist="八輪の帯",
-        -- waist="オルペウスサッシュ",
+        waist="オルペウスサッシュ",
 		left_ear="王将の耳飾り",
         -- left_ear={ name="アバテルピアス", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+8',}},
         right_ear="マリグナスピアス",
@@ -121,6 +120,9 @@ function get_sets()
         right_ring={ name="メタモルリング+1", augments={'Path: A',}},
         back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
     }
+	sets.mb.obi = {
+        waist="八輪の帯",
+	}
     
     sets.ja = {}
     sets.ja['Tabula Rasa'] = {
@@ -156,8 +158,7 @@ function get_sets()
         hands="ＡＢブレーサー+3",
         legs="ＡＢパンツ+3",
         feet="ＡＢローファー+3",
-        waist="八輪の帯",
-        -- waist="オルペウスサッシュ",
+        waist="オルペウスサッシュ",
     })
 	sets.ma.Impact = set_combine(sets.mb, {
 		head="",
@@ -348,6 +349,9 @@ function midcast(spell)
             
         elseif spell.skill=='精霊魔法' then
             set_equip = sets.mb
+			if mylib.has_storm() then
+				set_equip = set_combine(set_equip, sets.mb.obi)
+			end
             
         elseif spell.skill=='弱体魔法' then
             set_equip = sets.debuff

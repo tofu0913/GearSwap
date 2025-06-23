@@ -65,4 +65,19 @@ function mylib.tprint (tbl, indent)
   return toprint
 end
 
+function has_storm()
+	if not windower.ffxi.get_player() then return false end
+	
+	local storms = {178, 179, 180, 181, 182, 183, 184, 185, 
+					589, 590, 591, 592, 593, 594, 595, 596}
+	for _,k in ipairs(storms) do
+		for _,b in ipairs(windower.ffxi.get_player().buffs) do
+			if k == b then
+				return true
+			end
+		end
+	end
+	return false
+end
+
 return mylib

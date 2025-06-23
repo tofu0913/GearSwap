@@ -81,8 +81,7 @@ function get_sets()
         legs="ＡＺタイツ+3",
         feet="ＡＺゲートル+3",
         neck="水影の首飾り",
-        waist="八輪の帯",
-        -- waist="オルペウスサッシュ",
+        waist="オルペウスサッシュ",
         -- waist="アキュイテベルト+1",
 		left_ear="王将の耳飾り",
         right_ear="マリグナスピアス",
@@ -91,6 +90,9 @@ function get_sets()
         right_ring="メタモルリング+1",--{ name="メタモルリング+1", augments={'Path: A',}},
 		back={ name="ナントセルタケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
     }
+	sets.mb.obi = {
+        waist="八輪の帯",
+	}
 	
 	sets.ma = {}
 	sets.ma.indi = set_combine(sets.idle, {
@@ -236,6 +238,9 @@ function midcast(spell)
 				
 		elseif spell.skill=='精霊魔法' then
 			set_equip = sets.mb
+			if mylib.has_storm() then
+				set_equip = set_combine(set_equip, sets.mb.obi)
+			end
 				
 		elseif spell.skill=='暗黒魔法' then
 			set_equip = sets.macc
