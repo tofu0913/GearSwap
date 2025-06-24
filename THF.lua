@@ -67,11 +67,11 @@ function get_sets()
         head="ＳＫボンネット+3",
         -- head={ name="アデマボンネット+1", augments={'STR+12','DEX+12','Attack+20',}},
         -- body="ムンムジャケット+2",
-        body="ＰＬベスト+3",
+        body="ＰＬベスト+4",
         hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
         -- legs="メガナダショウス+2",
         legs={ name="サムヌータイツ", augments={'STR+9','DEX+8','"Dbl.Atk."+2','"Triple Atk."+2',}},
-        feet="ＰＤプーレーヌ+3",
+        feet="ＰＤプーレーヌ+4",
 		neck={ name="アサシンゴルゲ+2", augments={'Path: A',}},
         -- waist="ウィンバフベルト+1",
         waist="ケンタークベルト+1",
@@ -91,13 +91,14 @@ function get_sets()
 		feet="ＳＫプーレーヌ+3",
 	}
 	sets.tp.AssassinsCharge={
-		feet="ＰＤプーレーヌ+3",
+		feet="ＰＤプーレーヌ+4",
 	}
 	sets.idle={
 		ammo="ヤメラング",
 		head="トゥルムキャップ+1",
 		-- head="マリグナスシャポー",
-		body="マリグナスタバード",
+		body="ＰＬベスト+4",
+		-- body="マリグナスタバード",
 		hands="マリグナスグローブ",
 		legs="マリグナスタイツ",
 		-- feet="マリグナスブーツ",
