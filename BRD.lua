@@ -51,7 +51,7 @@ function get_sets()
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
 	}
 	sets.weapon.flee = {
-		range={ name="リノス", augments={'Evasion+15','Phys. dmg. taken -4%','AGI+8',}},
+		range={ name="リノス", augments={'Evasion+15','Phys. dmg. taken -5%','AGI+8',}},
         main="カルンウェナン",
 		sub={ name="ニビルナイフ", augments={'Accuracy+20','Attack+15','Evasion+20',}},
 	}
