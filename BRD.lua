@@ -343,18 +343,23 @@ function self_command(command)
     elseif command == 'sw' then
         weapon = 'sw'
         windower.add_to_chat('Weapon: '..tostring(weapon))
+		lockstyle()
     elseif command == 'aby' then
         weapon = 'aby'
         windower.add_to_chat('Weapon: '..tostring(weapon))
+		lockstyle()
     elseif command == 'flee' then
         weapon = 'flee'
         windower.add_to_chat('Weapon: '..tostring(weapon))
+		lockstyle()
     elseif command == 'p' then
         weapon = 'p'
         windower.add_to_chat('Weapon: '..tostring(weapon))
+		lockstyle()
     elseif command == 'swryu' then
         weapon = 'swryu'
         windower.add_to_chat('Weapon: '..tostring(weapon))
+		lockstyle()
 
     elseif command == 'dummy' then
         dummy = true
