@@ -65,7 +65,7 @@ function mylib.tprint (tbl, indent)
   return toprint
 end
 
-function has_storm()
+function mylib.has_storm()
 	if not windower.ffxi.get_player() then return false end
 	
 	local storms = {178, 179, 180, 181, 182, 183, 184, 185, 
