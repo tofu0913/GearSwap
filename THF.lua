@@ -85,7 +85,7 @@ function get_sets()
 		back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
     }
 	sets.tp.omen={
-		hands="ＰＤアムレット+3",
+		hands="ＰＤアムレット+4",
 		waist="チャークベルト",
 		right_ring="イラブラットリング",
 		feet="ＳＫプーレーヌ+3",
@@ -189,14 +189,14 @@ function get_sets()
         ammo="完璧な幸運の卵",
 		-- head="ヘルクリアヘルム",
 		body={ name="ヘルクリアベスト"},
-		hands="ＰＤアムレット+3",
+		hands="ＰＤアムレット+4",
 		feet="ＳＫプーレーヌ+3",
 		waist="チャークベルト",
     }
     
     sets.ja = {}
 	sets.ja['絶対回避'] = {
-		hands="ＰＤアムレット+3",
+		hands="ＰＤアムレット+4",
 	}
     sets.ja.Steal = {
 		ammo="バラスルーム",
@@ -275,7 +275,7 @@ function get_sets()
 		ammo="完璧な幸運の卵",
 		head={ name="ヘルクリアヘルム", augments={'AGI+14','Accuracy+30','"Treasure Hunter"+1','Accuracy+20 Attack+20',}},
 		body="マリグナスタバード",
-		hands={ name="ＰＤアムレット+3", augments={'Enhances "Perfect Dodge" effect',}},
+		hands={ name="ＰＤアムレット+4", augments={'Enhances "Perfect Dodge" effect',}},
 		legs="マリグナスタイツ",
 		feet="ＳＫプーレーヌ+3",
 		neck={ name="アサシンゴルゲ+2", augments={'Path: A',}},
