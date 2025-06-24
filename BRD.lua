@@ -35,10 +35,12 @@ function get_sets()
 	sets.weapon.sw = {
         main="ネイグリング",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
+		style=29,
 	}
 	sets.weapon.swryu = {
         main="ネイグリング",
         sub="クレパスクラナイフ",
+		style=29,
 	}
 	sets.weapon.aby = {
         main={ name="トゥワシュトラ", augments={'Path: A',}},
@@ -308,11 +310,11 @@ function file_unload(file_name)
 end
 
 function lockstyle()
-	-- if mode ~='' and sets.mode[mode] and sets.mode[mode].style then
-		-- send_command('input /lockstyleset '..sets.mode[mode].style)
-	-- else
+	if weapon ~='' and sets.weapon[weapon] and sets.weapon[weapon].style then
+		send_command('input /lockstyleset '..sets.weapon[weapon].style)
+	else
 		send_command('input /lockstyleset '..default_style)
-	-- end
+	end
 end
 
 function self_command(command)
