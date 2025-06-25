@@ -222,12 +222,10 @@ function get_sets()
     }
 	sets.ma = {}
 	sets.ma.Warp = {
-		sub="サクロバルワーク",
+		main="パラシュ",
+		sub="マジックストラップ",
 		ammo="ストンチタスラム+1",
-		-- head
-		-- body
 		hands={ name="エスカイトガントレ", augments={'Mag. Evasion+15','Spell interruption rate down +15%','Enmity+7',}},
-		-- legs
 		feet="オディシアグリーヴ",
         right_ear="ハラサズピアス",
         left_ring="エバネセンスリング",
