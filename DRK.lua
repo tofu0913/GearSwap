@@ -92,7 +92,7 @@ function get_sets()
         body="ＩＧキュイラス+4",
         hands={ name="ニャメガントレ", augments={'Path: B',}},
         -- hands="サクパタガントレ",
-        legs={ name="ＦＬフランチャー+3", augments={'Enhances "Muted Soul" effect',}},
+        legs={ name="ＦＬフランチャー+4", augments={'Enhances "Muted Soul" effect',}},
         feet="ＨＴソルレット+3",
         neck={ name="暗黒の数珠+2", augments={'Path: A',}},
         -- left_ring="シーリチリング+1",
