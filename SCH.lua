@@ -199,7 +199,7 @@ function get_sets()
         body="ＡＢガウン+3",--ＡＣガウン+3
         hands="ＡＢブレーサー+3",
         legs="ＡＢパンツ+3",
-        feet="ＡＣローファー+3",
+        feet="ＡＣローファー+4",
 		waist="無の腰当",
         neck={ name="アギュトストール+2", augments={'Path: A',}},
 		left_ear="王将の耳飾り",
@@ -238,7 +238,7 @@ function get_sets()
         hands="ＡＣブレーサー+3",
         legs="アグゥスロップス",
 		-- feet={ name="マーリンクラッコー", augments={'"Mag.Atk.Bns."+2','"Fast Cast"+6','INT+6',}},
-		feet="ＡＣローファー+3",
+		feet="ＡＣローファー+4",
         waist="エンブラサッシュ",
         neck="ボルトサージトルク",
         left_ring="キシャールリング",
