@@ -161,12 +161,17 @@ function get_sets()
 
     sets.ws = {
         range={ name="リノス", augments={'Attack+20','Weapon skill damage +3%','STR+6 DEX+6',}},
+        head="ニャメヘルム",
         body={ name="ＢＩジュストコル+3", augments={'Enhances "Troubadour" effect',}},
         hands={ name="ニャメガントレ", augments={'Path: B',}},
+        legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
 		neck="共和プラチナ章",
+        waist={ name="セールフィベルト+1", augments={'Path: A',}},
+		left_ear="イシュヴァラピアス",
         right_ear="胡蝶のイヤリング",
         left_ring="イラブラットリング",
+		right_ring="エパミノダスリング",
         back={ name="インタラアスケープ", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     }
 
