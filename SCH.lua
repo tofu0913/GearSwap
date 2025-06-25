@@ -160,7 +160,7 @@ function get_sets()
         feet="ＡＢローファー+3",
         waist="オルペウスサッシュ",
     })
-	sets.ma.Impact = set_combine(sets.mb, {
+	sets.ma.Impact = set_combine(sets.macc, {
 		head="",
 		body="クレパスクラプリス",
 	})
@@ -192,7 +192,7 @@ function get_sets()
 		back={ name="ブックワームケープ", augments={'INT+2','MND+2','Helix eff. dur. +20',}},
 	})
 	
-	sets.debuff = {
+	sets.macc = {
 		main={ name="ブンジロッド", augments={'Path: A',}},
 		sub="カルミナス",
 		head="ＡＣボード+3",
@@ -354,7 +354,7 @@ function midcast(spell)
 			end
             
         elseif spell.skill=='弱体魔法' then
-            set_equip = sets.debuff
+            set_equip = sets.macc
         end
             
     elseif spell.type == 'WeaponSkill' then
