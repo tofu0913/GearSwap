@@ -116,10 +116,6 @@ function get_sets()
 		neck="バグアチャーム+2",
 		right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
 	})
-	sets.ma.Impact = set_combine(sets.mb, {
-		head="",
-		body="クレパスクラプリス",
-	})
 	sets.ma.Cure = {
 		main={ name="ブンジロッド", augments={'Path: A',}},
 		-- sub="玄武盾",
@@ -154,6 +150,10 @@ function get_sets()
         left_ring="キシャールリング",
         back="無の外装",
 	}
+	sets.ma.Impact = set_combine(sets.macc, {
+		head="",
+		body="クレパスクラプリス",
+	})
 	
     sets.buff = {
 		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
