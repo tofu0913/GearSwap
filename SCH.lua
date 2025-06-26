@@ -89,7 +89,7 @@ function get_sets()
     }
 	sets.idle.Sublimation = set_combine(sets.idle, {
         main="シリティ",
-		head="ＡＣボード+3",
+		head="ＡＣボード+4",
         body="ＰＤガウン+3",
 		waist="エンブラサッシュ",
         right_ear="サバントピアス",
@@ -195,7 +195,7 @@ function get_sets()
 	sets.macc = {
 		main={ name="ブンジロッド", augments={'Path: A',}},
 		sub="カルミナス",
-		head="ＡＣボード+3",
+		head="ＡＣボード+4",
         body="ＡＢガウン+3",--ＡＣガウン+3
         hands="ＡＢブレーサー+3",
         legs="ＡＢパンツ+3",
