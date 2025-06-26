@@ -125,7 +125,8 @@ function get_sets()
         waist="無の腰当",
         left_ear="インフューズピアス",
         right_ear="エアバニピアス",
-        left_ring="シーリチリング+1",
+        -- left_ring="シーリチリング+1",
+        left_ring="ヴェンジフルリング",
         right_ring="シュネデックリング",
     }
     sets.engage = {
