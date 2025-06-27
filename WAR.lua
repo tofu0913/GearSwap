@@ -301,6 +301,10 @@ function midcast(spell)
         end
     elseif sets.ma[spell.english] then
         set_equip = sets.ma[spell.english]
+		if mode == '' then
+			set_equip.main=""
+			set_equip.sub=""
+		end
     elseif sets.ja[spell.english] then
         set_equip = sets.ja[spell.english]
     elseif sets.buff[spell.english] then
