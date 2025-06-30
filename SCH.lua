@@ -151,6 +151,23 @@ function get_sets()
         hands="ＡＢブレーサー+3",
 	})
     
+	sets.macc = {
+		main={ name="ブンジロッド", augments={'Path: A',}},
+		sub="カルミナス",
+		head="ＡＣボード+4",
+        body="ＡＢガウン+3",--ＡＣガウン+3
+        hands="ＡＢブレーサー+3",
+        legs="ＡＢパンツ+3",
+        feet="ＡＣローファー+4",
+		waist="無の腰当",
+        neck={ name="アギュトストール+2", augments={'Path: A',}},
+		left_ear="王将の耳飾り",
+		right_ear="マリグナスピアス",
+        right_ring={ name="メタモルリング+1", augments={'Path: A',}},
+        left_ring="キシャールリング",
+        back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
+	}
+
     sets.ma = {}
     sets.ma.matk = set_combine(sets.mb, {
         head="ＡＢボネット+3",
@@ -191,23 +208,6 @@ function get_sets()
     sets.ma.helix = set_combine(sets.mb, {
 		back={ name="ブックワームケープ", augments={'INT+2','MND+2','Helix eff. dur. +20',}},
 	})
-	
-	sets.macc = {
-		main={ name="ブンジロッド", augments={'Path: A',}},
-		sub="カルミナス",
-		head="ＡＣボード+4",
-        body="ＡＢガウン+3",--ＡＣガウン+3
-        hands="ＡＢブレーサー+3",
-        legs="ＡＢパンツ+3",
-        feet="ＡＣローファー+4",
-		waist="無の腰当",
-        neck={ name="アギュトストール+2", augments={'Path: A',}},
-		left_ear="王将の耳飾り",
-		right_ear="マリグナスピアス",
-        right_ring={ name="メタモルリング+1", augments={'Path: A',}},
-        left_ring="キシャールリング",
-        back={ name="ルッフケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-	}
     
     sets.lowsc = {
         main="ハーミットワンド",
@@ -300,9 +300,7 @@ function precast(spell)
 		
 		if spell.english == 'Impact' then
 			set_equip = sets.fc.Impact
-		end
-
-		if player.sub_job == '赤' and player.sub_job_level > 55 then
+		elseif player.sub_job == '赤' and player.sub_job_level > 55 then
 			set_equip = set_combine(set_equip, sets.fc.grimoire)
 		end
     elseif sets.ja[spell.english] then
