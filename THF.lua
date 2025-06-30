@@ -85,10 +85,13 @@ function get_sets()
 		back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
     }
 	sets.tp.omen={
+		head="マリグナスシャポー",
+		body="マリグナスタバード",
 		hands="ＰＤアムレット+4",
+		legs="マリグナスタイツ",
+		feet="ＳＫプーレーヌ+3",
 		waist="チャークベルト",
 		right_ring="イラブラットリング",
-		feet="ＳＫプーレーヌ+3",
 	}
 	sets.tp.AssassinsCharge={
 		feet="ＰＤプーレーヌ+4",
@@ -97,8 +100,8 @@ function get_sets()
 		ammo="ヤメラング",
 		head="トゥルムキャップ+1",
 		-- head="マリグナスシャポー",
-		body="ＰＬベスト+4",
-		-- body="マリグナスタバード",
+		-- body="ＰＬベスト+4",
+		body="マリグナスタバード",
 		hands="マリグナスグローブ",
 		legs="マリグナスタイツ",
 		-- feet="マリグナスブーツ",
