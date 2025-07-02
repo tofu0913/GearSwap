@@ -160,7 +160,7 @@ function get_sets()
         feet={ name="ビフスリッパー", augments={'Enhances "Nightingale" effect',}},
     }
     sets.ja['Troubadour'] = {
-        body={ name="ＢＩジュストコル+3", augments={'Enhances "Troubadour" effect',}},
+        body={ name="ＢＩジュストコル+4", augments={'Enhances "Troubadour" effect',}},
     }
     sets.ja['Soul Voice'] = {
         legs={ name="ビフキャニオンズ", augments={'Enhances "Soul Voice" effect',}},
@@ -169,7 +169,7 @@ function get_sets()
     sets.ws = {
         range={ name="リノス", augments={'Attack+20','Weapon skill damage +3%','STR+6 DEX+6',}},
         head="ニャメヘルム",
-        body={ name="ＢＩジュストコル+3", augments={'Enhances "Troubadour" effect',}},
+        body={ name="ＢＩジュストコル+4", augments={'Enhances "Troubadour" effect',}},
         hands={ name="ニャメガントレ", augments={'Path: B',}},
         legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
