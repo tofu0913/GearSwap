@@ -75,7 +75,7 @@ function get_sets()
         ammo="ノブキエリ",
         head="ＡＧマスク+4",
         -- body="ニャメメイル",
-        body="ＰＭロリカ+3",
+        body="ＰＭロリカ+4",
         hands="ＢＩマフラ+3",
         legs="ＢＩクウィス+3",
         -- feet="スレビアレギンス+2",
@@ -114,7 +114,7 @@ function get_sets()
         ammo={ name="シーズボムレット+1", augments={'Path: A',}},
         head="ＢＩマスク+3",
         -- body="サクパタブレスト",
-        body="ＰＭロリカ+3",
+        body="ＰＭロリカ+4",
         hands="ＢＩマフラ+3",
         legs="ＰＭクウィス+4",
         -- feet="ＢＩカリガ+2",
@@ -170,7 +170,7 @@ function get_sets()
         head="ＡＧマスク+4",
     }
     sets.ja.Berserk = {
-        body="ＰＭロリカ+3",
+        body="ＰＭロリカ+4",
         feet="ＡＧカリガ+1",
     }
     sets.ja.Berserk_weapon = {
