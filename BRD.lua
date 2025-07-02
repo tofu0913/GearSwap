@@ -50,6 +50,11 @@ function get_sets()
         main="ンプガンドリング",
         sub={ name="フセット+2", augments={'TP Bonus +1000',}},
 	}
+	sets.weapon.pryu = {
+        main="ンプガンドリング",
+        sub="クレパスクラナイフ",
+		style=31,
+	}
 	sets.weapon.flee = {
 		range={ name="リノス", augments={'Evasion+15','Phys. dmg. taken -5%','AGI+8',}},
         main="カルンウェナン",
@@ -366,6 +371,10 @@ function self_command(command)
 		lockstyle()
     elseif command == 'swryu' then
         weapon = 'swryu'
+        windower.add_to_chat('Weapon: '..tostring(weapon))
+		lockstyle()
+    elseif command == 'pryu' then
+        weapon = 'pryu'
         windower.add_to_chat('Weapon: '..tostring(weapon))
 		lockstyle()
 
