@@ -49,7 +49,7 @@ function get_sets()
         head="ＨＴバゴネット+3",
         -- body="デーゴンブレスト",
         body="フロプトブレスト",
-        legs="ＩＧフランチャ+3",
+        legs="ＩＧフランチャ+4",
         
         -- ### Ambuscade set ###
         -- head="フラマツッケット+2",
