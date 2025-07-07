@@ -211,15 +211,20 @@ function get_sets()
         right_ear="セサンスピアス",
 		back="無の外装",
 	}
+    sets.ja['Dark Seal'] = {
+        head="ＦＬバーゴネット+3",
+    }
     
     sets.ma = {}
-    sets.ma.drk_magic = {
-        head="ＦＬバーゴネット+3",
+    sets.ma.macc = {
+        head="ＩＧバゴネット+3",
         -- legs="ＨＴフランチャ+1",
         
-        body="ニャメメイル",
+        body="ＩＧキュイラス+4",
         hands="ニャメガントレ",
-        legs="ニャメフランチャ",
+        -- hands="ＦＬガントレット+4",
+        legs={ name="ＦＬフランチャー+4", augments={'Enhances "Muted Soul" effect',}},
+        -- legs="ＨＴフランチャ+4",
         feet="ＨＴソルレット+3",
         neck="エーラペンダント",
 		waist="無の腰当",
@@ -229,23 +234,21 @@ function get_sets()
         left_ring="アルコンリング",
 		back="無の外装",
     }
-    sets.ma.drk_magic['Dark Seal'] = {
-        head="ＦＬバーゴネット+3",
-    }
-    sets.ma.endark = set_combine(sets.ma.drk_magic, {
+    sets.ma.endark = set_combine(sets.ma.macc, {
 		neck="インカンタートルク",
-        hands="ＦＬガントレット+1",
-        legs="ＨＴフランチャ+1",
+        hands="ＦＬガントレット+1",--+4
+        legs="ＨＴフランチャ+1",--+4
     })
-    sets.ma.drain = set_combine(sets.ma.drk_magic, {
+    sets.ma.drain = set_combine(sets.ma.macc, {
         right_ear="ヒルディネアピアス",
         waist="オステリベルト+1",
-        hands="ＦＬガントレット+1",
+        hands="ＦＬガントレット+1",--+4
         back={ name="デオルクネスマント", augments={'Attack+7','"Drain" and "Aspir" potency +25',}},
     })
-	sets.ma.Impact = set_combine(sets.ma.drk_magic, {
+	sets.ma.Impact = set_combine(sets.ma.macc, {
 		head="",
 		body="クレパスクラプリス",
+		feet="ＨＴソルレット+3",
 		neck="無の喉輪",
 		waist="無の腰当",
 		right_ear="ヒーズンピアス+2",
@@ -358,7 +361,7 @@ function midcast(spell)
     elseif string.find(spell.name, 'ドレイン') or string.find(spell.name, 'アスピル') then
         set_equip = sets.ma.drain
     elseif string.find(spell.name, 'アブゾ') then
-        set_equip = sets.ma.drk_magic
+        set_equip = sets.ma.macc
     elseif string.find(spell.name, 'エンダーク') then
         set_equip = sets.ma.endark
     elseif sets.ja[spell.english] then
@@ -369,7 +372,7 @@ function midcast(spell)
         set_equip = sets.buff[spell.english]
     end
 	if buffactive['ダークシール'] and spell.skill=='暗黒魔法' then
-		set_equip = set_combine(set_equip, sets.ma.drk_magic['Dark Seal'])
+		set_equip = set_combine(set_equip, sets.ja['Dark Seal'])
 	end
 
     if set_equip then
