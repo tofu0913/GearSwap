@@ -87,7 +87,7 @@ function get_sets()
         body="ＰＥプラカート+2",--"ＰＥプラカート+3",
 		-- body="グレティキュイラス",
         -- hands={ name="ニャメガントレ", augments={'Path: B',}},
-        hands="ＰＴフィンガー+3",
+        hands="ＰＴフィンガー+4",
         legs="ニャメフランチャ",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
 		neck={ name="竜騎士の首輪+2", augments={'Path: A',}},
@@ -153,7 +153,7 @@ function get_sets()
     sets.ja = {}
     sets.ja.Angon = {
         ammo="アンゴン",
-        hands="ＰＴフィンガー+3",
+        hands="ＰＴフィンガー+4",
     }
 	sets.ja['Spirit Surge'] = {
 		-- body="テロスレメイル",
