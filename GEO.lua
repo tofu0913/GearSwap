@@ -26,7 +26,8 @@ function get_sets()
 	}
 	sets.idle.geo = {
 		body={ name="テルキネシャジュブ", augments={'Mag. Evasion+25','Pet: "Regen"+3','Pet: Damage taken -4%',}},
-		hands={ name="テルキネグローブ", augments={'Mag. Evasion+25','Pet: "Regen"+3','Pet: Damage taken -4%',}},
+		hands="ＧＯミテーヌ+3",
+		-- hands={ name="テルキネグローブ", augments={'Mag. Evasion+25','Pet: "Regen"+3','Pet: Damage taken -4%',}},
 		legs={ name="テルキネブラコーニ", augments={'Mag. Evasion+25','Pet: "Regen"+3','Pet: Damage taken -4%',}},
 		feet="ＢＡサンダル+3",
 		left_ear="ハンドラーピアス+1",
@@ -100,6 +101,9 @@ function get_sets()
 		main="イドリス",
 		sub="玄武盾",
 		range={ name="デュンナ", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="ＡＺフード+3",
+		body="バグアチュニック",--"ＢＡチュニック+1",
+		hands="ＧＯミテーヌ+3",
 		legs="ＢＡパンツ+3",
 		feet="ＡＺゲートル+3",
 		neck="インカンタートルク",
@@ -114,6 +118,11 @@ function get_sets()
 		main="イドリス",
 		sub="玄武盾",
 		range={ name="デュンナ", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="ＡＺフード+3",
+		body="バグアチュニック",--"ＢＡチュニック+1",
+		hands="ＧＯミテーヌ+3",
+		legs="ＢＡパンツ+3",
+		feet="ＡＺゲートル+3",
 		neck="バグアチャーム+2",
 		right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},
 	})
