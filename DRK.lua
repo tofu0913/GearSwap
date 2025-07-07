@@ -218,13 +218,11 @@ function get_sets()
     sets.ma = {}
     sets.ma.macc = {
         head="ＩＧバゴネット+3",
-        -- legs="ＨＴフランチャ+1",
-        
         body="ＩＧキュイラス+4",
         hands="ニャメガントレ",
         -- hands="ＦＬガントレット+4",
         legs={ name="ＦＬフランチャー+4", augments={'Enhances "Muted Soul" effect',}},
-        -- legs="ＨＴフランチャ+4",
+        -- legs="ＨＴフランチャ+3",
         feet="ＨＴソルレット+3",
         neck="エーラペンダント",
 		waist="無の腰当",
@@ -237,7 +235,7 @@ function get_sets()
     sets.ma.endark = set_combine(sets.ma.macc, {
 		neck="インカンタートルク",
         hands="ＦＬガントレット+1",--+4
-        legs="ＨＴフランチャ+1",--+4
+        legs="ＨＴフランチャ+1",--+3
     })
     sets.ma.drain = set_combine(sets.ma.macc, {
         right_ear="ヒルディネアピアス",
