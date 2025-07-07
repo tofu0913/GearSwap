@@ -279,7 +279,11 @@ function midcast(spell)
         set_equip = sets.ja[spell.english]
         
     elseif spell.type == 'WeaponSkill' then
-        set_equip = sets.ws
+        if sets.ws[spell.english] then
+            set_equip = sets.ws[spell.english]
+        else
+            set_equip = sets.ws
+        end
     
     elseif spell.action_type == 'Magic' then
         if string.find(spell.name,'ケアル') then
