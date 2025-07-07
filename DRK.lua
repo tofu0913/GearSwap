@@ -159,7 +159,7 @@ function get_sets()
 		neck="バーシチョーカー+1",
     }
     sets.blow['Last Resort'] = {
-		feet="ＦＬソルレット+3",
+		feet="ＦＬソルレット+4",
 	}
 	sets.lowhate = {
 		right_ear="シェレピアス",
@@ -190,7 +190,7 @@ function get_sets()
 
     sets.ja = {}
     sets.ja['Last Resort'] = {
-		feet="ＦＬソルレット+3",
+		feet="ＦＬソルレット+4",
         back={ name="アンコウマント", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
     sets.ja['Diabolic Eye'] = {

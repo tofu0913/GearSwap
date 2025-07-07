@@ -71,7 +71,8 @@ function get_sets()
 	}
 
     sets.mb = {
-		main={ name="ブンジロッド", augments={'Path: A',}},
+		-- main={ name="ブンジロッド", augments={'Path: A',}},
+		main="イドリス",
 		sub="カルミナス",
         ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
 		head="エアハット+1",
@@ -81,8 +82,8 @@ function get_sets()
         legs="ＡＺタイツ+3",
         feet="ＡＺゲートル+3",
         neck="水影の首飾り",
-        waist="オルペウスサッシュ",
-        -- waist="アキュイテベルト+1",
+        -- waist="オルペウスサッシュ",
+        waist="アキュイテベルト+1",
 		left_ear="王将の耳飾り",
         right_ear="マリグナスピアス",
 		-- right_ear={ name="アジムスピアス+1", augments={'System: 1 ID: 1676 Val: 0','Mag. Acc.+13','Damage taken-4%',}},

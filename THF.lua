@@ -242,8 +242,13 @@ function get_sets()
 	}
 	sets.ja.Waltz = {
 		ammo="ヤメラング",
+		head="ムンムボンネット+2",
 		body="パションジャケット",
+		-- hands="スリザーグローブ+1",
+		-- legs="ダッシングサブリガ",
+		feet="ローハイドブーツ",
         left_ring="ヴァルスールリング",
+		-- right_ring="アスクレピアリング",
 	}
 
     sets.buff = {}

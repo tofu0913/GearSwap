@@ -219,7 +219,7 @@ function get_sets()
     sets.ja = {}
     sets.ja.Jig = {
         legs="ＨＯタイツ+4",
-        feet="ＭＸトーシュー+1",
+        feet="ＭＸトーシュー+2",
     }
     sets.ja['Reverse Flourish'] = {
         hands="ＭＣバングル+2",
@@ -235,7 +235,7 @@ function get_sets()
 		ammo="ヤメラング",
         head="ＨＯティアラ+1",
 		body="ＭＸカザク+2",
-        feet="ＭＸトーシュー+1",
+        feet="ＭＸトーシュー+2",
 		neck={ name="エトワールゴルゲ+2", augments={'Path: A',}},
         left_ring="ヴァルスールリング",
 		back={ name="トータッパーマント", augments={'"Store TP"+4','"Dual Wield"+3','"Rev. Flourish"+30',}},

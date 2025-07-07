@@ -144,7 +144,8 @@ function get_sets()
         -- neck="クロタリウストルク",
         neck="バードチャーム+2",
         -- neck="無の喉輪",
-        waist={ name="セールフィベルト+1", augments={'Path: A',}},
+        -- waist={ name="セールフィベルト+1", augments={'Path: A',}},
+        waist="ウィンバフベルト+1",
         left_ear="テロスピアス",
         right_ear="セサンスピアス",
         -- right_ear="素破の耳",
@@ -182,6 +183,13 @@ function get_sets()
 		right_ring="エパミノダスリング",
         back={ name="インタラアスケープ", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     }
+    sets.ws['Ruthless Stroke'] = set_combine(sets.ws, {
+        neck="フォシャゴルゲット",
+        -- neck="バードチャーム+2",
+        -- waist="フォシャベルト",
+        waist={ name="ケンタークベルト+1", augments={'Path: A',}},
+		back={ name="インタラアスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+    })
 
     sets.ma = {}
     sets.ma.Cure = {
