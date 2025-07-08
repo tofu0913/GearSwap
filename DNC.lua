@@ -235,6 +235,7 @@ function get_sets()
 		ammo="ヤメラング",
         head="ＨＯティアラ+1",
 		body="ＭＸカザク+2",
+		hands="スリザーグローブ+1",
         feet="ＭＸトーシュー+2",
 		neck={ name="エトワールゴルゲ+2", augments={'Path: A',}},
         left_ring="ヴァルスールリング",
