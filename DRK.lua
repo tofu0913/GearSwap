@@ -214,6 +214,9 @@ function get_sets()
     sets.ja['Dark Seal'] = {
         head="ＦＬバーゴネット+3",
     }
+    sets.ja['Souleater'] = {
+        head="ＩＧバゴネット+4",
+    }
     
     sets.ma = {}
     sets.ma.macc = {
@@ -372,6 +375,9 @@ function midcast(spell)
 	if buffactive['ダークシール'] and spell.skill=='暗黒魔法' then
 		set_equip = set_combine(set_equip, sets.ja['Dark Seal'])
 	end
+	if buffactive['暗黒'] then
+		set_equip = set_combine(set_equip, sets.ja['Souleater'])
+	end
 
     if set_equip then
         equip(set_equip)
@@ -416,6 +422,9 @@ function setIdle()
             set_equip = set_combine(set_equip, sets.walk.windusts)
         end
     end
+	if buffactive['暗黒'] then
+		set_equip = set_combine(set_equip, sets.ja['Souleater'])
+	end
 
     if set_equip then
         equip(set_combine(sets.mode[mode], set_equip))
