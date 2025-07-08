@@ -90,7 +90,7 @@ function get_sets()
 	sets.idle.Sublimation = set_combine(sets.idle, {
         main="シリティ",
 		head="ＡＣボード+4",
-        body="ＰＤガウン+3",
+        body="ＰＤガウン+4",
 		waist="エンブラサッシュ",
         right_ear="サバントピアス",
 	})
@@ -129,14 +129,14 @@ function get_sets()
 		legs="ペダゴギパンツ",
 	}
     sets.ja['Enlightenment'] = {
-		body="ＰＤガウン+3",
+		body="ＰＤガウン+4",
 	}
 
     sets.buff = {
         main="ムサ",
         sub="コーンスー",
 		head={ name="テルキネキャップ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
-		body="ＰＤガウン+3",
+		body="ＰＤガウン+4",
         -- hands="ＡＢブレーサー+3",
 		hands={ name="テルキネグローブ", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 		legs={ name="テルキネブラコーニ", augments={'Mag. Evasion+25','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
