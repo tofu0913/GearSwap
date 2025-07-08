@@ -220,7 +220,7 @@ function get_sets()
     
     sets.ma = {}
     sets.ma.macc = {
-        head="ＩＧバゴネット+3",
+        head="ＩＧバゴネット+4",
         body="ＩＧキュイラス+4",
         hands="ニャメガントレ",
         -- hands="ＦＬガントレット+4",
