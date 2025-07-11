@@ -29,7 +29,7 @@ function get_sets()
 		hands="ＧＯミテーヌ+4",
 		-- hands={ name="テルキネグローブ", augments={'Mag. Evasion+25','Pet: "Regen"+3','Pet: Damage taken -4%',}},
 		legs={ name="テルキネブラコーニ", augments={'Mag. Evasion+25','Pet: "Regen"+3','Pet: Damage taken -4%',}},
-		feet="ＢＡサンダル+3",
+		feet="ＢＡサンダル+4",
 		left_ear="ハンドラーピアス+1",
 	}
 	
@@ -64,7 +64,7 @@ function get_sets()
 		legs="ＢＡパンツ+3",
 	}
 	sets.ja['Radial Arcana'] = {
-		feet="ＢＡサンダル+3",
+		feet="ＢＡサンダル+4",
 	}
 	sets.ja['Life Cycle'] = {
 		feet="ＧＯチュニック+1",
@@ -151,7 +151,7 @@ function get_sets()
         body="ＡＺコート+3",
         hands="ＧＯミテーヌ+4",
         legs="アグゥスロップス",
-        feet="ＢＡサンダル+3",
+        feet="ＢＡサンダル+4",
 		waist="無の腰当",
         neck="エーラペンダント",
 		left_ear="マリグナスピアス",
