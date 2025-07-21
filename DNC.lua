@@ -219,7 +219,7 @@ function get_sets()
     sets.ja = {}
     sets.ja.Jig = {
         legs="ＨＯタイツ+4",
-        feet="ＭＸトーシュー+2",
+        feet="ＭＸトーシュー+3",
     }
     sets.ja['Reverse Flourish'] = {
         hands="ＭＣバングル+2",
@@ -236,9 +236,10 @@ function get_sets()
         head="ＨＯティアラ+1",
 		body="ＭＸカザク+2",
 		hands="スリザーグローブ+1",
-        feet="ＭＸトーシュー+2",
+        feet="ＭＸトーシュー+3",
 		neck={ name="エトワールゴルゲ+2", augments={'Path: A',}},
         left_ring="ヴァルスールリング",
+		right_ring="アスクレピアリング",
 		back={ name="トータッパーマント", augments={'"Store TP"+4','"Dual Wield"+3','"Rev. Flourish"+30',}},
     }
     sets.ja.Step = {
@@ -275,6 +276,7 @@ function get_sets()
     }
     sets.buff = {}
     sets.buff.Phalanx = {
+        head={ name="ヘルクリアヘルム"},
         -- body={ name="ヘルクリアベスト"},
         hands={ name="ヘルクリアグローブ"},
         legs={ name="ヘルクリアトラウザ"},

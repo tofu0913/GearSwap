@@ -29,8 +29,8 @@ function get_sets()
     sets.idle = {
         -- head="ＡＢボネット+1",
         body="ＡＴタバード+2",--"ＶＩタバード+3",
-        hands="ＶＩグローブ+3",
-        legs="ＡＴタイツ+3",
+        hands="ＶＩグローブ+4",
+        legs="ＡＴタイツ+4",
         feet="ＬＴウゾー+1",--"ＬＴウゾー+3",
         neck={ name="デュエルトルク+2", augments={'Path: A',}},
         right_ring="シュネデックリング",
@@ -66,8 +66,8 @@ function get_sets()
 
     sets.buff = {
         body="ＶＩタバード+1",--"ＶＩタバード+3",
-        hands="ＶＩグローブ+3",
-        legs="ＡＴタイツ+3",
+        hands="ＶＩグローブ+4",
+        legs="ＡＴタイツ+4",
         feet="ＬＴウゾー+1",--"ＬＴウゾー+3",
         neck="インカンタートルク",
         waist="オリンポスサッシュ",

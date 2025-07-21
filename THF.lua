@@ -248,12 +248,13 @@ function get_sets()
 		-- legs="ダッシングサブリガ",
 		feet="ローハイドブーツ",
         left_ring="ヴァルスールリング",
-		-- right_ring="アスクレピアリング",
+		right_ring="アスクレピアリング",
 	}
 
     sets.buff = {}
     sets.buff.Phalanx = {
-        body={ name="ヘルクリアベスト"},
+        head={ name="ヘルクリアヘルム"},
+        -- body={ name="ヘルクリアベスト"},
         hands={ name="ヘルクリアグローブ"},
         legs={ name="ヘルクリアトラウザ"},
         feet={ name="ヘルクリアブーツ", augments={'"Dbl.Atk."+1','"Mag.Atk.Bns."+17','Phalanx +5','Mag. Acc.+9 "Mag.Atk.Bns."+9',}},
