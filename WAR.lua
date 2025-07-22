@@ -301,7 +301,7 @@ function midcast(spell)
         end
     elseif sets.ma[spell.english] then
         set_equip = sets.ma[spell.english]
-		if mode == '' then
+		if not string.find(spell.english, 'Warp') then
 			set_equip.main=""
 			set_equip.sub=""
 		end
