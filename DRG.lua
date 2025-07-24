@@ -89,7 +89,8 @@ function get_sets()
 		-- body="グレティキュイラス",
         -- hands={ name="ニャメガントレ", augments={'Path: B',}},
         hands="ＰＴフィンガー+4",
-        legs="ニャメフランチャ",
+        -- legs="ニャメフランチャ",
+		legs="ＶＳブレー+4",
         feet={ name="ニャメソルレット", augments={'Path: B',}},
 		neck={ name="竜騎士の首輪+2", augments={'Path: A',}},
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
@@ -169,7 +170,7 @@ function get_sets()
 		right_ear={ name="ペルタスピアス+2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 VIT+7',}},
 	}
 	sets.ja['Ancient Circle'] = {
-		legs="ＶＳブレー+2",
+		legs="ＶＳブレー+4",
 	}
 	sets.ja.Jump = {
 		head="フロプトヘルム",
@@ -182,7 +183,7 @@ function get_sets()
 		back={ name="ブリガンチアマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 	sets.ja['High Jump'] = set_combine(sets.ja.Jump, {
-		legs="ＶＳブレー+2",
+		legs="ＶＳブレー+4",
 	})
     
     sets.ra = {
