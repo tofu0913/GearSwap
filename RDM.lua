@@ -82,7 +82,7 @@ function get_sets()
     
     sets.debuff = {
 		ammo="王将の玉",
-        head="ニャメヘルム",
+        -- head="ＶＩシャポー+1",--+4
         body="ＡＴタバード+2",
         hands="ニャメガントレ",
         legs="カイロンホーズ",
@@ -91,7 +91,7 @@ function get_sets()
         right_ear={ name="レサジーピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
         right_ring="メタモルリング+1",--{ name="メタモルリング+1", augments={'Path: A',}},
         
-        feet="ＶＩブーツ+2",--"ＶＩブーツ+3",
+        feet="ＶＩブーツ+4",
         right_ear="スノトラピアス",
         left_ear="マリグナスピアス",
         left_ring="キシャールリング",

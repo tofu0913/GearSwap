@@ -104,7 +104,7 @@ function get_sets()
         hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
         legs={ name="サムヌータイツ", augments={'STR+9','DEX+8','"Dbl.Atk."+2','"Triple Atk."+2',}},
         -- feet="ムンムゲマッシュ+2",
-        -- feet={ name="ＨＯトーシュー+3", augments={'Enhances "Closed Position" effect',}},
+        -- feet={ name="ＨＯトーシュー+4", augments={'Enhances "Closed Position" effect',}},
         feet="ＭＣトーシュー+3",
         neck={ name="エトワールゴルゲ+2", augments={'Path: A',}},
         waist="ウィンバフベルト+1",
@@ -245,7 +245,7 @@ function get_sets()
     sets.ja.Step = {
         head="ＭＸティアラ+2",
         hands="ＭＸバングル+4",
-        feet={ name="ＨＯトーシュー+3", augments={'Enhances "Closed Position" effect',}},
+        feet={ name="ＨＯトーシュー+4", augments={'Enhances "Closed Position" effect',}},
     }
     sets.ja['No Foot Rise'] = {
         body="ＨＯカザク+4",

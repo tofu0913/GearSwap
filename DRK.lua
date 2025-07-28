@@ -212,7 +212,7 @@ function get_sets()
 		back="無の外装",
 	}
     sets.ja['Dark Seal'] = {
-        head="ＦＬバーゴネット+3",
+        head="ＦＬバーゴネット+4",
     }
     sets.ja['Souleater'] = {
         head="ＩＧバゴネット+4",
@@ -274,7 +274,7 @@ function get_sets()
         back={ name="アンコウマント", augments={'"Fast Cast"+10',}},
     }
     sets.fc.drk = set_combine(sets.fc, {
-        head="ＦＬバーゴネット+3",
+        head="ＦＬバーゴネット+4",
 	})
 	sets.fc.Impact = set_combine(sets.fc, {
 		head="",
