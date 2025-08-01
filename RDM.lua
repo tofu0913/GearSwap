@@ -28,7 +28,7 @@ function get_sets()
     }
     sets.idle = {
         -- head="ＡＢボネット+1",
-        body="ＡＴタバード+2",--"ＶＩタバード+3",
+        body="ＡＴタバード+4",--"ＶＩタバード+3",
         hands="ＶＩグローブ+4",
         legs="ＡＴタイツ+4",
         feet="ＬＴウゾー+1",--"ＬＴウゾー+3",
@@ -61,7 +61,8 @@ function get_sets()
         left_ring="ナジの包帯",
     }
     sets.ma.Refresh = {
-		body="ＡＴタバード+2",
+		body="ＡＴタバード+4",
+		-- legs="ＬＴフュゾー+3",
 	}
 
     sets.buff = {
@@ -82,10 +83,12 @@ function get_sets()
     
     sets.debuff = {
 		ammo="王将の玉",
-        -- head="ＶＩシャポー+1",--+4
-        body="ＡＴタバード+2",
+        head="ＶＩシャポー+1",--+4
+        body="ＡＴタバード+4",
         hands="ニャメガントレ",
+        -- hands="ＬＴガントロ+3",
         legs="カイロンホーズ",
+		-- legs="ＬＴフュゾー+3",
 		waist="オブシテナサッシュ",
         neck={ name="デュエルトルク+2", augments={'Path: A',}},
         right_ear={ name="レサジーピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Dbl.Atk."+4',}},
@@ -99,6 +102,7 @@ function get_sets()
     }
     
     sets.mb = {
+		-- head="ＡＴシャポー+4",
         head="ニャメヘルム",
         body="ニャメメイル",
         hands="ニャメガントレ",
@@ -117,6 +121,7 @@ function get_sets()
 
     sets.fc = {
         head={ name="マーリンフード", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','"Fast Cast"+7',}},
+		-- head="ＡＴシャポー+4",
         hands={ name="ＧＥゲージ+1", augments={'Phys. dmg. taken -4%','Magic dmg. taken -3%','Song spellcasting time -5%',}},
         legs="ギーヴトラウザ",
 		feet={ name="マーリンクラッコー", augments={'"Mag.Atk.Bns."+2','"Fast Cast"+6','INT+6',}},
