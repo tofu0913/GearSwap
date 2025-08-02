@@ -282,7 +282,7 @@ function get_sets()
 		-- main={ name="ガンドリング", augments={'Path: C',}},
 		-- sub="トーレット",
 		ammo="完璧な幸運の卵",
-		head={ name="ヘルクリアヘルム", augments={'AGI+14','Accuracy+30','"Treasure Hunter"+1','Accuracy+20 Attack+20',}},
+		head="ヘルクリアヘルム",
 		body="マリグナスタバード",
 		hands={ name="ＰＤアムレット+4", augments={'Enhances "Perfect Dodge" effect',}},
 		legs="マリグナスタイツ",
