@@ -49,6 +49,11 @@ function get_sets()
 		sub={ name="ガンドリング", augments={'Path: C',}},
 		style=11,
     }
+	sets.mode['PRYU'] = {
+        main="ンプガンドリング",
+        sub="クレパスクラナイフ",
+		style=31,
+	}
     sets.mode['PABY'] = {
         main="ンプガンドリング",
         sub={ name="トゥワシュトラ", augments={'Path: A',}},
@@ -538,6 +543,9 @@ function self_command(command)
         mode = 'P5'
 		lockstyle()
         -- send_command('input //ws dnc_p')
+    elseif command == 'pryu' then
+        mode = 'PRYU'
+		lockstyle()
     elseif command == 'sw' then
         mode = 'SW'
 		lockstyle()
